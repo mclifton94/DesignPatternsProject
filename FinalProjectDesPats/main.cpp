@@ -6,10 +6,16 @@
 //  Copyright © 2016 designPatterns. All rights reserved.
 //
 
-#include <iostream>
+#include "game.hpp"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+using namespace cap;
+using namespace state;
+
+auto main(int argc, const char * argv[]) -> int {
+    game g = game::getInstance();
+    
+    g.loop();
+
     return 0;
 }

@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		F90290971CA9AE76008969D6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90290961CA9AE76008969D6 /* main.cpp */; };
+		F902909F1CA9AEC2008969D6 /* libfreeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F902909E1CA9AEC2008969D6 /* libfreeimage.a */; };
+		F90290A11CA9AED0008969D6 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A01CA9AED0008969D6 /* libGLEW.a */; };
+		F90290A31CA9AED9008969D6 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A21CA9AED9008969D6 /* libglfw3.a */; };
+		F90290A51CA9AEE2008969D6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A41CA9AEE2008969D6 /* OpenGL.framework */; };
+		F90D59381CB18A7900DE5083 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90D59371CB18A7900DE5083 /* OpenCL.framework */; };
+		F90D593E1CB18BBA00DE5083 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D593C1CB18BBA00DE5083 /* game.cpp */; };
+		F90D59421CB18E5C00DE5083 /* gameStateGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59401CB18E5C00DE5083 /* gameStateGame.cpp */; };
+		F90D59471CB18E7A00DE5083 /* gameStateMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59451CB18E7A00DE5083 /* gameStateMenu.cpp */; };
+		F90D594B1CB1964D00DE5083 /* gameWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59491CB1964D00DE5083 /* gameWindow.cpp */; };
+		F90D595A1CB1A17900DE5083 /* mouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59591CB1A17900DE5083 /* mouse.cpp */; };
+		F90D595C1CB1A1E200DE5083 /* keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D595B1CB1A1E200DE5083 /* keyboard.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +36,26 @@
 /* Begin PBXFileReference section */
 		F90290931CA9AE76008969D6 /* FinalProjectDesPats */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FinalProjectDesPats; sourceTree = BUILT_PRODUCTS_DIR; };
 		F90290961CA9AE76008969D6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F902909E1CA9AEC2008969D6 /* libfreeimage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreeimage.a; path = Dependencies/freeimage/3.17.0/lib/libfreeimage.a; sourceTree = "<group>"; };
+		F90290A01CA9AED0008969D6 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = Dependencies/glew/1.13.0/lib/libGLEW.a; sourceTree = "<group>"; };
+		F90290A21CA9AED9008969D6 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = Dependencies/glfw3/3.1.2/lib/libglfw3.a; sourceTree = "<group>"; };
+		F90290A41CA9AEE2008969D6 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Dependencies/OpenGL.framework; sourceTree = "<group>"; };
+		F90D59371CB18A7900DE5083 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = Dependencies/OpenCL.framework; sourceTree = "<group>"; };
+		F90D593C1CB18BBA00DE5083 /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = game.cpp; path = src/game/interface/game.cpp; sourceTree = "<group>"; };
+		F90D593D1CB18BBA00DE5083 /* game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = game.hpp; path = src/game/interface/game.hpp; sourceTree = "<group>"; };
+		F90D593F1CB18D3700DE5083 /* gameStates.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = gameStates.hpp; path = src/game/states/gameStates.hpp; sourceTree = "<group>"; };
+		F90D59401CB18E5C00DE5083 /* gameStateGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gameStateGame.cpp; path = src/game/states/gameStateGame.cpp; sourceTree = "<group>"; };
+		F90D59411CB18E5C00DE5083 /* gameStateGame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = gameStateGame.hpp; path = src/game/states/gameStateGame.hpp; sourceTree = "<group>"; };
+		F90D59451CB18E7A00DE5083 /* gameStateMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gameStateMenu.cpp; path = src/game/states/gameStateMenu.cpp; sourceTree = "<group>"; };
+		F90D59461CB18E7A00DE5083 /* gameStateMenu.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = gameStateMenu.hpp; path = src/game/states/gameStateMenu.hpp; sourceTree = "<group>"; };
+		F90D59481CB18F6C00DE5083 /* states.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = states.hpp; path = src/game/states/states.hpp; sourceTree = "<group>"; };
+		F90D59491CB1964D00DE5083 /* gameWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gameWindow.cpp; path = src/opengl/window/gameWindow.cpp; sourceTree = "<group>"; };
+		F90D594A1CB1964D00DE5083 /* gameWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = gameWindow.hpp; path = src/opengl/window/gameWindow.hpp; sourceTree = "<group>"; };
+		F90D59501CB19C1E00DE5083 /* timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = timer.hpp; path = src/utils/time/timer.hpp; sourceTree = "<group>"; };
+		F90D59531CB19C9B00DE5083 /* keyboard.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = keyboard.hpp; path = src/opengl/input/keyboard.hpp; sourceTree = "<group>"; };
+		F90D59561CB19CAB00DE5083 /* mouse.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = mouse.hpp; path = src/opengl/input/mouse.hpp; sourceTree = "<group>"; };
+		F90D59591CB1A17900DE5083 /* mouse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mouse.cpp; path = src/opengl/input/mouse.cpp; sourceTree = "<group>"; };
+		F90D595B1CB1A1E200DE5083 /* keyboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = keyboard.cpp; path = src/opengl/input/keyboard.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +63,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90D59381CB18A7900DE5083 /* OpenCL.framework in Frameworks */,
+				F90290A51CA9AEE2008969D6 /* OpenGL.framework in Frameworks */,
+				F90290A31CA9AED9008969D6 /* libglfw3.a in Frameworks */,
+				F90290A11CA9AED0008969D6 /* libGLEW.a in Frameworks */,
+				F902909F1CA9AEC2008969D6 /* libfreeimage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +77,7 @@
 		F902908A1CA9AE76008969D6 = {
 			isa = PBXGroup;
 			children = (
+				F902909D1CA9AE99008969D6 /* Dependencies */,
 				F90290951CA9AE76008969D6 /* FinalProjectDesPats */,
 				F90290941CA9AE76008969D6 /* Products */,
 			);
@@ -57,9 +94,148 @@
 		F90290951CA9AE76008969D6 /* FinalProjectDesPats */ = {
 			isa = PBXGroup;
 			children = (
+				F90D59301CB1785F00DE5083 /* src */,
 				F90290961CA9AE76008969D6 /* main.cpp */,
 			);
 			path = FinalProjectDesPats;
+			sourceTree = "<group>";
+		};
+		F902909D1CA9AE99008969D6 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				F90290A21CA9AED9008969D6 /* libglfw3.a */,
+				F90290A01CA9AED0008969D6 /* libGLEW.a */,
+				F902909E1CA9AEC2008969D6 /* libfreeimage.a */,
+				F90D59371CB18A7900DE5083 /* OpenCL.framework */,
+				F90290A41CA9AEE2008969D6 /* OpenGL.framework */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		F90D592E1CB1783B00DE5083 /* states */ = {
+			isa = PBXGroup;
+			children = (
+				F90D59441CB18E6B00DE5083 /* menu */,
+				F90D59431CB18E6200DE5083 /* game */,
+				F90D59481CB18F6C00DE5083 /* states.hpp */,
+				F90D593F1CB18D3700DE5083 /* gameStates.hpp */,
+			);
+			name = states;
+			sourceTree = "<group>";
+		};
+		F90D592F1CB1784900DE5083 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				F90D593C1CB18BBA00DE5083 /* game.cpp */,
+				F90D593D1CB18BBA00DE5083 /* game.hpp */,
+			);
+			name = interface;
+			sourceTree = "<group>";
+		};
+		F90D59301CB1785F00DE5083 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F90D59391CB18A8800DE5083 /* opencl */,
+				F90D593A1CB18A8F00DE5083 /* opengl */,
+				F90D593B1CB18B2900DE5083 /* game */,
+				F90D594C1CB19B8D00DE5083 /* utils */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		F90D59311CB1788200DE5083 /* window */ = {
+			isa = PBXGroup;
+			children = (
+				F90D59491CB1964D00DE5083 /* gameWindow.cpp */,
+				F90D594A1CB1964D00DE5083 /* gameWindow.hpp */,
+			);
+			name = window;
+			sourceTree = "<group>";
+		};
+		F90D59321CB1788800DE5083 /* input */ = {
+			isa = PBXGroup;
+			children = (
+				F90D59531CB19C9B00DE5083 /* keyboard.hpp */,
+				F90D595B1CB1A1E200DE5083 /* keyboard.cpp */,
+				F90D59561CB19CAB00DE5083 /* mouse.hpp */,
+				F90D59591CB1A17900DE5083 /* mouse.cpp */,
+			);
+			name = input;
+			sourceTree = "<group>";
+		};
+		F90D59391CB18A8800DE5083 /* opencl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = opencl;
+			sourceTree = "<group>";
+		};
+		F90D593A1CB18A8F00DE5083 /* opengl */ = {
+			isa = PBXGroup;
+			children = (
+				F90D59321CB1788800DE5083 /* input */,
+				F90D59311CB1788200DE5083 /* window */,
+			);
+			name = opengl;
+			sourceTree = "<group>";
+		};
+		F90D593B1CB18B2900DE5083 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				F90D592E1CB1783B00DE5083 /* states */,
+				F90D592F1CB1784900DE5083 /* interface */,
+			);
+			name = game;
+			sourceTree = "<group>";
+		};
+		F90D59431CB18E6200DE5083 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				F90D59411CB18E5C00DE5083 /* gameStateGame.hpp */,
+				F90D59401CB18E5C00DE5083 /* gameStateGame.cpp */,
+			);
+			name = game;
+			sourceTree = "<group>";
+		};
+		F90D59441CB18E6B00DE5083 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				F90D59451CB18E7A00DE5083 /* gameStateMenu.cpp */,
+				F90D59461CB18E7A00DE5083 /* gameStateMenu.hpp */,
+			);
+			name = menu;
+			sourceTree = "<group>";
+		};
+		F90D594C1CB19B8D00DE5083 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				F90D594F1CB19BE000DE5083 /* math */,
+				F90D594E1CB19BCB00DE5083 /* fileinput */,
+				F90D594D1CB19BC300DE5083 /* time */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		F90D594D1CB19BC300DE5083 /* time */ = {
+			isa = PBXGroup;
+			children = (
+				F90D59501CB19C1E00DE5083 /* timer.hpp */,
+			);
+			name = time;
+			sourceTree = "<group>";
+		};
+		F90D594E1CB19BCB00DE5083 /* fileinput */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = fileinput;
+			sourceTree = "<group>";
+		};
+		F90D594F1CB19BE000DE5083 /* math */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = math;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90D59421CB18E5C00DE5083 /* gameStateGame.cpp in Sources */,
 				F90290971CA9AE76008969D6 /* main.cpp in Sources */,
+				F90D594B1CB1964D00DE5083 /* gameWindow.cpp in Sources */,
+				F90D59471CB18E7A00DE5083 /* gameStateMenu.cpp in Sources */,
+				F90D593E1CB18BBA00DE5083 /* game.cpp in Sources */,
+				F90D595A1CB1A17900DE5083 /* mouse.cpp in Sources */,
+				F90D595C1CB1A1E200DE5083 /* keyboard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +389,21 @@
 		F902909B1CA9AE76008969D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Dependencies/glew/1.13.0/include",
+					"$(PROJECT_DIR)/Dependencies/glfw3/3.1.2/include",
+					"$(PROJECT_DIR)/Dependencies/freeimage/3.17.0/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/freeimage/3.17.0/lib",
+					"$(PROJECT_DIR)/Dependencies/glew/1.13.0/lib",
+					"$(PROJECT_DIR)/Dependencies/glfw3/3.1.2/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +411,21 @@
 		F902909C1CA9AE76008969D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Dependencies/glew/1.13.0/include",
+					"$(PROJECT_DIR)/Dependencies/glfw3/3.1.2/include",
+					"$(PROJECT_DIR)/Dependencies/freeimage/3.17.0/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/freeimage/3.17.0/lib",
+					"$(PROJECT_DIR)/Dependencies/glew/1.13.0/lib",
+					"$(PROJECT_DIR)/Dependencies/glfw3/3.1.2/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -237,6 +449,7 @@
 				F902909C1CA9AE76008969D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
