@@ -19,6 +19,7 @@
 		F90D594B1CB1964D00DE5083 /* gameWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59491CB1964D00DE5083 /* gameWindow.cpp */; };
 		F90D595A1CB1A17900DE5083 /* mouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59591CB1A17900DE5083 /* mouse.cpp */; };
 		F90D595C1CB1A1E200DE5083 /* keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D595B1CB1A1E200DE5083 /* keyboard.cpp */; };
+		F90D595F1CB1AAEF00DE5083 /* ocl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D595D1CB1AAEF00DE5083 /* ocl.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +57,8 @@
 		F90D59561CB19CAB00DE5083 /* mouse.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = mouse.hpp; path = src/opengl/input/mouse.hpp; sourceTree = "<group>"; };
 		F90D59591CB1A17900DE5083 /* mouse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mouse.cpp; path = src/opengl/input/mouse.cpp; sourceTree = "<group>"; };
 		F90D595B1CB1A1E200DE5083 /* keyboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = keyboard.cpp; path = src/opengl/input/keyboard.cpp; sourceTree = "<group>"; };
+		F90D595D1CB1AAEF00DE5083 /* ocl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ocl.cpp; path = src/opencl/ocl.cpp; sourceTree = "<group>"; };
+		F90D595E1CB1AAEF00DE5083 /* ocl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ocl.hpp; path = src/opencl/ocl.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 		F90D59391CB18A8800DE5083 /* opencl */ = {
 			isa = PBXGroup;
 			children = (
+				F90D595D1CB1AAEF00DE5083 /* ocl.cpp */,
+				F90D595E1CB1AAEF00DE5083 /* ocl.hpp */,
 			);
 			name = opencl;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				F90D59471CB18E7A00DE5083 /* gameStateMenu.cpp in Sources */,
 				F90D593E1CB18BBA00DE5083 /* game.cpp in Sources */,
 				F90D595A1CB1A17900DE5083 /* mouse.cpp in Sources */,
+				F90D595F1CB1AAEF00DE5083 /* ocl.cpp in Sources */,
 				F90D595C1CB1A1E200DE5083 /* keyboard.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
