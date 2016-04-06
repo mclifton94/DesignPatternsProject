@@ -15,19 +15,19 @@ namespace cap { namespace state {
 
     class game {
     public:
-        static game& getInstance();
-        
+        static game* getInstance();
+
     private:
         game();
         
         gameStates* m_pStateCurrent;
-        gameStates* m_pStateGame;
+        std::shared_ptr<gameStates> m_pStateGame;
         
         void setState(gameStates* state);
         
     public:
         void loop();
-        static std::shared_ptr<gameWindow> window;
+        std::unique_ptr<graphics::gameWindow> window;
     };
 
 }}

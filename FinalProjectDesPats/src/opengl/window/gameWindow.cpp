@@ -20,14 +20,29 @@ namespace cap { namespace graphics {
         }
         else{
             
-            setProperties();
+            glfwWindowHint(GLFW_SAMPLES, 4);
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+            glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
+            glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+            glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
             
-            m_vsync == true ? glfwSwapInterval(1) : glfwSwapInterval(0);
+            m_pWindow = glfwCreateWindow(m_width, m_height, m_title, NULL, NULL);
             
-            glewExperimental = GL_TRUE;
-            if(glewInit() != GLEW_OK){
-                std::cerr << "Failed to init GLEW!\n";
+            // set it to be the current OpenGL context
+            glfwMakeContextCurrent(m_pWindow);
+            
+            // Initialize GLEW
+            // global variable declared in GLEW files
+            glewExperimental = true; // Needed for core profile
+            if (glewInit() != GLEW_OK) {
+                std::cerr << "failed to initialize GLEW\n";
+                exit(EXIT_FAILURE);
             }
+            
+            // specify refresh rate (normally 1)
+            glfwSwapInterval(1);
+            
+            glEnable(GL_DEPTH_TEST);
             
             m_Keyboard.reset(new input::inputKeyboard(getWindowID()));
             m_Mouse.reset(new input::inputMouse(getWindowID()));
@@ -48,23 +63,7 @@ namespace cap { namespace graphics {
      * If overrided, must provide window hints, create window, and any context properties
      */
     void gameWindow::setProperties(){
-        glfwWindowHint (GLFW_CONTEXT_VERSION_MAJOR, 3);
-        glfwWindowHint (GLFW_CONTEXT_VERSION_MINOR, 2);
-        glfwWindowHint (GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-        glfwWindowHint (GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
         
-        m_pWindow = glfwCreateWindow(m_width, m_height, m_title, NULL, NULL);
-        
-        if (!m_pWindow)
-        {
-            glfwTerminate();
-            std::cerr << "Failed to create Window!\n";
-        }
-        
-        glfwMakeContextCurrent(m_pWindow);
-        
-        glEnable(GL_BLEND);
-        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     }
     
     //--------------------------------------------------------------------------------

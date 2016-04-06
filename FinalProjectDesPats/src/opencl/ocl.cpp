@@ -31,6 +31,40 @@ namespace cap { namespace opencl {
         clReleaseContext(m_Context);
     }
     
+    void ocl::setup(const char** Kernel, const char* kernelFunc, unsigned int count, const float * data){
+        getProgram(Kernel);
+        getProgramExec();
+        getKernel(kernelFunc);
+        getInputOutput(count);
+        writeInput(data);
+        setArguments();
+        getWorkGroupAndExec();
+    }
+    
+    void ocl::setup(const char* kernelFile, const char* kernelFunc, unsigned int count, const float * data){
+        if(!m_reader.open(kernelFile)){
+            std::cerr << "Failed to open " << kernelFile << "\n";
+            return;
+        }
+        
+        // NEED IMPROVEMENT, IF POSSIBLE
+        std::string contents = "";
+        unsigned char c;
+        while(m_reader.read(c)){
+            contents += c;
+        }
+        m_reader.close();
+        const char* temp = contents.c_str();
+        
+        getProgram(&temp);
+        getProgramExec();
+        getKernel(kernelFunc);
+        getInputOutput(count);
+        writeInput(data);
+        setArguments();
+        getWorkGroupAndExec();
+    }
+    
     void ocl::getContext(){
         m_Context = clCreateContext(0, 1, &m_DeviceID, NULL, NULL, &err);
         if(!m_Context){
@@ -56,17 +90,17 @@ namespace cap { namespace opencl {
         err = clBuildProgram(m_Program, 0, NULL, NULL, NULL, NULL);
         if(err != CL_SUCCESS){
             std::cerr << "Failed to build program executable!\n";
-            /*
+            
              size_t len;
              char buffer[2048];
-             clGetProgramBuildInfo(m_Program, m_Device, CL_PROGRAM_BUILD_LOG, sizeof(buffer), buffer, &len);
+             clGetProgramBuildInfo(m_Program, m_DeviceID, CL_PROGRAM_BUILD_LOG, sizeof(buffer), buffer, &len);
              printf("%s\n", buffer);
-             */
+             
         }
     }
     
     void ocl::getKernel(const char* kernelName ){
-        m_Kernel = clCreateKernel(m_Program, "square", &err);
+        m_Kernel = clCreateKernel(m_Program, kernelName, &err);
         if (!m_Kernel || err != CL_SUCCESS)
         {
             std::cerr << "Failed to create compute kernel!\n";
@@ -110,6 +144,8 @@ namespace cap { namespace opencl {
         }
         
         m_GlobalMax = _count;
+        
+        std::cout << _count << "\n";
         err = clEnqueueNDRangeKernel(m_Queue, m_Kernel, 1, NULL, &m_GlobalMax, &m_LocalMax, 0, NULL, NULL);
         if (err != CL_SUCCESS)
         {

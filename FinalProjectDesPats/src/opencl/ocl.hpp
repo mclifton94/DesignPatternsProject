@@ -18,12 +18,19 @@
 #include <sys/stat.h>
 #include <OpenCL/opencl.h>
 
+#include "fileReader.hpp"
+
 namespace cap { namespace opencl {
+    enum DEVICE {
+        CPU = 0,
+        GPU = 1
+    };
     
     class ocl {
     private:
         int err;
         unsigned int _count;
+        utils::fileReader m_reader;
         
         size_t m_LocalMax, m_GlobalMax;
         
@@ -39,7 +46,12 @@ namespace cap { namespace opencl {
     public:
         ocl(bool);
         ~ocl();
+        void setup(const char*, const char*, unsigned int, const float[]);
+        void setup(const char**, const char*, unsigned, const float[]);
+        void wait();
+        void getResults(float[]);
         
+    private:
         void getContext();
         void getQueue();
         void getProgram(const char** );
@@ -49,8 +61,6 @@ namespace cap { namespace opencl {
         void writeInput(const float[] );
         void setArguments();
         void getWorkGroupAndExec();
-        void wait();
-        void getResults(float[]);
     };
 
 }}

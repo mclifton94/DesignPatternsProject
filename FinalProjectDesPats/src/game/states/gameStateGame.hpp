@@ -30,8 +30,8 @@ namespace cap { namespace state {
         void loop();
         void setWindow(gameWindow*);
     private:
-        std::shared_ptr<gameWindow> m_Window;
-        std::shared_ptr<timer> m_Timer;
+        gameWindow* m_Window;
+        std::unique_ptr<timer> m_Timer;
         
     };
 

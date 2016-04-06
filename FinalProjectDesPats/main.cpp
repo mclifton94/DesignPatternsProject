@@ -9,25 +9,16 @@
 #include "game.hpp"
 #include "ocl.hpp"
 
-#define DATA_SIZE (4096*128)
+#include "tools.hpp"
+
+#define DATA_SIZE (64*64)
 
 using namespace cap;
 using namespace opencl;
 using namespace state;
 
-const char *KernelSource = "\n" \
-"__kernel void square(                                                       \n" \
-"   __global float* input,                                              \n" \
-"   __global float* output,                                             \n" \
-"   const unsigned int count)                                           \n" \
-"{                                                                      \n" \
-"   int i = get_global_id(0);                                           \n" \
-"   if(i < count)                                                       \n" \
-"       output[i] = input[i] * input[i];                                \n" \
-"}                                                                      \n" \
-"\n";
-
 auto main(int argc, const char * argv[]) -> int {
+
     
     float data[DATA_SIZE];
     float results[DATA_SIZE];
@@ -38,14 +29,8 @@ auto main(int argc, const char * argv[]) -> int {
         data[i] = 1;
     }
     
-    ocl o(false);
-        o.getProgram(&KernelSource);
-    o.getProgramExec();
-    o.getKernel((char*)"square");
-    o.getInputOutput(DATA_SIZE);
-    o.writeInput(data);
-    o.setArguments();
-    o.getWorkGroupAndExec();
+    ocl o(DEVICE::CPU);
+    o.setup(utils::tools::getEnv("/FinalProjectDesPats/res/kernels/kernel.cl").c_str(), (char*)"square", DATA_SIZE, data);
     o.wait();
     o.getResults(results);
         
@@ -57,9 +42,8 @@ auto main(int argc, const char * argv[]) -> int {
     
     printf("Computed '%d/%d' correct values!\n", correct, DATA_SIZE);
     
-    game g = game::getInstance();
-    
-    g.loop();
+    game* g = game::getInstance();
+    g->loop();
 
     return 0;
 }

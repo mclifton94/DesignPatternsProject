@@ -8,12 +8,7 @@
 
 #pragma once
 
-#include <iostream>
-
 #include "gameWindow.hpp"
-
-using namespace cap;
-using namespace graphics;
 
 namespace cap { namespace state {
 

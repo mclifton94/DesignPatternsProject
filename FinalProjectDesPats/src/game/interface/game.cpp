@@ -10,23 +10,23 @@
 #include "game.hpp"
 
 namespace cap { namespace state {
-
-    //--------------------------------------------------------------------------------
-    std::shared_ptr<gameWindow> game::window( new gameWindow(800, 600, (char*)"Hello, World!", false ));
     
     //--------------------------------------------------------------------------------
     class gameStateGame;
     
     //--------------------------------------------------------------------------------
-    game& game::getInstance(){
+    game* game::getInstance(){
         static game instance;
-        return instance;
+        return &instance;
     }
 
     //--------------------------------------------------------------------------------
     game::game()
-    : m_pStateGame(new gameStateGame(window.get()))
-    { setState(m_pStateGame); }
+    {
+        window.reset( new gameWindow(640, 480, (char*)"Game Window!", false ));
+        m_pStateGame.reset(new gameStateGame(window.get()));
+        setState(m_pStateGame.get());
+    }
     
     //--------------------------------------------------------------------------------
     void game::setState(gameStates* state){
