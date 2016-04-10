@@ -27,13 +27,10 @@ namespace cap { namespace state {
 
         shaderObject shader(tools::getEnv("/FinalProjectDesPats/res/shaders/vs.shader"), tools::getEnv("/FinalProjectDesPats/res/shaders/fs.shader"));
         shader.enable();
+        shader.setUniformMat4("pr_matrix", Ortho(-1, 1, -1, 1, .1, 100));
         
-        GLuint VertexArrayID;
-        glGenVertexArrays(1, &VertexArrayID);
-        glBindVertexArray(VertexArrayID);
-        
-        rectangle r(vec2(1,1),vec3(-1,0,0));
-        rectangle j(vec2(1,1),vec3(1,0,0));
+        rectangle r(vec2(1,1),vec3(-1,0,-3));
+        rectangle j(vec2(1,1),vec3(1,0,-3));
         
         bool adding = true;
         
@@ -77,6 +74,9 @@ namespace cap { namespace state {
     bool gameStateGame::changeState(){
         if( inputKeyboard::keysPressed.count(GLFW_KEY_0)){
             m_Game->setState(m_Game->getStateOpenCL());
+            return true;
+        }else if( inputKeyboard::keysPressed.count(GLFW_KEY_9)){
+            m_Game->setState(m_Game->getStateOpenCLComplex());
             return true;
         }
         return false;

@@ -26,6 +26,7 @@ namespace cap { namespace state {
         window.reset( new gameWindow(640, 480, (char*)"Game Window!", true ));
         m_pStateGame.reset(new gameStateGame(window.get(), this));
         m_pStateOpenCL.reset(new gameStateOpenCL(window.get(), this));
+        m_pStateOpenCLComplex.reset(new gameStateOpenCLComplex(window.get(), this));
         setState(m_pStateGame.get());
     }
     
@@ -49,5 +50,10 @@ namespace cap { namespace state {
     //--------------------------------------------------------------------------------
     gameStates* game::getStateOpenCL(){
         return m_pStateOpenCL.get();
+    }
+    
+    //--------------------------------------------------------------------------------
+    gameStates* game::getStateOpenCLComplex(){
+        return m_pStateOpenCLComplex.get();
     }
 }}

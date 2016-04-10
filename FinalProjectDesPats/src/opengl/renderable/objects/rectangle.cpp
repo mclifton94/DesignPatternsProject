@@ -23,8 +23,6 @@ namespace cap { namespace graphics {
     }
 
     void rectangle::buffer(){
-        glGenVertexArrays(1, &_vao);
-        glBindVertexArray(_vao);
         m_buffer->genBuffer();
         m_buffer->bindBuffer();
         

@@ -13,7 +13,6 @@
 
 #define DATA_SIZE (64*64)
 
-
 namespace cap { namespace state {
     
     gameStateOpenCL::gameStateOpenCL(gameWindow* window, game* game)

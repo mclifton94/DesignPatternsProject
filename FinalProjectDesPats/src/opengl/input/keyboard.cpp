@@ -19,13 +19,13 @@ namespace cap { namespace input {
         if( action == GLFW_RELEASE){
             keysPressed[key] = false;
             keysHeld[key] = false;
-            std::cerr << key << " released!\n";
+            //std::cerr << key << " released!\n";
         }else if( action == GLFW_PRESS){
             keysPressed[key] = true;
-            std::cerr << key << " pressed!\n";
+            //std::cerr << key << " pressed!\n";
         }else{
             keysHeld[key] = true;
-            std::cerr << key << " held!\n";
+            //std::cerr << key << " held!\n";
         }
         
         if( action == GLFW_PRESS && key == GLFW_KEY_Q){

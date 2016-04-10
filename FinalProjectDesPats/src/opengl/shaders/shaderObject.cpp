@@ -127,7 +127,7 @@ namespace cap { namespace graphics {
     
     void shaderObject::setUniformMat4(const GLchar* name, const mat4& matrix)
     {
-        glUniformMatrix4fv(getUniformLocation(name), 16, GL_TRUE, matrix);
+        glUniformMatrix4fv(getUniformLocation(name), 1, GL_TRUE, matrix);
     }
     
 }}

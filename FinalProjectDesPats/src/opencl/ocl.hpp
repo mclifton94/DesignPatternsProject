@@ -38,6 +38,26 @@ namespace cap { namespace opencl {
         int value;
     };
     
+    struct direct {
+        float xValue;
+        float yValue;
+        float zValue;
+    };
+    
+    struct pt {
+        float centerX;
+        float centerY;
+        float mass;
+        direct direction;
+    };
+    
+    struct boundaries {
+        pt TL;
+        pt BL;
+        pt TR;
+        pt BR;
+    };
+    
     class ocl {
     private:
         int err;
@@ -58,21 +78,26 @@ namespace cap { namespace opencl {
     public:
         ocl(bool);
         ~ocl();
+        
+        void setup(const char*, const char*, unsigned);
         void setup(const char*, const char*, unsigned int, const float[]);
         void setup(const char**, const char*, unsigned, const float[]);
+        
         void setArguments(int, argument[]);
         void getWorkGroupAndExec();
         void wait();
         void getResults(results*);
+        void getResults(pt*);
         
-    private:
         void getContext();
         void getQueue();
         void getProgram(const char** );
         void getProgramExec();
         void getKernel(const char* );
-        void getInputOutput(uint );
+        void getInputOutput(uint);
+        void getInputOutputPts(uint);
         void writeInput(const float[] );
+        void writeInput(const pt[] );
     };
 
 }}

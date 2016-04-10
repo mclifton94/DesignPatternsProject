@@ -35,8 +35,8 @@ namespace cap { namespace opencl {
         getProgram(Kernel);
         getProgramExec();
         getKernel(kernelFunc);
-        getInputOutput(count);
-        writeInput(data);
+        //getInputOutput(count);
+        //writeInput(data);
     }
     
     void ocl::setup(const char* kernelFile, const char* kernelFunc, unsigned int count, const float * data){
@@ -59,6 +59,28 @@ namespace cap { namespace opencl {
         getKernel(kernelFunc);
         getInputOutput(count);
         writeInput(data);
+    }
+    
+    void ocl::setup(const char* kernelFile, const char* kernelFunc, unsigned int count){
+        if(!m_reader.open(kernelFile)){
+            std::cerr << "Failed to open " << kernelFile << "\n";
+            return;
+        }
+        
+        // NEED IMPROVEMENT, IF POSSIBLE
+        std::string contents = "";
+        unsigned char c;
+        while(m_reader.read(c)){
+            contents += c;
+        }
+        m_reader.close();
+        const char* temp = contents.c_str();
+        
+        getProgram(&temp);
+        getProgramExec();
+        getKernel(kernelFunc);
+        //getInputOutput(count);
+        //writeInput(data);
     }
     
     void ocl::getContext(){
@@ -113,14 +135,31 @@ namespace cap { namespace opencl {
         }
     }
     
-    void ocl::writeInput(const float data[]){
-        err = clEnqueueWriteBuffer(m_Queue, m_InputMem, CL_TRUE, 0, sizeof(float) * _count, data, 0, NULL, NULL);
-        if (err)
+    void ocl::getInputOutputPts(unsigned int count){
+        _count = count;
+        m_InputMem = clCreateBuffer(m_Context,  CL_MEM_READ_ONLY,  sizeof(pt) * _count, NULL, NULL);
+        m_OutputMem = clCreateBuffer(m_Context, CL_MEM_WRITE_ONLY, sizeof(pt) * _count, NULL, NULL);
+        if (!m_InputMem || !m_OutputMem)
+        {
+            std::cerr << "Failed to allocate device memory!\n";
+        }
+    }
+    
+    void ocl::writeInput(const pt* data){
+        err = clEnqueueWriteBuffer(m_Queue, m_InputMem, CL_TRUE, 0, sizeof(pt) * _count, data, 0, NULL, NULL);
+        if (err != CL_SUCCESS)
         {
             std::cerr << "Failed to write to source array!\n";
         }
     }
-    void getWorkGroupAndExec();
+    
+    void ocl::writeInput(const float* data){
+        err = clEnqueueWriteBuffer(m_Queue, m_InputMem, CL_TRUE, 0, sizeof(float) * _count, data, 0, NULL, NULL);
+        if (err != CL_SUCCESS)
+        {
+            std::cerr << "Failed to write to source array!\n";
+        }
+    }
     
     void ocl::setArguments(int count, argument args[]){
         err = 0;
@@ -160,6 +199,14 @@ namespace cap { namespace opencl {
     
     void ocl::getResults(results* result){
         err = clEnqueueReadBuffer( m_Queue, m_OutputMem, CL_TRUE, 0, sizeof(results) * _count, result, 0, NULL, NULL );
+        if (err)
+        {
+            std::cerr << "Failed to read output array! " << err << "\n";
+        }
+    }
+    
+    void ocl::getResults(pt* result){
+        err = clEnqueueReadBuffer( m_Queue, m_OutputMem, CL_TRUE, 0, sizeof(pt) * _count, result, 0, NULL, NULL );
         if (err)
         {
             std::cerr << "Failed to read output array! " << err << "\n";

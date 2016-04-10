@@ -46,6 +46,9 @@ namespace cap { namespace graphics {
             
             m_Keyboard.reset(new input::inputKeyboard(getWindowID()));
             m_Mouse.reset(new input::inputMouse(getWindowID()));
+            
+            glGenVertexArrays(1, &m_vao);
+            glBindVertexArray(m_vao);
         }
     }
     //--------------------------------------------------------------------------------
@@ -53,6 +56,7 @@ namespace cap { namespace graphics {
     
     //--------------------------------------------------------------------------------
     void gameWindow::close() const {
+        glDeleteVertexArrays(1, &m_vao);
         glfwMakeContextCurrent(NULL);
         glfwDestroyWindow(m_pWindow);
         glfwTerminate();

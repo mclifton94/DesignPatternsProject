@@ -27,6 +27,7 @@ namespace cap { namespace graphics {
         int m_height, m_width;
         bool m_vsync;
         char* m_title;
+        GLuint m_vao;
     //--------------------------------------------------------------------------------
     public:
         gameWindow(int, int, char*, bool );

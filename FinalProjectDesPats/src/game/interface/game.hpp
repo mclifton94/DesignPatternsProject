@@ -23,6 +23,7 @@ namespace cap { namespace state {
         gameStates* m_pStateCurrent;
         std::shared_ptr<gameStates> m_pStateGame;
         std::shared_ptr<gameStates> m_pStateOpenCL;
+        std::shared_ptr<gameStates> m_pStateOpenCLComplex;
         
     public:
         void loop();
@@ -32,6 +33,7 @@ namespace cap { namespace state {
         
         gameStates* getStateGame();
         gameStates* getStateOpenCL();
+        gameStates* getStateOpenCLComplex();
     };
 
 }}

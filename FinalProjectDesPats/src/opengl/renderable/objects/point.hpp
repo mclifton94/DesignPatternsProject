@@ -1,8 +1,8 @@
 //
-//  rectangle.hpp
+//  point.hpp
 //  FinalProjectDesPats
 //
-//  Created by Mark Clifton on 4/4/16.
+//  Created by MarkClifton on 4/10/16.
 //  Copyright © 2016 designPatterns. All rights reserved.
 //
 
@@ -11,15 +11,18 @@
 #include "baseObject.hpp"
 #include "baseObjectActions.hpp"
 
+#include "ocl.hpp"
+
 namespace cap { namespace graphics {
     
-    class rectangle : public baseObject, public baseObjectActions {
+    class point : public baseObject, public baseObjectActions {
     private:
         vec4 m_color;
-        vec2 m_size;
+        opencl::pt m_point;
         
     public:
-        rectangle(vec2, vec3);
+        //position
+        point(vec3);
         
         void buffer();
         void rebuffer();
@@ -29,6 +32,9 @@ namespace cap { namespace graphics {
         
         void setColor(vec4);
         vec4 getColor();
+        
+        void setPosition(vec3);
+        vec3 getPosition();
         
         void setVelocity(float);
         float getVelocity();

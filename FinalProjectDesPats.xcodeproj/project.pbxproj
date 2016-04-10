@@ -27,6 +27,8 @@
 		F9897D6E1CB30DB60035EDD4 /* buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D6C1CB30DB60035EDD4 /* buffer.cpp */; };
 		F9897D751CB31B770035EDD4 /* shaderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D731CB31B770035EDD4 /* shaderObject.cpp */; };
 		F9897D791CB31D450035EDD4 /* kernel.cl in Sources */ = {isa = PBXBuildFile; fileRef = F9897D781CB31D450035EDD4 /* kernel.cl */; };
+		F9BE79101CBA7D75006FC4E5 /* gameStateOpenCLComplex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9BE790E1CBA7D75006FC4E5 /* gameStateOpenCLComplex.cpp */; };
+		F9BE79131CBA7E64006FC4E5 /* point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9BE79111CBA7E64006FC4E5 /* point.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +90,10 @@
 		F9897D7A1CB31D4F0035EDD4 /* fs.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fs.shader; path = res/shaders/fs.shader; sourceTree = "<group>"; };
 		F9897D7B1CB31D4F0035EDD4 /* vs.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vs.shader; path = res/shaders/vs.shader; sourceTree = "<group>"; };
 		F9BE790C1CBA7B94006FC4E5 /* collision.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; name = collision.cl; path = res/kernels/collision.cl; sourceTree = "<group>"; };
+		F9BE790E1CBA7D75006FC4E5 /* gameStateOpenCLComplex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gameStateOpenCLComplex.cpp; path = src/game/states/gameStateOpenCLComplex.cpp; sourceTree = "<group>"; };
+		F9BE790F1CBA7D75006FC4E5 /* gameStateOpenCLComplex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = gameStateOpenCLComplex.hpp; path = src/game/states/gameStateOpenCLComplex.hpp; sourceTree = "<group>"; };
+		F9BE79111CBA7E64006FC4E5 /* point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = point.cpp; path = src/opengl/renderable/objects/point.cpp; sourceTree = "<group>"; };
+		F9BE79121CBA7E64006FC4E5 /* point.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = point.hpp; path = src/opengl/renderable/objects/point.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 		F90D592E1CB1783B00DE5083 /* states */ = {
 			isa = PBXGroup;
 			children = (
+				F9BE790D1CBA7D4D006FC4E5 /* openclComplex */,
 				F95C93BA1CB6A092004E0403 /* opencl */,
 				F90D59441CB18E6B00DE5083 /* menu */,
 				F90D59431CB18E6200DE5083 /* game */,
@@ -317,6 +324,8 @@
 			children = (
 				F9897D681CB2EAF90035EDD4 /* rectangle.cpp */,
 				F9897D691CB2EAF90035EDD4 /* rectangle.hpp */,
+				F9BE79111CBA7E64006FC4E5 /* point.cpp */,
+				F9BE79121CBA7E64006FC4E5 /* point.hpp */,
 			);
 			name = objects;
 			sourceTree = "<group>";
@@ -356,6 +365,15 @@
 				F9897D7B1CB31D4F0035EDD4 /* vs.shader */,
 			);
 			name = shaders;
+			sourceTree = "<group>";
+		};
+		F9BE790D1CBA7D4D006FC4E5 /* openclComplex */ = {
+			isa = PBXGroup;
+			children = (
+				F9BE790F1CBA7D75006FC4E5 /* gameStateOpenCLComplex.hpp */,
+				F9BE790E1CBA7D75006FC4E5 /* gameStateOpenCLComplex.cpp */,
+			);
+			name = openclComplex;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +436,7 @@
 				F9897D751CB31B770035EDD4 /* shaderObject.cpp in Sources */,
 				F90290971CA9AE76008969D6 /* main.cpp in Sources */,
 				F90D594B1CB1964D00DE5083 /* gameWindow.cpp in Sources */,
+				F9BE79131CBA7E64006FC4E5 /* point.cpp in Sources */,
 				F9897D6A1CB2EAF90035EDD4 /* rectangle.cpp in Sources */,
 				F9897D6E1CB30DB60035EDD4 /* buffer.cpp in Sources */,
 				F9897D541CB2DE750035EDD4 /* fileReader.cpp in Sources */,
@@ -429,6 +448,7 @@
 				F95C93BD1CB6A0B4004E0403 /* gameStateOpenCL.cpp in Sources */,
 				F90D595C1CB1A1E200DE5083 /* keyboard.cpp in Sources */,
 				F9897D791CB31D450035EDD4 /* kernel.cl in Sources */,
+				F9BE79101CBA7D75006FC4E5 /* gameStateOpenCLComplex.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,3 +10,4 @@
 
 #include "gameStateGame.hpp"
 #include "gameStateOpenCL.hpp"
+#include "gameStateOpenCLComplex.hpp"
