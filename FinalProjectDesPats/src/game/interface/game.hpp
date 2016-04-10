@@ -22,12 +22,16 @@ namespace cap { namespace state {
         
         gameStates* m_pStateCurrent;
         std::shared_ptr<gameStates> m_pStateGame;
-        
-        void setState(gameStates* state);
+        std::shared_ptr<gameStates> m_pStateOpenCL;
         
     public:
         void loop();
         std::unique_ptr<graphics::gameWindow> window;
+        
+        void setState(gameStates* state);
+        
+        gameStates* getStateGame();
+        gameStates* getStateOpenCL();
     };
 
 }}

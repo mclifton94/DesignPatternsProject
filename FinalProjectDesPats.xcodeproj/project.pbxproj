@@ -20,6 +20,7 @@
 		F90D595A1CB1A17900DE5083 /* mouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59591CB1A17900DE5083 /* mouse.cpp */; };
 		F90D595C1CB1A1E200DE5083 /* keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D595B1CB1A1E200DE5083 /* keyboard.cpp */; };
 		F90D595F1CB1AAEF00DE5083 /* ocl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D595D1CB1AAEF00DE5083 /* ocl.cpp */; };
+		F95C93BD1CB6A0B4004E0403 /* gameStateOpenCL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F95C93BB1CB6A0B4004E0403 /* gameStateOpenCL.cpp */; };
 		F9897D541CB2DE750035EDD4 /* fileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D521CB2DE750035EDD4 /* fileReader.cpp */; };
 		F9897D671CB2EAED0035EDD4 /* baseObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D641CB2EAED0035EDD4 /* baseObject.cpp */; };
 		F9897D6A1CB2EAF90035EDD4 /* rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D681CB2EAF90035EDD4 /* rectangle.cpp */; };
@@ -65,6 +66,9 @@
 		F90D595B1CB1A1E200DE5083 /* keyboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = keyboard.cpp; path = src/opengl/input/keyboard.cpp; sourceTree = "<group>"; };
 		F90D595D1CB1AAEF00DE5083 /* ocl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ocl.cpp; path = src/opencl/ocl.cpp; sourceTree = "<group>"; };
 		F90D595E1CB1AAEF00DE5083 /* ocl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ocl.hpp; path = src/opencl/ocl.hpp; sourceTree = "<group>"; };
+		F93852C81CB6ABC200572CD6 /* MaxContSub.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; name = MaxContSub.cl; path = res/kernels/MaxContSub.cl; sourceTree = "<group>"; };
+		F95C93BB1CB6A0B4004E0403 /* gameStateOpenCL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gameStateOpenCL.cpp; path = src/game/states/gameStateOpenCL.cpp; sourceTree = "<group>"; };
+		F95C93BC1CB6A0B4004E0403 /* gameStateOpenCL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = gameStateOpenCL.hpp; path = src/game/states/gameStateOpenCL.hpp; sourceTree = "<group>"; };
 		F9897D501CB2DC770035EDD4 /* tools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tools.hpp; path = src/utils/fileinput/tools.hpp; sourceTree = "<group>"; };
 		F9897D521CB2DE750035EDD4 /* fileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fileReader.cpp; path = src/utils/fileinput/fileReader.cpp; sourceTree = "<group>"; };
 		F9897D531CB2DE750035EDD4 /* fileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fileReader.hpp; path = src/utils/fileinput/fileReader.hpp; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		F9897D781CB31D450035EDD4 /* kernel.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; name = kernel.cl; path = res/kernels/kernel.cl; sourceTree = "<group>"; };
 		F9897D7A1CB31D4F0035EDD4 /* fs.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fs.shader; path = res/shaders/fs.shader; sourceTree = "<group>"; };
 		F9897D7B1CB31D4F0035EDD4 /* vs.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vs.shader; path = res/shaders/vs.shader; sourceTree = "<group>"; };
+		F9BE790C1CBA7B94006FC4E5 /* collision.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; name = collision.cl; path = res/kernels/collision.cl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +148,7 @@
 		F90D592E1CB1783B00DE5083 /* states */ = {
 			isa = PBXGroup;
 			children = (
+				F95C93BA1CB6A092004E0403 /* opencl */,
 				F90D59441CB18E6B00DE5083 /* menu */,
 				F90D59431CB18E6200DE5083 /* game */,
 				F90D59481CB18F6C00DE5083 /* states.hpp */,
@@ -233,8 +239,8 @@
 		F90D59441CB18E6B00DE5083 /* menu */ = {
 			isa = PBXGroup;
 			children = (
-				F90D59451CB18E7A00DE5083 /* gameStateMenu.cpp */,
 				F90D59461CB18E7A00DE5083 /* gameStateMenu.hpp */,
+				F90D59451CB18E7A00DE5083 /* gameStateMenu.cpp */,
 			);
 			name = menu;
 			sourceTree = "<group>";
@@ -275,6 +281,15 @@
 				F9897D5E1CB2E8980035EDD4 /* vec.h */,
 			);
 			name = math;
+			sourceTree = "<group>";
+		};
+		F95C93BA1CB6A092004E0403 /* opencl */ = {
+			isa = PBXGroup;
+			children = (
+				F95C93BC1CB6A0B4004E0403 /* gameStateOpenCL.hpp */,
+				F95C93BB1CB6A0B4004E0403 /* gameStateOpenCL.cpp */,
+			);
+			name = opencl;
 			sourceTree = "<group>";
 		};
 		F9897D551CB2E4D00035EDD4 /* res */ = {
@@ -328,6 +343,8 @@
 			isa = PBXGroup;
 			children = (
 				F9897D781CB31D450035EDD4 /* kernel.cl */,
+				F93852C81CB6ABC200572CD6 /* MaxContSub.cl */,
+				F9BE790C1CBA7B94006FC4E5 /* collision.cl */,
 			);
 			name = kernel;
 			sourceTree = "<group>";
@@ -409,6 +426,7 @@
 				F90D595A1CB1A17900DE5083 /* mouse.cpp in Sources */,
 				F9897D671CB2EAED0035EDD4 /* baseObject.cpp in Sources */,
 				F90D595F1CB1AAEF00DE5083 /* ocl.cpp in Sources */,
+				F95C93BD1CB6A0B4004E0403 /* gameStateOpenCL.cpp in Sources */,
 				F90D595C1CB1A1E200DE5083 /* keyboard.cpp in Sources */,
 				F9897D791CB31D450035EDD4 /* kernel.cl in Sources */,
 			);

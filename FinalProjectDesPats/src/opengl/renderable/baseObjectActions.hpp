@@ -14,6 +14,9 @@ public:
     virtual void draw() = 0;
     virtual void setup() = 0;
     
+    virtual void setColor(vec4) = 0;
+    virtual vec4 getColor() = 0;
+    
     virtual void setVelocity(float) = 0;
     virtual float getVelocity() = 0;
     

@@ -1,8 +1,8 @@
 //
-//  gameStateGame.hpp
+//  gameStateOpenCL.hpp
 //  FinalProjectDesPats
 //
-//  Created by MarkClifton on 4/3/16.
+//  Created by Mark Clifton on 4/7/16.
 //  Copyright © 2016 designPatterns. All rights reserved.
 //
 
@@ -14,6 +14,8 @@
 #include "mouse.hpp"
 #include "timer.hpp"
 
+#include "ocl.hpp"
+
 #include "gameStates.hpp"
 
 using namespace cap;
@@ -23,18 +25,16 @@ using namespace utils;
 
 namespace cap { namespace state {
     class game;
-    class gameStateGame : public gameStates {
+    class gameStateOpenCL : public gameStates {
     public:
-        gameStateGame(gameWindow*, game*);
+        gameStateOpenCL(gameWindow*, game*);
         
         void loop();
-        void setWindow(gameWindow*);
         bool changeState();
+        
     private:
         gameWindow* m_Window;
         game* m_Game;
-        std::unique_ptr<timer> m_Timer;
-        
     };
-
+    
 }}

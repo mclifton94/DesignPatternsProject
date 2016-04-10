@@ -26,6 +26,18 @@ namespace cap { namespace opencl {
         GPU = 1
     };
     
+    struct argument {
+        int sizeOf;
+        void* actualParam;
+        
+    };
+    
+    struct results {
+        int start;
+        int end;
+        int value;
+    };
+    
     class ocl {
     private:
         int err;
@@ -48,8 +60,10 @@ namespace cap { namespace opencl {
         ~ocl();
         void setup(const char*, const char*, unsigned int, const float[]);
         void setup(const char**, const char*, unsigned, const float[]);
+        void setArguments(int, argument[]);
+        void getWorkGroupAndExec();
         void wait();
-        void getResults(float[]);
+        void getResults(results*);
         
     private:
         void getContext();
@@ -59,8 +73,6 @@ namespace cap { namespace opencl {
         void getKernel(const char* );
         void getInputOutput(uint );
         void writeInput(const float[] );
-        void setArguments();
-        void getWorkGroupAndExec();
     };
 
 }}

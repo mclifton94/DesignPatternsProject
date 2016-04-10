@@ -37,8 +37,6 @@ namespace cap { namespace opencl {
         getKernel(kernelFunc);
         getInputOutput(count);
         writeInput(data);
-        setArguments();
-        getWorkGroupAndExec();
     }
     
     void ocl::setup(const char* kernelFile, const char* kernelFunc, unsigned int count, const float * data){
@@ -61,8 +59,6 @@ namespace cap { namespace opencl {
         getKernel(kernelFunc);
         getInputOutput(count);
         writeInput(data);
-        setArguments();
-        getWorkGroupAndExec();
     }
     
     void ocl::getContext(){
@@ -88,7 +84,7 @@ namespace cap { namespace opencl {
     
     void ocl::getProgramExec(){
         err = clBuildProgram(m_Program, 0, NULL, NULL, NULL, NULL);
-        if(err != CL_SUCCESS){
+        if(err){
             std::cerr << "Failed to build program executable!\n";
             
              size_t len;
@@ -101,7 +97,7 @@ namespace cap { namespace opencl {
     
     void ocl::getKernel(const char* kernelName ){
         m_Kernel = clCreateKernel(m_Program, kernelName, &err);
-        if (!m_Kernel || err != CL_SUCCESS)
+        if (!m_Kernel || err)
         {
             std::cerr << "Failed to create compute kernel!\n";
         }
@@ -109,8 +105,8 @@ namespace cap { namespace opencl {
     
     void ocl::getInputOutput(unsigned int count ){
         _count = count;
-        m_InputMem = clCreateBuffer(m_Context,  CL_MEM_READ_ONLY,  sizeof(float) * count, NULL, NULL);
-        m_OutputMem = clCreateBuffer(m_Context, CL_MEM_WRITE_ONLY, sizeof(float) * count, NULL, NULL);
+        m_InputMem = clCreateBuffer(m_Context,  CL_MEM_READ_ONLY,  sizeof(float) * _count, NULL, NULL);
+        m_OutputMem = clCreateBuffer(m_Context, CL_MEM_WRITE_ONLY, sizeof(results) * _count, NULL, NULL);
         if (!m_InputMem || !m_OutputMem)
         {
             std::cerr << "Failed to allocate device memory!\n";
@@ -119,18 +115,23 @@ namespace cap { namespace opencl {
     
     void ocl::writeInput(const float data[]){
         err = clEnqueueWriteBuffer(m_Queue, m_InputMem, CL_TRUE, 0, sizeof(float) * _count, data, 0, NULL, NULL);
-        if (err != CL_SUCCESS)
+        if (err)
         {
             std::cerr << "Failed to write to source array!\n";
         }
     }
+    void getWorkGroupAndExec();
     
-    void ocl::setArguments(){
+    void ocl::setArguments(int count, argument args[]){
         err = 0;
         err  = clSetKernelArg(m_Kernel, 0, sizeof(cl_mem), &m_InputMem);
         err |= clSetKernelArg(m_Kernel, 1, sizeof(cl_mem), &m_OutputMem);
-        err |= clSetKernelArg(m_Kernel, 2, sizeof(unsigned int), &_count);
-        if (err != CL_SUCCESS)
+        
+        for(int i=0; i< count; i++){
+            err |= clSetKernelArg(m_Kernel, i+2, args[i].sizeOf, args[i].actualParam);
+        }
+        
+        if (err)
         {
             std::cerr << "Failed to set kernel arguments! " << err << "\n";
         }
@@ -143,11 +144,11 @@ namespace cap { namespace opencl {
             std::cerr << "Failed to retrieve kernel work group info! " << err << "\n";
         }
         
-        m_GlobalMax = _count;
+        m_LocalMax = _count < m_LocalMax ? _count : m_LocalMax;
+        m_GlobalMax = _count < m_LocalMax ? m_LocalMax : _count;
         
-        std::cout << _count << "\n";
         err = clEnqueueNDRangeKernel(m_Queue, m_Kernel, 1, NULL, &m_GlobalMax, &m_LocalMax, 0, NULL, NULL);
-        if (err != CL_SUCCESS)
+        if (err)
         {
             std::cerr << "Failed to execute kernel!\n";
         }
@@ -157,9 +158,9 @@ namespace cap { namespace opencl {
         clFinish(m_Queue);
     }
     
-    void ocl::getResults(float results[]){
-        err = clEnqueueReadBuffer( m_Queue, m_OutputMem, CL_TRUE, 0, sizeof(float) * _count, results, 0, NULL, NULL );
-        if (err != CL_SUCCESS)
+    void ocl::getResults(results* result){
+        err = clEnqueueReadBuffer( m_Queue, m_OutputMem, CL_TRUE, 0, sizeof(results) * _count, result, 0, NULL, NULL );
+        if (err)
         {
             std::cerr << "Failed to read output array! " << err << "\n";
         }

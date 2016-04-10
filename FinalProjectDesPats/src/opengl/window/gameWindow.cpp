@@ -40,7 +40,7 @@ namespace cap { namespace graphics {
             }
             
             // specify refresh rate (normally 1)
-            glfwSwapInterval(1);
+            glfwSwapInterval( vsync ? 1 : 0 );
             
             glEnable(GL_DEPTH_TEST);
             

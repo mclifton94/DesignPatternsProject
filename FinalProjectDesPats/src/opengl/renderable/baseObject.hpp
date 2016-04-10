@@ -27,7 +27,7 @@ namespace cap { namespace graphics {
         float m_velocity;
         float m_mass;
         
-        vertex m_vertices[4];
+        std::unique_ptr<vertex[]> m_vertices;
         std::unique_ptr<bufferObject> m_buffer;
         
     public:

@@ -16,6 +16,8 @@ namespace cap { namespace graphics {
         m_color = vec4(.9f,.9f,.9f,1);
         m_buffer.reset(new bufferObject(GL_ARRAY_BUFFER));
         
+        m_vertices.reset(new vertex[6]);
+        
         setup();
         buffer();
     }
@@ -26,24 +28,27 @@ namespace cap { namespace graphics {
         m_buffer->genBuffer();
         m_buffer->bindBuffer();
         
-        //m_buffer->bufferData(12, sizeof(GLfloat), arr, GL_STATIC_DRAW);
-        glBufferData(GL_ARRAY_BUFFER, 18 * sizeof(GLfloat), arr, GL_STATIC_DRAW);
-
+        m_buffer->bufferData(6, sizeof(vertex), m_vertices.get(), GL_STATIC_DRAW);
+    }
+    
+    void rectangle::rebuffer(){
+        m_buffer->bindBuffer();
+        m_buffer->bufferData(6, sizeof(vertex), m_vertices.get(), GL_STATIC_DRAW);
     }
     
     void rectangle::draw(){
         m_buffer->bindBuffer();
         
         glEnableVertexAttribArray(0);
+        glEnableVertexAttribArray(1);
         
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(GLfloat), BUFFER_OFFSET(0));
+        glVertexAttribPointer(0, sizeof(vertex::position)/sizeof(GLfloat), GL_FLOAT, GL_FALSE, sizeof(vertex), BUFFER_OFFSET(offsetof(vertex, position)));
+        glVertexAttribPointer(1, sizeof(vertex::color)/sizeof(GLfloat), GL_FLOAT, GL_FALSE, sizeof(vertex), BUFFER_OFFSET(offsetof(vertex, color)));
         
         glDrawArrays(GL_TRIANGLES, 0, 6);
-
     }
     
     void rectangle::setup(){
-        
         m_vertices[0].color = m_color;
         m_vertices[0].position = vec3(m_position[0]+m_size[0]/2.f, m_position[1]+m_size[1]/2.f, m_position[2]);
         
@@ -54,30 +59,24 @@ namespace cap { namespace graphics {
         m_vertices[2].position = vec3(m_position[0]-m_size[0]/2.f, m_position[1]-m_size[1]/2.f, m_position[2]);
         
         m_vertices[3].color = m_color;
-        m_vertices[3].position = vec3(m_position[0]-m_size[0]/2.f, m_position[1]+m_size[1]/2.f, m_position[2]);
+        m_vertices[3].position = vec3(m_position[0]+m_size[0]/2.f, m_position[1]+m_size[1]/2.f, m_position[2]);
         
+        m_vertices[4].color = m_color;
+        m_vertices[4].position = vec3(m_position[0]-m_size[0]/2.f, m_position[1]-m_size[1]/2.f, m_position[2]);
         
+        m_vertices[5].color = m_color;
+        m_vertices[5].position = vec3(m_position[0]-m_size[0]/2.f, m_position[1]+m_size[1]/2.f, m_position[2]);
+    }
+    
+    void rectangle::setColor(vec4 color){
+        m_color = color;
         
-        arr[0] = m_vertices[0].position[0];
-        arr[1] = m_vertices[0].position[1];
-        arr[2] = m_vertices[0].position[2];
-        arr[3] = m_vertices[1].position[0];
-        arr[4] = m_vertices[1].position[1];
-        arr[5] = m_vertices[1].position[2];
-        arr[6] = m_vertices[2].position[0];
-        arr[7] = m_vertices[2].position[1];
-        arr[8] = m_vertices[2].position[2];
-        
-        arr[9] = m_vertices[0].position[0];
-        arr[10] = m_vertices[0].position[1];
-        arr[11] = m_vertices[0].position[2];
-        arr[12] = m_vertices[2].position[0];
-        arr[13] = m_vertices[2].position[1];
-        arr[14] = m_vertices[2].position[2];
-        arr[15] = m_vertices[3].position[0];
-        arr[16] = m_vertices[3].position[1];
-        arr[17] = m_vertices[3].position[2];
-        
+        setup();
+        buffer();
+    }
+    
+    vec4 rectangle::getColor(){
+        return m_color;
     }
     
     void rectangle::setVelocity(float velocity){
