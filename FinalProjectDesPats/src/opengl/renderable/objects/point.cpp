@@ -35,8 +35,6 @@ namespace cap { namespace graphics {
     
     void point::setPosition(vec3 position){
         m_position = position;
-        setup();
-        rebuffer();
     }
     
     vec3 point::getPosition(){
@@ -57,13 +55,9 @@ namespace cap { namespace graphics {
     
     void point::setup(){
         m_vertices[0].color = m_color;
-        m_vertices[0].position = vec3(m_position[0], m_position[1], m_position[2]);
-        
-        m_point.centerX = m_position[0];
-        m_point.centerY = m_position[2];
-        m_point.direction.xValue = m_direction[0];
-        m_point.direction.yValue = m_direction[1];
-        m_point.direction.zValue = 0;
+        m_vertices[0].position[0] = m_position[0];
+        m_vertices[0].position[1] = m_position[1];
+        m_vertices[0].position[2] = m_position[2];
     }
     
     void point::setColor(vec4 color){

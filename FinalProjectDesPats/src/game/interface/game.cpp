@@ -23,7 +23,7 @@ namespace cap { namespace state {
     //--------------------------------------------------------------------------------
     game::game()
     {
-        window.reset( new gameWindow(640, 480, (char*)"Game Window!", true ));
+        window.reset( new gameWindow(640, 480, (char*)"Game Window!", false ));
         m_pStateGame.reset(new gameStateGame(window.get(), this));
         m_pStateOpenCL.reset(new gameStateOpenCL(window.get(), this));
         m_pStateOpenCLComplex.reset(new gameStateOpenCLComplex(window.get(), this));

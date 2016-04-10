@@ -47,6 +47,7 @@ namespace cap { namespace opencl {
     struct pt {
         float centerX;
         float centerY;
+        float centerZ;
         float mass;
         direct direction;
     };

@@ -49,22 +49,25 @@ namespace cap { namespace state {
         
         glEnable(GL_PROGRAM_POINT_SIZE);
         glPointSize(5);
+        glEnable(GL_DEPTH_TEST);
         
         shaderObject shader(tools::getEnv("/FinalProjectDesPats/res/shaders/vs.shader"), tools::getEnv("/FinalProjectDesPats/res/shaders/fs.shader"));
         shader.enable();
-        shader.setUniformMat4("pr_matrix", Ortho(-1, 1, -1, 1, .1, 100));
+        shader.setUniformMat4("pr_matrix", Perspective(90, 640/480.f, .1, 9000));
 
         std::vector<point> pts;
         int numPts = 64*32;
         pt data[numPts];
         direct none;
         none.xValue = 0;
-        none.yValue = 0;
+        none.yValue = rand()%5/50;
         none.zValue = 0;
         for(int i=0; i< numPts; i++){
-            pts.push_back(point(vec3((2*i+1)/(float)numPts-1,1,-1)));
-            data[i].centerX = (2*i+1)/(float)numPts-1;
-            data[i].centerY = rand()%100-50;
+            pts.push_back(point(vec3((2*i+1)/(float)numPts-1,(rand()%100)/50.f-1,(rand()%100)/50.f-2)));
+            pts[pts.size()-1].setColor(vec4(1,.5, pts[pts.size()-1].getPosition()[2],1));
+            data[i].centerX = pts[pts.size()-1].getPosition()[0];
+            data[i].centerY = pts[pts.size()-1].getPosition()[1];
+            data[i].centerZ = pts[pts.size()-1].getPosition()[2];
             data[i].mass = 10;
             data[i].direction = none;
         }
@@ -75,7 +78,7 @@ namespace cap { namespace state {
         o.setup(cap::utils::tools::getEnv("/FinalProjectDesPats/res/kernels/collision.cl").c_str(), (char*)"collision", numPts);
         o.getInputOutputPts(numPts);
         
-        m_gravity = -.0001;
+        m_gravity = .0001;
         
         while(!m_Window->shouldClose()){
             m_Window->clear();
@@ -83,6 +86,7 @@ namespace cap { namespace state {
             if(m_Timer->check()){
                 std::cerr << m_Timer->get() << "\n";
                 m_Timer->reset();
+                m_gravity = (rand()%10-5)/1000;
             }
             m_Timer->update();
             
@@ -96,7 +100,7 @@ namespace cap { namespace state {
             //Number of items in array
             cap::opencl::argument arg2;
             arg2.sizeOf = sizeof(boundaries);
-            arg2.actualParam = new boundaries(getBounds(-1, .9, 1, -.9));
+            arg2.actualParam = new boundaries(getBounds(-640/480.f, .9, 640/480.f, -.9));
             
             //Number of items in array
             cap::opencl::argument arg3;
@@ -116,14 +120,14 @@ namespace cap { namespace state {
             o.getResults(pt);
             
             for(int i=0; i<numPts; i++){
-                pts[i].setPosition(vec3(pt[i].centerX, pt[i].centerY, pts[i].getPosition()[2]));
+                pts[i].setPosition(vec3(pt[i].centerX, pt[i].centerY, pt[i].centerZ));
+                
+                pts[i].setup();
+                pts[i].rebuffer();
+                
                 data[i].centerX = pt[i].centerX;
                 data[i].centerY = pt[i].centerY;
-                if(rand()%100>95){
-                    data[i].centerY = data[i].centerY+2*m_gravity;
-                }else{
-                    data[i].centerY = pt[i].centerY;
-                }
+                data[i].centerZ = pt[i].centerZ;
                 data[i].direction = pt[i].direction;
             }
             

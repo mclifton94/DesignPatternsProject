@@ -16,11 +16,9 @@
 namespace cap { namespace graphics {
     
     class point : public baseObject, public baseObjectActions {
-    private:
-        vec4 m_color;
-        opencl::pt m_point;
         
     public:
+        vec4 m_color;
         //position
         point(vec3);
         
