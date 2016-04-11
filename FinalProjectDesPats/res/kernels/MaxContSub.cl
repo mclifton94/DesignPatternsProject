@@ -10,7 +10,7 @@ __kernel void maxSub( __global float* input, __global struct results* output, in
     
     int s,e;
     
-    int stride = totalItems/n;
+    int stride = totalItems/n+1;
     int start = workID * stride;
     int end = start + stride;
     int max = input[start];

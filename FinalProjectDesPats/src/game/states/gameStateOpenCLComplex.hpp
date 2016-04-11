@@ -39,6 +39,7 @@ namespace cap { namespace state {
         gameWindow* m_Window;
         game* m_Game;
         std::unique_ptr<timer> m_Timer;
+        bool m_release;
     };
     
 }}
