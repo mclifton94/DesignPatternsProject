@@ -23,15 +23,11 @@ namespace cap { namespace graphics {
     }
 
     void rectangle::buffer(){
-        m_buffer->genBuffer();
+        if(m_buffer->getID() == 0)
+            m_buffer->genBuffer();
         m_buffer->bindBuffer();
         
-        m_buffer->bufferData(6, sizeof(vertex), m_vertices.get(), GL_STATIC_DRAW);
-    }
-    
-    void rectangle::rebuffer(){
-        m_buffer->bindBuffer();
-        m_buffer->bufferData(6, sizeof(vertex), m_vertices.get(), GL_STATIC_DRAW);
+        m_buffer->bufferData(4, sizeof(vertex), m_vertices.get(), GL_STATIC_DRAW);
     }
     
     void rectangle::draw(){
@@ -43,7 +39,7 @@ namespace cap { namespace graphics {
         glVertexAttribPointer(0, sizeof(vertex::position)/sizeof(GLfloat), GL_FLOAT, GL_FALSE, sizeof(vertex), BUFFER_OFFSET(offsetof(vertex, position)));
         glVertexAttribPointer(1, sizeof(vertex::color)/sizeof(GLfloat), GL_FLOAT, GL_FALSE, sizeof(vertex), BUFFER_OFFSET(offsetof(vertex, color)));
         
-        glDrawArrays(GL_TRIANGLES, 0, 6);
+        glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
     }
     
     void rectangle::setup(){
@@ -52,18 +48,12 @@ namespace cap { namespace graphics {
         
         m_vertices[1].color = m_color;
         m_vertices[1].position = vec3(m_position[0]+m_size[0]/2.f, m_position[1]-m_size[1]/2.f, m_position[2]);
-        
+
         m_vertices[2].color = m_color;
         m_vertices[2].position = vec3(m_position[0]-m_size[0]/2.f, m_position[1]-m_size[1]/2.f, m_position[2]);
         
         m_vertices[3].color = m_color;
-        m_vertices[3].position = vec3(m_position[0]+m_size[0]/2.f, m_position[1]+m_size[1]/2.f, m_position[2]);
-        
-        m_vertices[4].color = m_color;
-        m_vertices[4].position = vec3(m_position[0]-m_size[0]/2.f, m_position[1]-m_size[1]/2.f, m_position[2]);
-        
-        m_vertices[5].color = m_color;
-        m_vertices[5].position = vec3(m_position[0]-m_size[0]/2.f, m_position[1]+m_size[1]/2.f, m_position[2]);
+        m_vertices[3].position = vec3(m_position[0]-m_size[0]/2.f, m_position[1]+m_size[1]/2.f, m_position[2]);
     }
     
     void rectangle::setColor(vec4 color){

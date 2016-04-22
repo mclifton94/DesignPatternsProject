@@ -29,6 +29,7 @@ namespace cap { namespace state {
     public:
         gameStateOpenCL(gameWindow*, game*);
         
+        void setup();
         void loop();
         bool changeState();
         

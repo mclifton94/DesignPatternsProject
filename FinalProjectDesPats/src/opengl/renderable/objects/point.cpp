@@ -22,14 +22,10 @@ namespace cap { namespace graphics {
     }
     
     void point::buffer(){
-        m_buffer->genBuffer();
+        if(m_buffer->getID() == 0)
+            m_buffer->genBuffer();
         m_buffer->bindBuffer();
         
-        m_buffer->bufferData(1, sizeof(vertex), m_vertices.get(), GL_STATIC_DRAW);
-    }
-    
-    void point::rebuffer(){
-        m_buffer->bindBuffer();
         m_buffer->bufferData(1, sizeof(vertex), m_vertices.get(), GL_STATIC_DRAW);
     }
     
@@ -37,7 +33,7 @@ namespace cap { namespace graphics {
         m_position = position;
         
         setup();
-        rebuffer();
+        buffer();
     }
     
     vec3 point::getPosition(){
@@ -58,7 +54,8 @@ namespace cap { namespace graphics {
     
     void point::setup(){
         m_vertices[0].color = m_color;
-        m_vertices[0].position = vec3(m_position[0], m_position[1], m_position[2]);
+        m_vertices[0].position = m_position;
+    
     }
     
     void point::setColor(vec4 color){

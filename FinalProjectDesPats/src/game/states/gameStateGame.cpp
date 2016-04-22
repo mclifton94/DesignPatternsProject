@@ -17,58 +17,33 @@ namespace cap { namespace state {
   
     //--------------------------------------------------------------------------------
     gameStateGame::gameStateGame(gameWindow* window, game* game)
-    : m_Window(window), m_Timer(new timer), m_Game(game)
+    : m_Window(window),  m_Game(game)
     {
-        m_Timer->reset();
+        shaderObject shader(tools::getEnv("/FinalProjectDesPats/res/shaders/vs.shader"), tools::getEnv("/FinalProjectDesPats/res/shaders/fs.shader"));
+        shader.enable();
+        shader.setUniformMat4("pr_matrix", Ortho(-1, 1, -1, 1, .1, 100));
+    }
+    
+    //--------------------------------------------------------------------------------
+    void gameStateGame::setup(){
+        
     }
     
     //--------------------------------------------------------------------------------
     void gameStateGame::loop(){
-
-        shaderObject shader(tools::getEnv("/FinalProjectDesPats/res/shaders/vs.shader"), tools::getEnv("/FinalProjectDesPats/res/shaders/fs.shader"));
-        shader.enable();
-        shader.setUniformMat4("pr_matrix", Ortho(-1, 1, -1, 1, .1, 100));
         
         rectangle r(vec2(1,1),vec3(-1,0,-3));
         rectangle j(vec2(1,1),vec3(1,0,-3));
         
-        bool adding = true;
-        
-        while(!m_Window->shouldClose()){
-            m_Window->clear();
-            
-            if(m_Timer->check()){
-                std::cerr << m_Timer->get() << "\n";
-                m_Timer->reset();
-            }
-            m_Timer->update();
+        m_Window->clear();
 
-            r.draw();
-            j.draw();
+        r.draw();
+        j.draw();
             
-            vec4 color = r.getColor();
-            vec4 color1 = j.getColor();
-            if( color[0] > 1 ){
-                adding = false;
-            }else if( color[0] < 0){
-                adding = true;
-            }
+        m_Window->swap();
+        glfwPollEvents();
             
-            if( adding ){
-                r.setColor(vec4(color[0]+.01, .5, .5, 1));
-                j.setColor(vec4(.5, color1[1]+.01, .5, 1));
-            }else{
-                r.setColor(vec4(color[0]-.01, .5, .5, 1));
-                j.setColor(vec4(.5, color1[1]-.01, .5, 1));
-            }
-            
-            m_Window->swap();
-            glfwPollEvents();
-            
-            if(changeState()){
-                return;
-            }
-        }
+        changeState();
     }
     
     bool gameStateGame::changeState(){

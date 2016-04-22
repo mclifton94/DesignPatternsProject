@@ -12,7 +12,6 @@
 		F90290A11CA9AED0008969D6 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A01CA9AED0008969D6 /* libGLEW.a */; };
 		F90290A31CA9AED9008969D6 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A21CA9AED9008969D6 /* libglfw3.a */; };
 		F90290A51CA9AEE2008969D6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A41CA9AEE2008969D6 /* OpenGL.framework */; };
-		F90D59381CB18A7900DE5083 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90D59371CB18A7900DE5083 /* OpenCL.framework */; };
 		F90D593E1CB18BBA00DE5083 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D593C1CB18BBA00DE5083 /* game.cpp */; };
 		F90D59421CB18E5C00DE5083 /* gameStateGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59401CB18E5C00DE5083 /* gameStateGame.cpp */; };
 		F90D59471CB18E7A00DE5083 /* gameStateMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59451CB18E7A00DE5083 /* gameStateMenu.cpp */; };
@@ -21,6 +20,7 @@
 		F90D595C1CB1A1E200DE5083 /* keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D595B1CB1A1E200DE5083 /* keyboard.cpp */; };
 		F90D595F1CB1AAEF00DE5083 /* ocl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D595D1CB1AAEF00DE5083 /* ocl.cpp */; };
 		F95C93BD1CB6A0B4004E0403 /* gameStateOpenCL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F95C93BB1CB6A0B4004E0403 /* gameStateOpenCL.cpp */; };
+		F976AED11CCAA3AC00CABAC3 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F976AECF1CCAA39E00CABAC3 /* OpenCL.framework */; };
 		F9897D541CB2DE750035EDD4 /* fileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D521CB2DE750035EDD4 /* fileReader.cpp */; };
 		F9897D671CB2EAED0035EDD4 /* baseObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D641CB2EAED0035EDD4 /* baseObject.cpp */; };
 		F9897D6A1CB2EAF90035EDD4 /* rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D681CB2EAF90035EDD4 /* rectangle.cpp */; };
@@ -71,6 +71,7 @@
 		F93852C81CB6ABC200572CD6 /* MaxContSub.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; name = MaxContSub.cl; path = res/kernels/MaxContSub.cl; sourceTree = "<group>"; };
 		F95C93BB1CB6A0B4004E0403 /* gameStateOpenCL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gameStateOpenCL.cpp; path = src/game/states/gameStateOpenCL.cpp; sourceTree = "<group>"; };
 		F95C93BC1CB6A0B4004E0403 /* gameStateOpenCL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = gameStateOpenCL.hpp; path = src/game/states/gameStateOpenCL.hpp; sourceTree = "<group>"; };
+		F976AECF1CCAA39E00CABAC3 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
 		F9897D501CB2DC770035EDD4 /* tools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tools.hpp; path = src/utils/fileinput/tools.hpp; sourceTree = "<group>"; };
 		F9897D521CB2DE750035EDD4 /* fileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fileReader.cpp; path = src/utils/fileinput/fileReader.cpp; sourceTree = "<group>"; };
 		F9897D531CB2DE750035EDD4 /* fileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fileReader.hpp; path = src/utils/fileinput/fileReader.hpp; sourceTree = "<group>"; };
@@ -101,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F90D59381CB18A7900DE5083 /* OpenCL.framework in Frameworks */,
+				F976AED11CCAA3AC00CABAC3 /* OpenCL.framework in Frameworks */,
 				F90290A51CA9AEE2008969D6 /* OpenGL.framework in Frameworks */,
 				F90290A31CA9AED9008969D6 /* libglfw3.a in Frameworks */,
 				F90290A11CA9AED0008969D6 /* libGLEW.a in Frameworks */,
@@ -115,6 +116,7 @@
 		F902908A1CA9AE76008969D6 = {
 			isa = PBXGroup;
 			children = (
+				F976AECF1CCAA39E00CABAC3 /* OpenCL.framework */,
 				F902909D1CA9AE99008969D6 /* Dependencies */,
 				F90290951CA9AE76008969D6 /* FinalProjectDesPats */,
 				F90290941CA9AE76008969D6 /* Products */,

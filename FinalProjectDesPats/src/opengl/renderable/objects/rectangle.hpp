@@ -22,7 +22,6 @@ namespace cap { namespace graphics {
         rectangle(vec2, vec3);
         
         void buffer();
-        void rebuffer();
         
         void draw();
         void setup();

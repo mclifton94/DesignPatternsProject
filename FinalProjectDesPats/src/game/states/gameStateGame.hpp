@@ -27,13 +27,13 @@ namespace cap { namespace state {
     public:
         gameStateGame(gameWindow*, game*);
         
+        void setup();
         void loop();
         void setWindow(gameWindow*);
         bool changeState();
     private:
         gameWindow* m_Window;
         game* m_Game;
-        std::unique_ptr<timer> m_Timer;
         
     };
 

@@ -28,5 +28,6 @@ namespace cap { namespace graphics {
         void bindBuffer();
         void unbindBuffer();
         void bufferData(GLsizei, int, vertex*, GLuint);
+        GLuint getID() const { return m_buffer; }
     };
 }}

@@ -23,7 +23,6 @@ namespace cap { namespace graphics {
         point(vec3);
         
         void buffer();
-        void rebuffer();
         
         void draw();
         void setup();

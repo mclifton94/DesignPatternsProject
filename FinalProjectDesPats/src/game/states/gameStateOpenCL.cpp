@@ -19,6 +19,10 @@ namespace cap { namespace state {
     : m_Window(window), m_Game(game)
     {}
     
+    void gameStateOpenCL::setup(){
+        
+    }
+    
     void gameStateOpenCL::loop(){
         std::cout << "OPENCL STATE!\n";
         

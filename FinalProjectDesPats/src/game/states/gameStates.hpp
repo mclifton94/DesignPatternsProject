@@ -14,6 +14,7 @@ namespace cap { namespace state {
 
     class gameStates {
     public:
+        virtual void setup() = 0;
         virtual void loop() = 0;
         virtual bool changeState() = 0;
     };

@@ -83,7 +83,7 @@ namespace cap { namespace graphics {
     }
     
     //--------------------------------------------------------------------------------
-    void gameWindow::setTitle( char* Title ){ m_title = Title; }
+    void gameWindow::setTitle( char* Title ){ m_title = Title; glfwSetWindowTitle(m_pWindow, Title); }
     
     //--------------------------------------------------------------------------------
     GLFWwindow* gameWindow::getWindowID() const { return m_pWindow; }
