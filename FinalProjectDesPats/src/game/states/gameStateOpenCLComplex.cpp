@@ -65,7 +65,7 @@ namespace cap { namespace state {
         for(int i=0; i< numPts; i++){
             if( i%2 == 0){
                 pts.push_back(point(vec3((2*i)/(float)numPts-1,(2*i)/(float)numPts-1, -1)));
-                data[i].mass = .1;
+                data[i].mass = 10;
             }else{
                 pts.push_back(point(vec3((2*i)/(float)numPts-1,(-2*i)/(float)numPts+1, -1)));
                 data[i].mass = 16;
