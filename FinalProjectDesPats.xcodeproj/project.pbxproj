@@ -32,6 +32,7 @@
 		F9DB3C7A1CCD650200CF9187 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DB3C711CCD64F400CF9187 /* libcommon.a */; };
 		F9DB3C7B1CCD650600CF9187 /* libopenal.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DB3C751CCD64F400CF9187 /* libopenal.dylib */; };
 		F9DB3C7C1CCD650600CF9187 /* libtest-common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DB3C791CCD64F400CF9187 /* libtest-common.a */; };
+		F9DB3C8C1CCD6FFA00CF9187 /* audioTrack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9DB3C8A1CCD6FFA00CF9187 /* audioTrack.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,8 @@
 		F9BE79121CBA7E64006FC4E5 /* point.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = point.hpp; path = src/opengl/renderable/objects/point.hpp; sourceTree = "<group>"; };
 		F9DB3C3E1CCD608D00CF9187 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OpenAL.xcodeproj; path = Dependencies/alut/OpenAL.xcodeproj; sourceTree = "<group>"; };
+		F9DB3C8A1CCD6FFA00CF9187 /* audioTrack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = audioTrack.cpp; path = src/openal/audioTrack.cpp; sourceTree = "<group>"; };
+		F9DB3C8B1CCD6FFA00CF9187 /* audioTrack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = audioTrack.hpp; path = src/openal/audioTrack.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +267,7 @@
 		F90D59301CB1785F00DE5083 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F9DB3C7F1CCD6FDD00CF9187 /* openal */,
 				F90D59391CB18A8800DE5083 /* opencl */,
 				F90D593A1CB18A8F00DE5083 /* opengl */,
 				F90D593B1CB18B2900DE5083 /* game */,
@@ -482,6 +486,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F9DB3C7F1CCD6FDD00CF9187 /* openal */ = {
+			isa = PBXGroup;
+			children = (
+				F9DB3C8A1CCD6FFA00CF9187 /* audioTrack.cpp */,
+				F9DB3C8B1CCD6FFA00CF9187 /* audioTrack.hpp */,
+			);
+			name = openal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -607,6 +620,7 @@
 				F9897D6E1CB30DB60035EDD4 /* buffer.cpp in Sources */,
 				F9897D541CB2DE750035EDD4 /* fileReader.cpp in Sources */,
 				F90D59471CB18E7A00DE5083 /* gameStateMenu.cpp in Sources */,
+				F9DB3C8C1CCD6FFA00CF9187 /* audioTrack.cpp in Sources */,
 				F90D593E1CB18BBA00DE5083 /* game.cpp in Sources */,
 				F90D595A1CB1A17900DE5083 /* mouse.cpp in Sources */,
 				F909D11F1CCD2DEC00566343 /* textureManager.cpp in Sources */,
