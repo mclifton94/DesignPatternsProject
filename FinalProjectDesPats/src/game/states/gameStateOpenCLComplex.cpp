@@ -15,11 +15,6 @@ using namespace opencl;
 
 namespace cap { namespace state {
     
-    gameStateOpenCLComplex::gameStateOpenCLComplex(gameWindow* window, game* game)
-    : m_Window(window), m_Game(game), o(opencl::DEVICE::GPU)
-    {
-    }
-    
     boundaries getBounds(float tlX, float tlY, float brX, float brY){
         boundaries bounds;
         
@@ -38,14 +33,18 @@ namespace cap { namespace state {
         return bounds;
     }
     
+    gameStateOpenCLComplex::gameStateOpenCLComplex(gameWindow* window, game* game)
+    : m_Window(window), m_Game(game), o(opencl::DEVICE::GPU)
+    {
+        m_shader.reset(new shaderObject(tools::getEnv("/FinalProjectDesPats/res/shaders/vs.shader"), tools::getEnv("/FinalProjectDesPats/res/shaders/fs.shader")));
+        m_shader->enable();
+        m_shader->setUniformMat4("pr_matrix", Perspective(90, 640/480.f, .1, 100));
+        m_shader->disable();
+    }
+    
     void gameStateOpenCLComplex::setup(){
-        std::cerr << "OpenCL Complex!\n";
         
-        shaderObject shader(tools::getEnv("/FinalProjectDesPats/res/shaders/vs.shader"), tools::getEnv("/FinalProjectDesPats/res/shaders/fs.shader"));
-        shader.enable();
-        shader.setUniformMat4("pr_matrix", Perspective(90, 640/480.f, .1, 100));
-        
-        glPointSize(1);
+        glPointSize(3);
 
         direct none;
         none.xValue = 0;
@@ -85,7 +84,7 @@ namespace cap { namespace state {
     void gameStateOpenCLComplex::loop(){
         
         m_Window->clear();
-        
+        m_shader->enable();
         getInput();
         
         arg1.actualParam = &numPts;
@@ -124,9 +123,21 @@ namespace cap { namespace state {
         
         m_Window->swap();
         glfwPollEvents();
+        m_shader->disable();
+        changeState();
     }
     
     bool gameStateOpenCLComplex::changeState(){
+        if( inputKeyboard::keysPressed.count(GLFW_KEY_0) && inputKeyboard::keysPressed[GLFW_KEY_0]){
+            m_Game->setState(m_Game->getStateOpenCL());
+            return true;
+        }else if( inputKeyboard::keysPressed.count(GLFW_KEY_9) && inputKeyboard::keysPressed[GLFW_KEY_9]){
+            m_Game->setState(m_Game->getStateOpenCLComplex());
+            return true;
+        }else if( inputKeyboard::keysPressed.count(GLFW_KEY_8) && inputKeyboard::keysPressed[GLFW_KEY_8]){
+            m_Game->setState(m_Game->getStateMenu());
+            return true;
+        }
         return false;
     }
     
@@ -151,7 +162,6 @@ namespace cap { namespace state {
                 m_release = false;
             }
         }
-        
     }
     
 }}

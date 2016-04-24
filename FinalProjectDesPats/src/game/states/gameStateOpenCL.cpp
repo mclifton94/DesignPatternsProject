@@ -52,17 +52,16 @@ namespace cap { namespace state {
         o.wait();
         o.getResults(results);
         
-        for(int i = 0; i < DATA_SIZE/1024; i++)
-        {
-            std::cout << results[i].start << " " << results[i].end << " " << results[i].value << "\n";
+        for(int i = 0; i < DATA_SIZE/1024; i++){
+            std::cerr << results[i].start << " " << results[i].end << " " << results[i].value << "\n";
         }
         
-        glfwSetWindowShouldClose(m_Window->getWindowID(), true);
-        return;
+        changeState();
     }
     
     bool gameStateOpenCL::changeState(){
-        return false;
+        m_Game->setState(m_Game->getStateMenu());
+        return true;
     }
     
 }}

@@ -93,4 +93,8 @@ namespace cap { namespace graphics {
         return m_direction;
     }
     
+    point* point::clone(){
+        return this;
+    }
+    
 }}

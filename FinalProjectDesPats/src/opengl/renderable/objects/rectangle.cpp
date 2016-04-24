@@ -27,6 +27,7 @@ namespace cap { namespace graphics {
             m_buffer->genBuffer();
         m_buffer->bindBuffer();
         m_buffer->bufferData(4, sizeof(vertex), m_vertices.get(), GL_STATIC_DRAW);
+        m_buffer->unbindBuffer();
     }
     
     void rectangle::draw(){
@@ -43,6 +44,13 @@ namespace cap { namespace graphics {
         glVertexAttribPointer(3, sizeof(vertex::tid)/sizeof(GLfloat), GL_FLOAT, GL_FALSE, sizeof(vertex), BUFFER_OFFSET(offsetof(vertex, tid)));
         
         glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
+        
+        glDisableVertexAttribArray(0);
+        glDisableVertexAttribArray(1);
+        glDisableVertexAttribArray(2);
+        glDisableVertexAttribArray(3);
+        
+        m_buffer->unbindBuffer();
     }
     
     void rectangle::setup(){
@@ -69,7 +77,6 @@ namespace cap { namespace graphics {
     
     void rectangle::setColor(vec4 color){
         m_color = color;
-        
         setup();
         buffer();
     }
@@ -108,6 +115,18 @@ namespace cap { namespace graphics {
     
     void rectangle::setTexID(float tid){
         m_texID = tid;
+        setup();
+        buffer();
+    }
+    
+    rectangle* rectangle::clone(){
+        rectangle* newClone = new rectangle(m_size, m_position);
+        newClone->m_direction = m_direction;
+        newClone->m_velocity = m_velocity;
+        newClone->m_texID = m_texID;
+        newClone->m_texture = m_texture;
+        newClone->m_mass = m_mass;
+        return newClone;
     }
     
 }}

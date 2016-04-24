@@ -44,7 +44,7 @@ namespace cap { namespace state {
         
         float m_gravity;
         
-    public:
+    protected:
         int numPts = 64;
         cap::opencl::pt pt[64];
         std::vector<point> pts;
@@ -63,7 +63,9 @@ namespace cap { namespace state {
     private:
         gameWindow* m_Window;
         game* m_Game;
-        std::unique_ptr<timer> m_Timer;
+        
+        std::unique_ptr<shaderObject> m_shader;
+        
         bool m_release;
     };
     

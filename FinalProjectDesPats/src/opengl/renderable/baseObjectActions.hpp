@@ -25,4 +25,6 @@ public:
     
     virtual void setDirection(vec3) = 0;
     virtual vec3 getDirection() = 0;
+    
+    virtual cap::graphics::baseObject* clone() = 0;
 };

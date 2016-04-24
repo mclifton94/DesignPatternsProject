@@ -29,6 +29,7 @@ namespace cap { namespace state {
         m_pStateMenu.reset(new gameStateMenu(window.get(), this));
         m_pStateOpenCL.reset(new gameStateOpenCL(window.get(), this));
         m_pStateOpenCLComplex.reset(new gameStateOpenCLComplex(window.get(), this));
+        
         setState(m_pStateMenu.get());
         
         m_Timer->reset();

@@ -13,6 +13,7 @@
 #include "keyboard.hpp"
 #include "mouse.hpp"
 #include "timer.hpp"
+#include "shaderObject.hpp"
 
 #include "gameStates.hpp"
 
@@ -34,6 +35,7 @@ namespace cap { namespace state {
     private:
         gameWindow* m_Window;
         game* m_Game;
+        std::unique_ptr<shaderObject> m_shader;
         
     };
 

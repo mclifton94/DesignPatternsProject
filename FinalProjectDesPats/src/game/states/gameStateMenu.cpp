@@ -70,13 +70,14 @@ namespace cap { namespace state {
     }
     
     bool gameStateMenu::changeState(){
-        if( inputKeyboard::keysPressed.count(GLFW_KEY_0)){
-            m_shader->disable();
+        if( inputKeyboard::keysPressed.count(GLFW_KEY_0) && inputKeyboard::keysPressed[GLFW_KEY_0]){
             m_Game->setState(m_Game->getStateOpenCL());
             return true;
-        }else if( inputKeyboard::keysPressed.count(GLFW_KEY_9)){
-            m_shader->disable();
+        }else if( inputKeyboard::keysPressed.count(GLFW_KEY_9) && inputKeyboard::keysPressed[GLFW_KEY_9]){
             m_Game->setState(m_Game->getStateOpenCLComplex());
+            return true;
+        }else if( inputKeyboard::keysPressed.count(GLFW_KEY_8) && inputKeyboard::keysPressed[GLFW_KEY_8]){
+            m_Game->setState(m_Game->getStateMenu());
             return true;
         }
         return false;

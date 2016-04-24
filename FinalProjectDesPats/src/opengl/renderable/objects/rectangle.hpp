@@ -40,6 +40,8 @@ namespace cap { namespace graphics {
         
         void setTexture(texture*);
         void setTexID(float);
+        
+        rectangle* clone();
     };
     
 }}
