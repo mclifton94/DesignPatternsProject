@@ -14,7 +14,7 @@
 #include "mouse.hpp"
 #include "timer.hpp"
 
-#include "texture.hpp"
+#include "textureManager.hpp"
 #include "rectangle.hpp"
 #include "gameStates.hpp"
 #include "shaderObject.hpp"
@@ -44,9 +44,8 @@ namespace cap { namespace state {
         std::unique_ptr<rectangle> m_menuPicture;
         
         std::unique_ptr<shaderObject> m_shader;
-        std::vector<texture*> m_textures;
-        std::vector<GLuint> m_texIDs;
-        
+        std::unique_ptr<textureManager> m_texManager;
+        pathToString m_txPath;
     };
     
 }}

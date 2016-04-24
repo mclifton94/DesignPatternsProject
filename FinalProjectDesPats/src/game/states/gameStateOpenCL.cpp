@@ -15,17 +15,17 @@
 
 namespace cap { namespace state {
     
+    //--------------------------------------------------------------------------------
     gameStateOpenCL::gameStateOpenCL(gameWindow* window, game* game)
     : m_Window(window), m_Game(game)
     {}
     
+    //--------------------------------------------------------------------------------
     void gameStateOpenCL::setup(){
-        
     }
     
+    //--------------------------------------------------------------------------------
     void gameStateOpenCL::loop(){
-        std::cout << "OPENCL STATE!\n";
-        
         float data[DATA_SIZE];
         for(int i=0; i<DATA_SIZE; i++){
             data[i] = rand()%100-50;
@@ -59,6 +59,7 @@ namespace cap { namespace state {
         changeState();
     }
     
+    //--------------------------------------------------------------------------------
     bool gameStateOpenCL::changeState(){
         m_Game->setState(m_Game->getStateMenu());
         return true;

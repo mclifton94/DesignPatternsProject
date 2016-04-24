@@ -16,6 +16,7 @@ namespace cap { namespace graphics {
 
     class loadTexture {
     public:
+        //--------------------------------------------------------------------------------
         static BYTE* load_Texture(const char* filename, GLsizei* width, GLsizei* height)
         {
             FREE_IMAGE_FORMAT fif = FIF_UNKNOWN;
@@ -37,6 +38,7 @@ namespace cap { namespace graphics {
             
             return result;
         }
+        //--------------------------------------------------------------------------------
     };
 
 }}

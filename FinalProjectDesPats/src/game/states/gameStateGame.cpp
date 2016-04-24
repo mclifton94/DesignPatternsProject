@@ -40,6 +40,7 @@ namespace cap { namespace state {
         changeState();
     }
     
+    //--------------------------------------------------------------------------------
     bool gameStateGame::changeState(){
         if( inputKeyboard::keysPressed.count(GLFW_KEY_0) && inputKeyboard::keysPressed[GLFW_KEY_0]){
             m_Game->setState(m_Game->getStateOpenCL());

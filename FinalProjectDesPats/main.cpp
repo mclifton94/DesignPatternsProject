@@ -9,7 +9,6 @@
 #include "game.hpp"
 
 auto main(int argc, const char * argv[]) -> int {
-    
     cap::state::game* g = cap::state::game::getInstance();
     g->loop();
 

@@ -13,6 +13,7 @@
 		F90290A31CA9AED9008969D6 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A21CA9AED9008969D6 /* libglfw3.a */; };
 		F90290A51CA9AEE2008969D6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A41CA9AEE2008969D6 /* OpenGL.framework */; };
 		F909D1131CCCFD0C00566343 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F909D1111CCCFD0C00566343 /* texture.cpp */; };
+		F909D11F1CCD2DEC00566343 /* textureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F909D11D1CCD2DEC00566343 /* textureManager.cpp */; };
 		F90D593E1CB18BBA00DE5083 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D593C1CB18BBA00DE5083 /* game.cpp */; };
 		F90D59421CB18E5C00DE5083 /* gameStateGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59401CB18E5C00DE5083 /* gameStateGame.cpp */; };
 		F90D59471CB18E7A00DE5083 /* gameStateMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59451CB18E7A00DE5083 /* gameStateMenu.cpp */; };
@@ -55,6 +56,8 @@
 		F909D1151CCCFF7D00566343 /* textureLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = textureLoad.hpp; path = src/opengl/textureManagement/textureLoad.hpp; sourceTree = "<group>"; };
 		F909D1191CCD05A800566343 /* fsMenu.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fsMenu.shader; path = res/shaders/fsMenu.shader; sourceTree = "<group>"; };
 		F909D11A1CCD05A800566343 /* vsMenu.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vsMenu.shader; path = res/shaders/vsMenu.shader; sourceTree = "<group>"; };
+		F909D11D1CCD2DEC00566343 /* textureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = textureManager.cpp; path = src/opengl/textureManagement/textureManager.cpp; sourceTree = "<group>"; };
+		F909D11E1CCD2DEC00566343 /* textureManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = textureManager.hpp; path = src/opengl/textureManagement/textureManager.hpp; sourceTree = "<group>"; };
 		F90D59371CB18A7900DE5083 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = Dependencies/OpenCL.framework; sourceTree = "<group>"; };
 		F90D593C1CB18BBA00DE5083 /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = game.cpp; path = src/game/interface/game.cpp; sourceTree = "<group>"; };
 		F90D593D1CB18BBA00DE5083 /* game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = game.hpp; path = src/game/interface/game.hpp; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 				F909D1111CCCFD0C00566343 /* texture.cpp */,
 				F909D1121CCCFD0C00566343 /* texture.hpp */,
 				F909D1151CCCFF7D00566343 /* textureLoad.hpp */,
+				F909D11D1CCD2DEC00566343 /* textureManager.cpp */,
+				F909D11E1CCD2DEC00566343 /* textureManager.hpp */,
 			);
 			name = textureManagement;
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 				F90D59471CB18E7A00DE5083 /* gameStateMenu.cpp in Sources */,
 				F90D593E1CB18BBA00DE5083 /* game.cpp in Sources */,
 				F90D595A1CB1A17900DE5083 /* mouse.cpp in Sources */,
+				F909D11F1CCD2DEC00566343 /* textureManager.cpp in Sources */,
 				F9897D671CB2EAED0035EDD4 /* baseObject.cpp in Sources */,
 				F90D595F1CB1AAEF00DE5083 /* ocl.cpp in Sources */,
 				F95C93BD1CB6A0B4004E0403 /* gameStateOpenCL.cpp in Sources */,

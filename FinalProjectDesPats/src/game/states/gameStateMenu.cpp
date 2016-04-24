@@ -23,25 +23,21 @@ namespace cap { namespace state {
         m_shader->enable();
         m_shader->setUniformMat4("pr_matrix", Ortho(-1, 1, -1, 1, .1, 100));
         
-        m_textures.push_back(new texture(tools::getEnv("/FinalProjectDesPats/res/textures/MenuPicture.png")));
+        m_txPath["MenuPic"] = tools::getEnv("/FinalProjectDesPats/res/textures/MenuPicture.png");
         
-        GLint texIDs[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-        m_shader->setUniform1iv("textures", texIDs, 10);
+        m_texManager.reset(new textureManager(16));
+        m_texManager->submitTexture(m_txPath["MenuPic"]);
+        m_shader->setUniform1iv("textures", m_texManager->getTextureIDs(), 16);
         
         m_menuPicture.reset(new rectangle(vec2(2,2),vec3(0,0,-1)));
-        m_menuPicture->setTexture(m_textures[0]);
-        m_menuPicture->setTexID(1);
-        
-        m_texIDs.push_back(m_menuPicture->m_texture->getID());
+        m_menuPicture->setTexture(m_texManager->findTexture(m_txPath["MenuPic"]).texture);
+        m_menuPicture->setTexID(m_texManager->bindTexture(m_txPath["MenuPic"]));
         
         m_shader->disable();
     }
     
     //--------------------------------------------------------------------------------
     gameStateMenu::~gameStateMenu(){
-        for(int c=0; c<m_textures.size(); c++){
-            delete m_textures[c];
-        }
     }
     
     //--------------------------------------------------------------------------------
@@ -53,11 +49,7 @@ namespace cap { namespace state {
         m_Window->clear();
         
         m_shader->enable();
-        
-        for (int i = 0; i < m_texIDs.size(); i++){
-            glActiveTexture(GL_TEXTURE0 + i);
-            glBindTexture(GL_TEXTURE_2D, m_texIDs[i]);
-        }
+        m_texManager->enableTextures();
         
         m_menuPicture->draw();
         
@@ -69,6 +61,7 @@ namespace cap { namespace state {
         changeState();
     }
     
+    //--------------------------------------------------------------------------------
     bool gameStateMenu::changeState(){
         if( inputKeyboard::keysPressed.count(GLFW_KEY_0) && inputKeyboard::keysPressed[GLFW_KEY_0]){
             m_Game->setState(m_Game->getStateOpenCL());
@@ -82,5 +75,4 @@ namespace cap { namespace state {
         }
         return false;
     }
-    
 }}

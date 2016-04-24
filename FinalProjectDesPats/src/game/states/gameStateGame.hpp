@@ -24,6 +24,7 @@ using namespace utils;
 
 namespace cap { namespace state {
     class game;
+    
     class gameStateGame : public gameStates {
     public:
         gameStateGame(gameWindow*, game*);
@@ -32,6 +33,7 @@ namespace cap { namespace state {
         void loop();
         void setWindow(gameWindow*);
         bool changeState();
+    
     private:
         gameWindow* m_Window;
         game* m_Game;

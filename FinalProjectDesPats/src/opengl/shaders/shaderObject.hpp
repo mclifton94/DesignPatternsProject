@@ -34,6 +34,7 @@ namespace cap { namespace graphics {
         
         GLint getUniformLocation(const GLchar* name);
         
+        //--------------------------------------------------------------------------------
         void setUniform1f(const GLchar* name, float value);
         void setUniform1fv(const GLchar* name, float* value, int count);
         void setUniform1i(const GLchar* name, int value);

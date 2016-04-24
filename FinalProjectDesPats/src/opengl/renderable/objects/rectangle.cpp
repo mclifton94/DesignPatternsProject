@@ -10,6 +10,7 @@
 
 namespace cap { namespace graphics {
     
+    //--------------------------------------------------------------------------------
     rectangle::rectangle(vec2 size, vec3 position){
         m_size = size;
         m_position = position;
@@ -22,6 +23,7 @@ namespace cap { namespace graphics {
         buffer();
     }
 
+    //--------------------------------------------------------------------------------
     void rectangle::buffer(){
         if(m_buffer->getID() == 0)
             m_buffer->genBuffer();
@@ -30,6 +32,7 @@ namespace cap { namespace graphics {
         m_buffer->unbindBuffer();
     }
     
+    //--------------------------------------------------------------------------------
     void rectangle::draw(){
         m_buffer->bindBuffer();
         
@@ -53,6 +56,7 @@ namespace cap { namespace graphics {
         m_buffer->unbindBuffer();
     }
     
+    //--------------------------------------------------------------------------------
     void rectangle::setup(){
         m_vertices[0].color = m_color;
         m_vertices[0].position = vec3(m_position[0]+m_size[0]/2.f, m_position[1]+m_size[1]/2.f, m_position[2]);
@@ -75,50 +79,61 @@ namespace cap { namespace graphics {
         m_vertices[3].tid = m_texID;
     }
     
+    //--------------------------------------------------------------------------------
     void rectangle::setColor(vec4 color){
         m_color = color;
         setup();
         buffer();
     }
     
+    //--------------------------------------------------------------------------------
     vec4 rectangle::getColor(){
         return m_color;
     }
     
+    //--------------------------------------------------------------------------------
     void rectangle::setVelocity(float velocity){
         m_velocity = velocity;
     }
     
+    //--------------------------------------------------------------------------------
     float rectangle::getVelocity(){
         return m_velocity;
     }
     
+    //--------------------------------------------------------------------------------
     void rectangle::setMass(float mass){
         m_mass = mass;
     }
     
+    //--------------------------------------------------------------------------------
     float rectangle::getMass(){
         return m_mass;
     }
     
+    //--------------------------------------------------------------------------------
     void rectangle::setDirection(vec3 direction){
         m_direction = direction;
     }
     
+    //--------------------------------------------------------------------------------
     vec3 rectangle::getDirection(){
         return m_direction;
     }
     
+    //--------------------------------------------------------------------------------
     void rectangle::setTexture(texture* Texture){
         m_texture = Texture;
     }
     
+    //--------------------------------------------------------------------------------
     void rectangle::setTexID(float tid){
         m_texID = tid;
         setup();
         buffer();
     }
     
+    //--------------------------------------------------------------------------------
     rectangle* rectangle::clone(){
         rectangle* newClone = new rectangle(m_size, m_position);
         newClone->m_direction = m_direction;

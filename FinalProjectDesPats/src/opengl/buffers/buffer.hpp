@@ -19,7 +19,6 @@ namespace cap { namespace graphics {
     class bufferObject {
     private:
         GLuint m_buffer, m_type;
-        unsigned int m_count;
     public:
         bufferObject(GLuint);
         ~bufferObject();

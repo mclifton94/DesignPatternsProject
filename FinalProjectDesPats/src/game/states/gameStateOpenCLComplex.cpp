@@ -15,6 +15,7 @@ using namespace opencl;
 
 namespace cap { namespace state {
     
+    //--------------------------------------------------------------------------------
     boundaries getBounds(float tlX, float tlY, float brX, float brY){
         boundaries bounds;
         
@@ -33,6 +34,7 @@ namespace cap { namespace state {
         return bounds;
     }
     
+    //--------------------------------------------------------------------------------
     gameStateOpenCLComplex::gameStateOpenCLComplex(gameWindow* window, game* game)
     : m_Window(window), m_Game(game), o(opencl::DEVICE::GPU)
     {
@@ -42,6 +44,7 @@ namespace cap { namespace state {
         m_shader->disable();
     }
     
+    //--------------------------------------------------------------------------------
     void gameStateOpenCLComplex::setup(){
         
         glPointSize(3);
@@ -81,6 +84,7 @@ namespace cap { namespace state {
         bounds = boundaries(getBounds(-640/480.f, 1, 640/480.f, -1));
     }
     
+    //--------------------------------------------------------------------------------
     void gameStateOpenCLComplex::loop(){
         
         m_Window->clear();
@@ -127,6 +131,7 @@ namespace cap { namespace state {
         changeState();
     }
     
+    //--------------------------------------------------------------------------------
     bool gameStateOpenCLComplex::changeState(){
         if( inputKeyboard::keysPressed.count(GLFW_KEY_0) && inputKeyboard::keysPressed[GLFW_KEY_0]){
             m_Game->setState(m_Game->getStateOpenCL());
@@ -141,6 +146,7 @@ namespace cap { namespace state {
         return false;
     }
     
+    //--------------------------------------------------------------------------------
     void gameStateOpenCLComplex::getInput(){
         if(inputKeyboard::keysPressed.count(GLFW_KEY_1)){
             if(inputKeyboard::keysPressed[GLFW_KEY_1]){

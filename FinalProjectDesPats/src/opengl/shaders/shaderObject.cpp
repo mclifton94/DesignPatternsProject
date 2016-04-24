@@ -11,6 +11,7 @@
 
 namespace cap { namespace graphics {
     
+    //--------------------------------------------------------------------------------
     shaderObject::shaderObject(std::string vertexShader, std::string fragmentShader)
     : m_vsPath(vertexShader), m_fsPath(fragmentShader)
     {
@@ -45,10 +46,12 @@ namespace cap { namespace graphics {
         glDeleteShader(m_fs);
     }
     
+    //--------------------------------------------------------------------------------
     shaderObject::~shaderObject(){
         glDeleteProgram(m_program);
     }
     
+    //--------------------------------------------------------------------------------
     bool shaderObject::load(std::string path, int shaderType, GLuint& shader){
         if(!m_reader.open(path)){
             std::cerr << "Failed to open " << path << "\n";
@@ -56,7 +59,6 @@ namespace cap { namespace graphics {
         }
         
         std::string contents = "";
-        
         unsigned char c;
         while(m_reader.read(c)){
             contents += c;
@@ -67,13 +69,11 @@ namespace cap { namespace graphics {
         shader = glCreateShader(shaderType);
         const char* c_str = contents.c_str();
         glShaderSource(shader, 1, &c_str, NULL);
-        
         glCompileShader(shader);
         
         GLint result;
         glGetShaderiv(shader, GL_COMPILE_STATUS, &result);
-        if (result == GL_FALSE)
-        {
+        if (result == GL_FALSE){
             GLint length;
             glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &length);
             std::vector<char> error(length);
@@ -86,48 +86,48 @@ namespace cap { namespace graphics {
         return true;
     }
     
-    GLint shaderObject::getUniformLocation(const GLchar* name)
-    {
+    //--------------------------------------------------------------------------------
+    GLint shaderObject::getUniformLocation(const GLchar* name){
         return glGetUniformLocation(m_program, name);
     }
     
-    void shaderObject::setUniform1f(const GLchar* name, float value)
-    {
+    //--------------------------------------------------------------------------------
+    void shaderObject::setUniform1f(const GLchar* name, float value){
         glUniform1f(getUniformLocation(name), value);
     }
-    void shaderObject::setUniform1fv(const GLchar* name, float* value, int count)
-    {
+    
+    //--------------------------------------------------------------------------------
+    void shaderObject::setUniform1fv(const GLchar* name, float* value, int count){
         glUniform1fv(getUniformLocation(name), count, value);
     }
     
-    void shaderObject::setUniform1i(const GLchar* name, int value)
-    {
+    //--------------------------------------------------------------------------------
+    void shaderObject::setUniform1i(const GLchar* name, int value){
         glUniform1i(getUniformLocation(name), value);
     }
     
-    void shaderObject::setUniform1iv(const GLchar* name, int* value, int count)
-    {
+    //--------------------------------------------------------------------------------
+    void shaderObject::setUniform1iv(const GLchar* name, int* value, int count){
         glUniform1iv(getUniformLocation(name), count, value);
     }
     
-    void shaderObject::setUniform2f(const GLchar* name, const vec2& vector)
-    {
+    //--------------------------------------------------------------------------------
+    void shaderObject::setUniform2f(const GLchar* name, const vec2& vector){
         glUniform2f(getUniformLocation(name), vector[0], vector[1]);
     }
     
-    void shaderObject::setUniform3f(const GLchar* name, const vec3& vector)
-    {
+    //--------------------------------------------------------------------------------
+    void shaderObject::setUniform3f(const GLchar* name, const vec3& vector){
         glUniform3f(getUniformLocation(name), vector[0], vector[1], vector[2]);
     }
     
-    void shaderObject::setUniform4f(const GLchar* name, const vec4& vector)
-    {
+    //--------------------------------------------------------------------------------
+    void shaderObject::setUniform4f(const GLchar* name, const vec4& vector){
         glUniform4f(getUniformLocation(name), vector[0], vector[1], vector[2], vector[3]);
     }
     
-    void shaderObject::setUniformMat4(const GLchar* name, const mat4& matrix)
-    {
+    //--------------------------------------------------------------------------------
+    void shaderObject::setUniformMat4(const GLchar* name, const mat4& matrix){
         glUniformMatrix4fv(getUniformLocation(name), 1, GL_TRUE, matrix);
     }
-    
 }}
