@@ -58,6 +58,7 @@
 		F909D11A1CCD05A800566343 /* vsMenu.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vsMenu.shader; path = res/shaders/vsMenu.shader; sourceTree = "<group>"; };
 		F909D11D1CCD2DEC00566343 /* textureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = textureManager.cpp; path = src/opengl/textureManagement/textureManager.cpp; sourceTree = "<group>"; };
 		F909D11E1CCD2DEC00566343 /* textureManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = textureManager.hpp; path = src/opengl/textureManagement/textureManager.hpp; sourceTree = "<group>"; };
+		F909D1201CCD3E2900566343 /* MenuPicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MenuPicture.png; path = res/textures/MenuPicture.png; sourceTree = "<group>"; };
 		F90D59371CB18A7900DE5083 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = Dependencies/OpenCL.framework; sourceTree = "<group>"; };
 		F90D593C1CB18BBA00DE5083 /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = game.cpp; path = src/game/interface/game.cpp; sourceTree = "<group>"; };
 		F90D593D1CB18BBA00DE5083 /* game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = game.hpp; path = src/game/interface/game.hpp; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 		F909D1171CCD040000566343 /* textures */ = {
 			isa = PBXGroup;
 			children = (
+				F909D1201CCD3E2900566343 /* MenuPicture.png */,
 			);
 			name = textures;
 			sourceTree = "<group>";
