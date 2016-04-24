@@ -1,0 +1,726 @@
+Performing C SOURCE FILE Test HAVE_C11_ATOMIC failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_84f82" "-configuration" "Debug"
+=== BUILD TARGET cmTC_84f82 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_84f82.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_84f82.build/Objects-normal/x86_64/cmTC_84f82.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_84f82.build/Objects-normal/x86_64/src.o src.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_84f82.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_84f82.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -DHAVE_C11_ATOMIC -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_84f82.build/Objects-normal/x86_64/src.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_84f82.build/Objects-normal/x86_64/src.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/src.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_84f82.build/Objects-normal/x86_64/src.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/src.c:5:13: error: address argument to atomic operation must be a pointer to non-const _Atomic type ('const _Atomic(int) *' invalid)
+     return atomic_load(&foo);
+            ^           ~~~~
+In file included from /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/src.c:1:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/stdatomic.h:134:29: note: expanded from macro 'atomic_load'
+#define atomic_load(object) __c11_atomic_load(object, __ATOMIC_SEQ_CST)
+                            ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_84f82.build/Objects-normal/x86_64/src.o src.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+Source file was:
+#include <stdatomic.h>
+ const int _Atomic foo = ATOMIC_VAR_INIT(~0);
+ int main()
+ {
+     return atomic_load(&foo);
+ }
+Performing C SOURCE FILE Test HAVE_GCC_PROTECTED_VISIBILITY failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_d31e4" "-configuration" "Debug"
+=== BUILD TARGET cmTC_d31e4 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d31e4.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d31e4.build/Objects-normal/x86_64/cmTC_d31e4.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_d31e4.build/Objects-normal/x86_64/src.o src.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d31e4.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d31e4.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -DHAVE_GCC_PROTECTED_VISIBILITY -D_LARGEFILE_SOURCE -D_LARGE_FILES -Wattributes -Werror -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d31e4.build/Objects-normal/x86_64/src.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d31e4.build/Objects-normal/x86_64/src.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/src.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d31e4.build/Objects-normal/x86_64/src.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/src.c:1:26: error: target does not support 'protected' visibility; using 'default' [-Werror,-Wunsupported-visibility]
+int foo() __attribute__((visibility("protected")));
+                         ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_d31e4.build/Objects-normal/x86_64/src.o src.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+Source file was:
+int foo() __attribute__((visibility("protected")));
+                             int main() {return 0;}
+Determining if the include file malloc.h exists failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_80782" "-configuration" "Debug"
+=== BUILD TARGET cmTC_80782 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_80782.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_80782.build/Objects-normal/x86_64/cmTC_80782.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_80782.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_80782.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_80782.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_80782.build/Objects-normal/x86_64/CheckIncludeFile.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_80782.build/Objects-normal/x86_64/CheckIncludeFile.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_80782.build/Objects-normal/x86_64/CheckIncludeFile.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'malloc.h' file not found
+#include <malloc.h>
+         ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_80782.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+
+Determining if the include file intrin.h exists failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_e9b60" "-configuration" "Debug"
+=== BUILD TARGET cmTC_e9b60 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e9b60.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e9b60.build/Objects-normal/x86_64/cmTC_e9b60.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_e9b60.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e9b60.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e9b60.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e9b60.build/Objects-normal/x86_64/CheckIncludeFile.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e9b60.build/Objects-normal/x86_64/CheckIncludeFile.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e9b60.build/Objects-normal/x86_64/CheckIncludeFile.o
+In file included from /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/intrin.h:26:15: fatal error: 'Intrin.h' file not found
+#include_next <Intrin.h>
+              ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_e9b60.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+
+Determining if the include file sys/sysconf.h exists failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_7ffae" "-configuration" "Debug"
+=== BUILD TARGET cmTC_7ffae OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7ffae.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7ffae.build/Objects-normal/x86_64/cmTC_7ffae.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_7ffae.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7ffae.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7ffae.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7ffae.build/Objects-normal/x86_64/CheckIncludeFile.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7ffae.build/Objects-normal/x86_64/CheckIncludeFile.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7ffae.build/Objects-normal/x86_64/CheckIncludeFile.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'sys/sysconf.h' file not found
+#include <sys/sysconf.h>
+         ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_7ffae.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+
+Determining if the include file ieeefp.h exists failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_ff173" "-configuration" "Debug"
+=== BUILD TARGET cmTC_ff173 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff173.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff173.build/Objects-normal/x86_64/cmTC_ff173.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_ff173.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff173.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff173.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff173.build/Objects-normal/x86_64/CheckIncludeFile.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff173.build/Objects-normal/x86_64/CheckIncludeFile.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ff173.build/Objects-normal/x86_64/CheckIncludeFile.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'ieeefp.h' file not found
+#include <ieeefp.h>
+         ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_ff173.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+
+Determining if the include file guiddef.h exists failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_654d6" "-configuration" "Debug"
+=== BUILD TARGET cmTC_654d6 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_654d6.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_654d6.build/Objects-normal/x86_64/cmTC_654d6.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_654d6.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_654d6.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_654d6.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_654d6.build/Objects-normal/x86_64/CheckIncludeFile.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_654d6.build/Objects-normal/x86_64/CheckIncludeFile.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_654d6.build/Objects-normal/x86_64/CheckIncludeFile.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'guiddef.h' file not found
+#include <guiddef.h>
+         ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_654d6.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+
+Determining if the include file initguid.h exists failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_94a84" "-configuration" "Debug"
+=== BUILD TARGET cmTC_94a84 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_94a84.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_94a84.build/Objects-normal/x86_64/cmTC_94a84.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_94a84.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_94a84.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_94a84.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_94a84.build/Objects-normal/x86_64/CheckIncludeFile.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_94a84.build/Objects-normal/x86_64/CheckIncludeFile.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_94a84.build/Objects-normal/x86_64/CheckIncludeFile.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'initguid.h' file not found
+#include <initguid.h>
+         ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_94a84.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+
+Determining if the aligned_alloc exist failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_6a45d" "-configuration" "Debug"
+=== BUILD TARGET cmTC_6a45d OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6a45d.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6a45d.build/Objects-normal/x86_64/cmTC_6a45d.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_6a45d.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6a45d.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6a45d.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6a45d.build/Objects-normal/x86_64/CheckSymbolExists.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6a45d.build/Objects-normal/x86_64/CheckSymbolExists.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_6a45d.build/Objects-normal/x86_64/CheckSymbolExists.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'aligned_alloc'
+  return ((int*)(&aligned_alloc))[argc];
+                  ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_6a45d.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+File /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef aligned_alloc
+  return ((int*)(&aligned_alloc))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the _aligned_malloc exist failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_ea8ca" "-configuration" "Debug"
+=== BUILD TARGET cmTC_ea8ca OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ea8ca.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ea8ca.build/Objects-normal/x86_64/cmTC_ea8ca.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_ea8ca.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ea8ca.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ea8ca.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ea8ca.build/Objects-normal/x86_64/CheckSymbolExists.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ea8ca.build/Objects-normal/x86_64/CheckSymbolExists.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_ea8ca.build/Objects-normal/x86_64/CheckSymbolExists.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: 'malloc.h' file not found
+#include <malloc.h>
+         ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_ea8ca.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+File /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _aligned_malloc
+  return ((int*)(&_aligned_malloc))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the _controlfp exist failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_fd911" "-configuration" "Debug"
+=== BUILD TARGET cmTC_fd911 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fd911.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fd911.build/Objects-normal/x86_64/cmTC_fd911.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_fd911.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fd911.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fd911.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fd911.build/Objects-normal/x86_64/CheckSymbolExists.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fd911.build/Objects-normal/x86_64/CheckSymbolExists.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fd911.build/Objects-normal/x86_64/CheckSymbolExists.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier '_controlfp'
+  return ((int*)(&_controlfp))[argc];
+                  ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_fd911.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+File /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _controlfp
+  return ((int*)(&_controlfp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the __control87_2 exist failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_a53dc" "-configuration" "Debug"
+=== BUILD TARGET cmTC_a53dc OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a53dc.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a53dc.build/Objects-normal/x86_64/cmTC_a53dc.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_a53dc.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a53dc.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a53dc.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a53dc.build/Objects-normal/x86_64/CheckSymbolExists.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a53dc.build/Objects-normal/x86_64/CheckSymbolExists.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a53dc.build/Objects-normal/x86_64/CheckSymbolExists.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier '__control87_2'
+  return ((int*)(&__control87_2))[argc];
+                  ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_a53dc.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+File /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <float.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef __control87_2
+  return ((int*)(&__control87_2))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file windows.h exists failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_1c287" "-configuration" "Debug"
+=== BUILD TARGET cmTC_1c287 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c287.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c287.build/Objects-normal/x86_64/cmTC_1c287.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_1c287.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c287.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c287.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_WIN32_WINNT=0x0502 -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c287.build/Objects-normal/x86_64/CheckIncludeFile.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c287.build/Objects-normal/x86_64/CheckIncludeFile.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_1c287.build/Objects-normal/x86_64/CheckIncludeFile.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: 'windows.h' file not found
+#include <windows.h>
+         ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_1c287.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+
+Determining if files pthread.h;pthread_np.h exist failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_fba0f" "-configuration" "Debug"
+=== BUILD TARGET cmTC_fba0f OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fba0f.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fba0f.build/Objects-normal/x86_64/cmTC_fba0f.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_fba0f.build/Objects-normal/x86_64/CheckIncludeFiles.o CheckIncludeFiles.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fba0f.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fba0f.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fba0f.build/Objects-normal/x86_64/CheckIncludeFiles.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fba0f.build/Objects-normal/x86_64/CheckIncludeFiles.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fba0f.build/Objects-normal/x86_64/CheckIncludeFiles.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:3:10: fatal error: 'pthread_np.h' file not found
+#include <pthread_np.h>
+         ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_fba0f.build/Objects-normal/x86_64/CheckIncludeFiles.o CheckIncludeFiles.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+Source:
+/* */
+#include <pthread.h>
+#include <pthread_np.h>
+
+
+int main(void){return 0;}
+
+Determining if the pthread_mutexattr_setkind_np exist failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_cf939" "-configuration" "Debug"
+=== BUILD TARGET cmTC_cf939 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_cf939.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_cf939.build/Objects-normal/x86_64/cmTC_cf939.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_cf939.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_cf939.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_cf939.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -pthread -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_cf939.build/Objects-normal/x86_64/CheckSymbolExists.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_cf939.build/Objects-normal/x86_64/CheckSymbolExists.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_cf939.build/Objects-normal/x86_64/CheckSymbolExists.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'pthread_mutexattr_setkind_np'
+  return ((int*)(&pthread_mutexattr_setkind_np))[argc];
+                  ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_cf939.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+File /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_mutexattr_setkind_np
+  return ((int*)(&pthread_mutexattr_setkind_np))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_mutex_timedlock exist failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_7f93b" "-configuration" "Debug"
+=== BUILD TARGET cmTC_7f93b OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7f93b.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7f93b.build/Objects-normal/x86_64/cmTC_7f93b.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_7f93b.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7f93b.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7f93b.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -pthread -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7f93b.build/Objects-normal/x86_64/CheckSymbolExists.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7f93b.build/Objects-normal/x86_64/CheckSymbolExists.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_7f93b.build/Objects-normal/x86_64/CheckSymbolExists.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'pthread_mutex_timedlock'; did you mean 'pthread_mutex_trylock'?
+  return ((int*)(&pthread_mutex_timedlock))[argc];
+                  ^~~~~~~~~~~~~~~~~~~~~~~
+                  pthread_mutex_trylock
+In file included from /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/pthread.h:362:5: note: 'pthread_mutex_trylock' declared here
+int pthread_mutex_trylock(pthread_mutex_t *);
+    ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_7f93b.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+File /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_mutex_timedlock
+  return ((int*)(&pthread_mutex_timedlock))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function clock_gettime exists in the rt failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_8fd9e" "-configuration" "Debug"
+=== BUILD TARGET cmTC_8fd9e OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8fd9e.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8fd9e.build/Objects-normal/x86_64/cmTC_8fd9e.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_8fd9e.build/Objects-normal/x86_64/CheckFunctionExists.o /Applications/CMake.app/Contents/share/cmake-3.5/Modules/CheckFunctionExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8fd9e.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8fd9e.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -DCHECK_FUNCTION_EXISTS=clock_gettime -D_LARGEFILE_SOURCE -D_LARGE_FILES -pthread -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8fd9e.build/Objects-normal/x86_64/CheckFunctionExists.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8fd9e.build/Objects-normal/x86_64/CheckFunctionExists.dia -c /Applications/CMake.app/Contents/share/cmake-3.5/Modules/CheckFunctionExists.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8fd9e.build/Objects-normal/x86_64/CheckFunctionExists.o
+
+Ld Debug/cmTC_8fd9e normal x86_64
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export MACOSX_DEPLOYMENT_TARGET=10.11
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -L/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8fd9e.build/Objects-normal/x86_64/cmTC_8fd9e.LinkFileList -mmacosx-version-min=10.11 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -lrt -lm -ldl -Xlinker -dependency_info -Xlinker /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8fd9e.build/Objects-normal/x86_64/cmTC_8fd9e_dependency_info.dat -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/cmTC_8fd9e
+ld: library not found for -lrt
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Ld Debug/cmTC_8fd9e normal x86_64
+(1 failure)
+
+
+Determining if the include file arm_neon.h exists failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_316cf" "-configuration" "Debug"
+=== BUILD TARGET cmTC_316cf OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_316cf.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_316cf.build/Objects-normal/x86_64/cmTC_316cf.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_316cf.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_316cf.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_316cf.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -pthread -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_316cf.build/Objects-normal/x86_64/CheckIncludeFile.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_316cf.build/Objects-normal/x86_64/CheckIncludeFile.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_316cf.build/Objects-normal/x86_64/CheckIncludeFile.o
+In file included from /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:28:2: error: "NEON support not enabled"
+#error "NEON support not enabled"
+ ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:98:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(8))) int8_t int8x8_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:99:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(16))) int8_t int8x16_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:100:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(4))) int16_t int16x4_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:101:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(8))) int16_t int16x8_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:102:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(2))) int32_t int32x2_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:103:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(4))) int32_t int32x4_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:104:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(1))) int64_t int64x1_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:105:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(2))) int64_t int64x2_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:106:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(8))) uint8_t uint8x8_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:107:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(16))) uint8_t uint8x16_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:108:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(4))) uint16_t uint16x4_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:109:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(8))) uint16_t uint16x8_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:110:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(2))) uint32_t uint32x2_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:111:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(4))) uint32_t uint32x4_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:112:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(1))) uint64_t uint64x1_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:113:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(2))) uint64_t uint64x2_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:114:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(4))) float16_t float16x4_t;
+                       ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/arm_neon.h:115:24: error: 'neon_vector_type' attribute is not supported for this target
+typedef __attribute__((neon_vector_type(8))) float16_t float16x8_t;
+                       ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_316cf.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+
+Determining if files SLES/OpenSLES.h;SLES/OpenSLES_Android.h exist failed with the following output:
+Change Dir: /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_0bd3e" "-configuration" "Debug"
+=== BUILD TARGET cmTC_0bd3e OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0bd3e.build/Objects-normal/x86_64
+write-file /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0bd3e.build/Objects-normal/x86_64/cmTC_0bd3e.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_0bd3e.build/Objects-normal/x86_64/CheckIncludeFiles.o CheckIncludeFiles.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0bd3e.build/DerivedSources/x86_64 -I/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0bd3e.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/Debug -std=c11 -D_LARGEFILE_SOURCE -D_LARGE_FILES -pthread -MMD -MT dependencies -MF /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0bd3e.build/Objects-normal/x86_64/CheckIncludeFiles.d --serialize-diagnostics /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0bd3e.build/Objects-normal/x86_64/CheckIncludeFiles.dia -c /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c -o /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0bd3e.build/Objects-normal/x86_64/CheckIncludeFiles.o
+/Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:10: fatal error: 'SLES/OpenSLES.h' file not found
+#include <SLES/OpenSLES.h>
+         ^
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC CMAKE_TRY_COMPILE.build/Debug/cmTC_0bd3e.build/Objects-normal/x86_64/CheckIncludeFiles.o CheckIncludeFiles.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+(1 failure)
+
+Source:
+/* */
+#include <SLES/OpenSLES.h>
+#include <SLES/OpenSLES_Android.h>
+
+
+int main(void){return 0;}
+

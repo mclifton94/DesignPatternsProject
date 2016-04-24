@@ -11,7 +11,6 @@
 		F902909F1CA9AEC2008969D6 /* libfreeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F902909E1CA9AEC2008969D6 /* libfreeimage.a */; };
 		F90290A11CA9AED0008969D6 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A01CA9AED0008969D6 /* libGLEW.a */; };
 		F90290A31CA9AED9008969D6 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A21CA9AED9008969D6 /* libglfw3.a */; };
-		F90290A51CA9AEE2008969D6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A41CA9AEE2008969D6 /* OpenGL.framework */; };
 		F909D1131CCCFD0C00566343 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F909D1111CCCFD0C00566343 /* texture.cpp */; };
 		F909D11F1CCD2DEC00566343 /* textureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F909D11D1CCD2DEC00566343 /* textureManager.cpp */; };
 		F90D593E1CB18BBA00DE5083 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D593C1CB18BBA00DE5083 /* game.cpp */; };
@@ -30,7 +29,62 @@
 		F9897D791CB31D450035EDD4 /* kernel.cl in Sources */ = {isa = PBXBuildFile; fileRef = F9897D781CB31D450035EDD4 /* kernel.cl */; };
 		F9BE79101CBA7D75006FC4E5 /* gameStateOpenCLComplex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9BE790E1CBA7D75006FC4E5 /* gameStateOpenCLComplex.cpp */; };
 		F9BE79131CBA7E64006FC4E5 /* point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9BE79111CBA7E64006FC4E5 /* point.cpp */; };
+		F9DB3C7A1CCD650200CF9187 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DB3C711CCD64F400CF9187 /* libcommon.a */; };
+		F9DB3C7B1CCD650600CF9187 /* libopenal.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DB3C751CCD64F400CF9187 /* libopenal.dylib */; };
+		F9DB3C7C1CCD650600CF9187 /* libtest-common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DB3C791CCD64F400CF9187 /* libtest-common.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9DB3C6C1CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 17457C40935843D08643A916;
+			remoteInfo = altonegen;
+		};
+		F9DB3C6E1CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4474D973388E4551A00041AD;
+			remoteInfo = bsincgen;
+		};
+		F9DB3C701CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 51F7F08CE88F48619E0EB76A;
+			remoteInfo = common;
+		};
+		F9DB3C721CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8E74782B114746E48EFC0EE7;
+			remoteInfo = makehrtf;
+		};
+		F9DB3C741CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3E6AB2EE4264B4293AB2343;
+			remoteInfo = openal;
+		};
+		F9DB3C761CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C505243B38E44DEBA502FA02;
+			remoteInfo = "openal-info";
+		};
+		F9DB3C781CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70B6D58D8029434DBB0E70B1;
+			remoteInfo = "test-common";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		F90290911CA9AE76008969D6 /* CopyFiles */ = {
@@ -103,6 +157,8 @@
 		F9BE790F1CBA7D75006FC4E5 /* gameStateOpenCLComplex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = gameStateOpenCLComplex.hpp; path = src/game/states/gameStateOpenCLComplex.hpp; sourceTree = "<group>"; };
 		F9BE79111CBA7E64006FC4E5 /* point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = point.cpp; path = src/opengl/renderable/objects/point.cpp; sourceTree = "<group>"; };
 		F9BE79121CBA7E64006FC4E5 /* point.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = point.hpp; path = src/opengl/renderable/objects/point.hpp; sourceTree = "<group>"; };
+		F9DB3C3E1CCD608D00CF9187 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OpenAL.xcodeproj; path = Dependencies/alut/OpenAL.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +166,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F90290A51CA9AEE2008969D6 /* OpenGL.framework in Frameworks */,
+				F9DB3C7B1CCD650600CF9187 /* libopenal.dylib in Frameworks */,
+				F9DB3C7C1CCD650600CF9187 /* libtest-common.a in Frameworks */,
+				F9DB3C7A1CCD650200CF9187 /* libcommon.a in Frameworks */,
 				F90290A31CA9AED9008969D6 /* libglfw3.a in Frameworks */,
 				F90290A11CA9AED0008969D6 /* libGLEW.a in Frameworks */,
 				F902909F1CA9AEC2008969D6 /* libfreeimage.a in Frameworks */,
@@ -150,6 +208,8 @@
 		F902909D1CA9AE99008969D6 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */,
+				F9DB3C3E1CCD608D00CF9187 /* OpenAL.framework */,
 				F90290A21CA9AED9008969D6 /* libglfw3.a */,
 				F90290A01CA9AED0008969D6 /* libGLEW.a */,
 				F902909E1CA9AEC2008969D6 /* libfreeimage.a */,
@@ -159,7 +219,7 @@
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		F909D1101CCCFCE100566343 /* textureManagement */ = {
+		F909D1101CCCFCE100566343 /* textures */ = {
 			isa = PBXGroup;
 			children = (
 				F909D1111CCCFD0C00566343 /* texture.cpp */,
@@ -168,7 +228,7 @@
 				F909D11D1CCD2DEC00566343 /* textureManager.cpp */,
 				F909D11E1CCD2DEC00566343 /* textureManager.hpp */,
 			);
-			name = textureManagement;
+			name = textures;
 			sourceTree = "<group>";
 		};
 		F909D1171CCD040000566343 /* textures */ = {
@@ -244,7 +304,7 @@
 		F90D593A1CB18A8F00DE5083 /* opengl */ = {
 			isa = PBXGroup;
 			children = (
-				F909D1101CCCFCE100566343 /* textureManagement */,
+				F909D1101CCCFCE100566343 /* textures */,
 				F9897D721CB31B580035EDD4 /* shaders */,
 				F9897D6B1CB30D8B0035EDD4 /* buffers */,
 				F9897D581CB2E7C50035EDD4 /* renderable */,
@@ -408,6 +468,20 @@
 			name = openclComplex;
 			sourceTree = "<group>";
 		};
+		F9DB3C601CCD64F400CF9187 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9DB3C6D1CCD64F400CF9187 /* altonegen */,
+				F9DB3C6F1CCD64F400CF9187 /* bsincgen */,
+				F9DB3C711CCD64F400CF9187 /* libcommon.a */,
+				F9DB3C731CCD64F400CF9187 /* makehrtf */,
+				F9DB3C751CCD64F400CF9187 /* libopenal.dylib */,
+				F9DB3C771CCD64F400CF9187 /* openal-info */,
+				F9DB3C791CCD64F400CF9187 /* libtest-common.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -452,12 +526,71 @@
 			mainGroup = F902908A1CA9AE76008969D6;
 			productRefGroup = F90290941CA9AE76008969D6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F9DB3C601CCD64F400CF9187 /* Products */;
+					ProjectRef = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F90290921CA9AE76008969D6 /* FinalProjectDesPats */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F9DB3C6D1CCD64F400CF9187 /* altonegen */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = altonegen;
+			remoteRef = F9DB3C6C1CCD64F400CF9187 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F9DB3C6F1CCD64F400CF9187 /* bsincgen */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = bsincgen;
+			remoteRef = F9DB3C6E1CCD64F400CF9187 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F9DB3C711CCD64F400CF9187 /* libcommon.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcommon.a;
+			remoteRef = F9DB3C701CCD64F400CF9187 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F9DB3C731CCD64F400CF9187 /* makehrtf */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = makehrtf;
+			remoteRef = F9DB3C721CCD64F400CF9187 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F9DB3C751CCD64F400CF9187 /* libopenal.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			name = libopenal.dylib;
+			path = libopenal.1.17.2.dylib;
+			remoteRef = F9DB3C741CCD64F400CF9187 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F9DB3C771CCD64F400CF9187 /* openal-info */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "openal-info";
+			remoteRef = F9DB3C761CCD64F400CF9187 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F9DB3C791CCD64F400CF9187 /* libtest-common.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libtest-common.a";
+			remoteRef = F9DB3C781CCD64F400CF9187 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F902908F1CA9AE76008969D6 /* Sources */ = {
@@ -571,6 +704,7 @@
 		F902909B1CA9AE76008969D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies",
@@ -579,6 +713,9 @@
 					"$(PROJECT_DIR)/Dependencies/glew/1.13.0/include",
 					"$(PROJECT_DIR)/Dependencies/glfw3/3.1.2/include",
 					"$(PROJECT_DIR)/Dependencies/freeimage/3.17.0/include",
+					"$(PROJECT_DIR)/Dependencies/alut",
+					"$(PROJECT_DIR)/Dependencies/alut/include",
+					"$(PROJECT_DIR)/Dependencies/alut/examples",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -593,6 +730,7 @@
 		F902909C1CA9AE76008969D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies",
@@ -601,6 +739,9 @@
 					"$(PROJECT_DIR)/Dependencies/glew/1.13.0/include",
 					"$(PROJECT_DIR)/Dependencies/glfw3/3.1.2/include",
 					"$(PROJECT_DIR)/Dependencies/freeimage/3.17.0/include",
+					"$(PROJECT_DIR)/Dependencies/alut",
+					"$(PROJECT_DIR)/Dependencies/alut/include",
+					"$(PROJECT_DIR)/Dependencies/alut/examples",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

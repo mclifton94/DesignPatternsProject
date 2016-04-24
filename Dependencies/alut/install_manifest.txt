@@ -1,0 +1,17 @@
+/usr/local/lib/libopenal.1.17.2.dylib
+/usr/local/lib/libopenal.1.dylib
+/usr/local/lib/libopenal.dylib
+/usr/local/include/AL/al.h
+/usr/local/include/AL/alc.h
+/usr/local/include/AL/alext.h
+/usr/local/include/AL/efx.h
+/usr/local/include/AL/efx-creative.h
+/usr/local/include/AL/efx-presets.h
+/usr/local/lib/pkgconfig/openal.pc
+/usr/local/share/openal/alsoftrc.sample
+/usr/local/share/openal/hrtf/default-44100.mhr
+/usr/local/share/openal/hrtf/default-48000.mhr
+/usr/local/bin/openal-info
+/usr/local/bin/makehrtf
+/usr/local/bin/bsincgen
+/usr/local/bin/altonegen

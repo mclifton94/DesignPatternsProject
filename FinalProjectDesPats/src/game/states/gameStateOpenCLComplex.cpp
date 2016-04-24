@@ -46,9 +46,10 @@ namespace cap { namespace state {
     
     //--------------------------------------------------------------------------------
     void gameStateOpenCLComplex::setup(){
-        
         glPointSize(3);
-
+        
+        pts.clear();
+        
         direct none;
         none.xValue = 0;
         none.yValue = 0;
@@ -86,7 +87,6 @@ namespace cap { namespace state {
     
     //--------------------------------------------------------------------------------
     void gameStateOpenCLComplex::loop(){
-        
         m_Window->clear();
         m_shader->enable();
         getInput();

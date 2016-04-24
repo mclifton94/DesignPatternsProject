@@ -1,0 +1,2222 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		6DFE014B6DF342D595F7886D /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6ACA2A707CEA460784C7EC6F /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				53D7B17C6C264D329AA87681 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				E82CD477D2D7446DB9684116 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		9ECFBFA547BB406286C8121B /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 799B4033861E48839A9102CB /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				DCA6D80094F8495A85800910 /* CMake Rules */,
+			);
+			dependencies = (
+				5A464161FC90447697CEBD2F /* PBXTargetDependency */,
+				B4055B05595440F4B9886867 /* PBXTargetDependency */,
+				6B7B3BD65D814521B4E67EC6 /* PBXTargetDependency */,
+				FF8C300C671748E6B5662C68 /* PBXTargetDependency */,
+				4F2868723D77459CAB95B625 /* PBXTargetDependency */,
+				85ED4DB812C94126B1D72AA6 /* PBXTargetDependency */,
+				08B78CE8F9C846149EFAD317 /* PBXTargetDependency */,
+				E5A1232E2490427B95B7728C /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		AD6D0FD10B1D45718781F368 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E9BE5BF249AC4A63A640A169 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				A9E53A7CE42F4815AB9F4E7A /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00394A930A7D4A209CF9A00B /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/equalizer.c */ = {isa = PBXBuildFile; fileRef = 9C853FDA893D490088967A6F /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/equalizer.c */; settings = {COMPILER_FLAGS = ""; }; };
+		03AF14BFBDF64A598092DB7D /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alState.c */ = {isa = PBXBuildFile; fileRef = 048B688C3D3A4765B289D6AD /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alState.c */; settings = {COMPILER_FLAGS = ""; }; };
+		0D961845AB464EBDB8C1A07C /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse2.c */ = {isa = PBXBuildFile; fileRef = AC25E9AEC1C845B2A4A44DB9 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse2.c */; settings = {COMPILER_FLAGS = "-msse2"; }; };
+		152603EFBA13433CBAC75D07 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/helpers.c */ = {isa = PBXBuildFile; fileRef = 076FADAEA3B3408A805BF184 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/helpers.c */; settings = {COMPILER_FLAGS = ""; }; };
+		1789DB351A7C474BB26724FF /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/bsincgen.c */ = {isa = PBXBuildFile; fileRef = CF869977009F456DAD0C3949 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/bsincgen.c */; settings = {COMPILER_FLAGS = ""; }; };
+		1A086ECF7B154A4C8C6F11B6 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 7B4C6CCB3B064362B906ADAB /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		1D70272F77A642D69D0D2C3C /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/rwlock.c */ = {isa = PBXBuildFile; fileRef = 448ADFDAB440497A9E7F4E62 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/rwlock.c */; settings = {COMPILER_FLAGS = ""; }; };
+		24302093500A457CAF3D4BC2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/modulator.c */ = {isa = PBXBuildFile; fileRef = B5D531B08F5E4674A72A0F80 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/modulator.c */; settings = {COMPILER_FLAGS = ""; }; };
+		28DAA0E21A2F400E920ABC53 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/alcConfig.c */ = {isa = PBXBuildFile; fileRef = 5C9AA50B380741BE92125678 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/alcConfig.c */; settings = {COMPILER_FLAGS = ""; }; };
+		35BC52E1596B47F79BB406EB /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/distortion.c */ = {isa = PBXBuildFile; fileRef = 75F7C50D046F46C8BED47519 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/distortion.c */; settings = {COMPILER_FLAGS = ""; }; };
+		38CF779BBE3B4637B00FD3BA /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_c.c */ = {isa = PBXBuildFile; fileRef = 250605E3C21142A78A2A32F5 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_c.c */; settings = {COMPILER_FLAGS = ""; }; };
+		492838847B604B69BCDE81F8 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/ALu.c */ = {isa = PBXBuildFile; fileRef = 2B6CE10D99804C3FA789C73D /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/ALu.c */; settings = {COMPILER_FLAGS = ""; }; };
+		50DE8D297C8846F9AAEB2642 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alSource.c */ = {isa = PBXBuildFile; fileRef = A4B3DFCF1A7F4661A51D4DD8 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alSource.c */; settings = {COMPILER_FLAGS = ""; }; };
+		544E8CE0B734496C94574416 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/reverb.c */ = {isa = PBXBuildFile; fileRef = 83806F872A8A482BA77E1C93 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/reverb.c */; settings = {COMPILER_FLAGS = ""; }; };
+		63A7A5103FE2417BB55228E9 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/null.c */ = {isa = PBXBuildFile; fileRef = 8B7D8B62E50D4995A2672923 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/null.c */; settings = {COMPILER_FLAGS = ""; }; };
+		705EA39263314A32AB070281 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/compressor.c */ = {isa = PBXBuildFile; fileRef = D684CFA82150462FA500A18E /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/compressor.c */; settings = {COMPILER_FLAGS = ""; }; };
+		70AB6FA469F2419E9B7BABA7 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/null.c */ = {isa = PBXBuildFile; fileRef = 8026B2ED76DB4148A6AC3AF2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/null.c */; settings = {COMPILER_FLAGS = ""; }; };
+		72F19EDA7F8E4E87A7C91068 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/sample_cvt.c */ = {isa = PBXBuildFile; fileRef = 10C4148BE3964BFBAC2D0FE0 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/sample_cvt.c */; settings = {COMPILER_FLAGS = ""; }; };
+		7481DE570F2B4B85AD15C930 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/loopback.c */ = {isa = PBXBuildFile; fileRef = 8EEE21DDC7AC4854A68C0EC1 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/loopback.c */; settings = {COMPILER_FLAGS = ""; }; };
+		78F5197F53DA4F3CB8541A44 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/hrtf.c */ = {isa = PBXBuildFile; fileRef = D873F747451744CEBBD99507 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/hrtf.c */; settings = {COMPILER_FLAGS = ""; }; };
+		885A18FA574F4EAEA7B0DE3F /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/bs2b.c */ = {isa = PBXBuildFile; fileRef = 49285C80B1E740019172BFBC /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/bs2b.c */; settings = {COMPILER_FLAGS = ""; }; };
+		918FA66AA41745BEAB5DA2A9 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/chorus.c */ = {isa = PBXBuildFile; fileRef = 328A7CF7D1274EB1BCE2D295 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/chorus.c */; settings = {COMPILER_FLAGS = ""; }; };
+		958E19A09B1F44B8B1B73A38 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = CB77EF465DEA4BCBB6DF71F2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		961DC354195B45E68B8549FB /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse.c */ = {isa = PBXBuildFile; fileRef = EE6B7B9AA2144D2C9819BF1C /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse.c */; settings = {COMPILER_FLAGS = "-msse"; }; };
+		9B39A942EED74CA39558316B /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alAuxEffectSlot.c */ = {isa = PBXBuildFile; fileRef = E8D64F85C02C453C9F82CA88 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alAuxEffectSlot.c */; settings = {COMPILER_FLAGS = ""; }; };
+		9D340837963240ACBE8BE901 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/autowah.c */ = {isa = PBXBuildFile; fileRef = 98DD3E2C10664C3A9DA6801C /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/autowah.c */; settings = {COMPILER_FLAGS = ""; }; };
+		A03D6AD46FA9459F8B4D16BD /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/echo.c */ = {isa = PBXBuildFile; fileRef = DFD23C57D9524A1F9371B3B1 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/echo.c */; settings = {COMPILER_FLAGS = ""; }; };
+		A32BD8712E8F44C0B4DFBB97 /* /Users/mclifton/Downloads/openal-soft-1.17.2/examples/altonegen.c */ = {isa = PBXBuildFile; fileRef = 513464BE30F64D18AC44E25A /* /Users/mclifton/Downloads/openal-soft-1.17.2/examples/altonegen.c */; settings = {COMPILER_FLAGS = ""; }; };
+		A637B60D565A4D798408CD7C /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alListener.c */ = {isa = PBXBuildFile; fileRef = C1FBB3558F3543AA9DC4FFB1 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alListener.c */; settings = {COMPILER_FLAGS = ""; }; };
+		A75BDF3B9AD2430287A36804 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/flanger.c */ = {isa = PBXBuildFile; fileRef = BE11C8A6123A40659B7350B0 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/flanger.c */; settings = {COMPILER_FLAGS = ""; }; };
+		B6899D1AB9CA41409B5A55F6 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/uintmap.c */ = {isa = PBXBuildFile; fileRef = 2661574BA7814231AA5C1ED2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/uintmap.c */; settings = {COMPILER_FLAGS = ""; }; };
+		C26A55FBDDDE4F0F9364D337 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer.c */ = {isa = PBXBuildFile; fileRef = 14150DA8D78B4AFCA2539A48 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer.c */; settings = {COMPILER_FLAGS = ""; }; };
+		C3ECA511721A42E6BF74E36D /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse41.c */ = {isa = PBXBuildFile; fileRef = C3E74DFB4B2143D7A3BF5027 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse41.c */; settings = {COMPILER_FLAGS = "-msse4.1"; }; };
+		C6BD07CF16C44BFD9EB98892 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse3.c */ = {isa = PBXBuildFile; fileRef = D1354C43F91A45C1A2DC8DA1 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse3.c */; settings = {COMPILER_FLAGS = "-msse3"; }; };
+		C95E977464304DB0BDE9E576 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/dedicated.c */ = {isa = PBXBuildFile; fileRef = D13CA32A33284366956BF14D /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/dedicated.c */; settings = {COMPILER_FLAGS = ""; }; };
+		CD2527BE965A41EF97550836 /* /Users/mclifton/Downloads/openal-soft-1.17.2/examples/common/alhelpers.c */ = {isa = PBXBuildFile; fileRef = 143885EE13E04E2AAF31D2AB /* /Users/mclifton/Downloads/openal-soft-1.17.2/examples/common/alhelpers.c */; settings = {COMPILER_FLAGS = ""; }; };
+		D021BA34E2384988B2D4686A /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/threads.c */ = {isa = PBXBuildFile; fileRef = 46521DFCF8CE4DF096777D2E /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/threads.c */; settings = {COMPILER_FLAGS = ""; }; };
+		D1B508E8B7D245CEAA27C84C /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/panning.c */ = {isa = PBXBuildFile; fileRef = C736E18F6F4749E18CCB71C8 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/panning.c */; settings = {COMPILER_FLAGS = ""; }; };
+		D1F8711795884FC8A4280197 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/bsinc.c */ = {isa = PBXBuildFile; fileRef = 961B626B5A20494092C94AE0 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/bsinc.c */; settings = {COMPILER_FLAGS = ""; }; };
+		D37D946859494F5586E1F029 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A7CF36A06A174723BF595F58 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		E15E7D9CF84748979A5E8F38 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/openal-info.c */ = {isa = PBXBuildFile; fileRef = CA2ACE927B2440AC9F46B380 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/openal-info.c */; settings = {COMPILER_FLAGS = ""; }; };
+		E1AC5A7824E94BC3916C3DC4 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 80F56F5C427F400AA70918E2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		E38DEB11E8D24EF9B9946FCD /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A18C6E93B0D34013A44714B4 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		E6561DD12C154D229770566F /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alFilter.c */ = {isa = PBXBuildFile; fileRef = 44AFA4ACD79644898E5A9781 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alFilter.c */; settings = {COMPILER_FLAGS = ""; }; };
+		E8A95C908DD04E2E88A4D793 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/atomic.c */ = {isa = PBXBuildFile; fileRef = 37D056692EB741D7828750A6 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/atomic.c */; settings = {COMPILER_FLAGS = ""; }; };
+		EAF558111CD04AA9AC44E4DB /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/wave.c */ = {isa = PBXBuildFile; fileRef = C08FECCCEAF84A8888A4FDAD /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/wave.c */; settings = {COMPILER_FLAGS = ""; }; };
+		EB51E95DA5BF4B92A495F84A /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = AE73B35D87974CD787D07C92 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		ECBF7AF33D134AB9ADD51A4F /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alEffect.c */ = {isa = PBXBuildFile; fileRef = 576D4293B12B4E83947D07A7 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alEffect.c */; settings = {COMPILER_FLAGS = ""; }; };
+		EEE8C858D51743289C5C6305 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alExtension.c */ = {isa = PBXBuildFile; fileRef = 37B2C77CA246474EBD7E2895 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alExtension.c */; settings = {COMPILER_FLAGS = ""; }; };
+		EF5F0B9EE5D343D985F70167 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/makehrtf.c */ = {isa = PBXBuildFile; fileRef = 74CF41707AE7474BA4DFE538 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/makehrtf.c */; settings = {COMPILER_FLAGS = ""; }; };
+		F5E725022A844A0DB97EBD01 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 793556FA81B94B27AC39D562 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		F644172CD2A24E62B001C252 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alThunk.c */ = {isa = PBXBuildFile; fileRef = 2F33871F14214C379F1E7F77 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alThunk.c */; settings = {COMPILER_FLAGS = ""; }; };
+		F6AF143FFE4E485FADC66332 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/base.c */ = {isa = PBXBuildFile; fileRef = 0D7DCBA5E6E047AD8882B62D /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/base.c */; settings = {COMPILER_FLAGS = ""; }; };
+		F8571656E379410D8752A78B /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alError.c */ = {isa = PBXBuildFile; fileRef = D11E5DE52F5645C9B952D96C /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alError.c */; settings = {COMPILER_FLAGS = ""; }; };
+		F8BE390F13974F128495BC96 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/ALc.c */ = {isa = PBXBuildFile; fileRef = E872450E55CB4634BB18DC57 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/ALc.c */; settings = {COMPILER_FLAGS = ""; }; };
+		F98ECFB0269D4F2E91935441 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alBuffer.c */ = {isa = PBXBuildFile; fileRef = 4B5E97F338444ACB9A8FC593 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alBuffer.c */; settings = {COMPILER_FLAGS = ""; }; };
+		FD4B311E4FE34BF8A751C669 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/coreaudio.c */ = {isa = PBXBuildFile; fileRef = 348C64C96FFB4DF2822BBABC /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/coreaudio.c */; settings = {COMPILER_FLAGS = ""; }; };
+		FD8B2C15E2CF417FA3B6D927 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/alcRing.c */ = {isa = PBXBuildFile; fileRef = 871CA5CBF9E34517A0500768 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/alcRing.c */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		9BED0A13B4924FE6966DB69E = {
+			isa = PBXBuildStyle;
+		};
+		9E8B12D139DE441B912AC534 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		A7A2F71B0DD8416381A00F93 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		BD63D13895A74340B5CB4452 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		BFFDA443961D448A96647ECE /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		02794858493D4ED58892D804 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05EB6D45688E46AA9EBDE67D;
+			remoteInfo = openal;
+		};
+		08736B1723F14F478CD93CB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD6D0FD10B1D45718781F368;
+			remoteInfo = ZERO_CHECK;
+		};
+		09DE0C5390244541867675E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD6D0FD10B1D45718781F368;
+			remoteInfo = ZERO_CHECK;
+		};
+		2779C46FF15D493F9155D3F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD6D0FD10B1D45718781F368;
+			remoteInfo = ZERO_CHECK;
+		};
+		2A4E770FE63A4A718D50BB98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD6D0FD10B1D45718781F368;
+			remoteInfo = ZERO_CHECK;
+		};
+		49266D95C2CE4EC39F712695 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD6D0FD10B1D45718781F368;
+			remoteInfo = ZERO_CHECK;
+		};
+		5C6B8A5EFB684AC9A9A9850E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D287BA8DD7614B679E118DCE;
+			remoteInfo = common;
+		};
+		5E0F7F6B49D04715B049ADD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E114C1EFBBA4FB190F3F254;
+			remoteInfo = "openal-info";
+		};
+		5F60B2B7D9634207AA25BC49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05EB6D45688E46AA9EBDE67D;
+			remoteInfo = openal;
+		};
+		650284760474460DAE3A6C14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D287BA8DD7614B679E118DCE;
+			remoteInfo = common;
+		};
+		7CA13A4C75E046B49BCE21C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD6D0FD10B1D45718781F368;
+			remoteInfo = ZERO_CHECK;
+		};
+		8C5DBAC493654B8EA169B6E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DB9DE472D404B869C87A3A6;
+			remoteInfo = bsincgen;
+		};
+		9D089FB4CC52449BB5EEB6B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9ECFBFA547BB406286C8121B;
+			remoteInfo = ALL_BUILD;
+		};
+		AC19AB9AB93D4194A242515E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05EB6D45688E46AA9EBDE67D;
+			remoteInfo = openal;
+		};
+		BAD3EACC23AE4B33AB1F01C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD6D0FD10B1D45718781F368;
+			remoteInfo = ZERO_CHECK;
+		};
+		BBD578230E054028A7BA833C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D18497910483452D93A7BA96;
+			remoteInfo = makehrtf;
+		};
+		C14498E10C6B4E8CACE0CBF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D287BA8DD7614B679E118DCE;
+			remoteInfo = common;
+		};
+		C35B756A8E164E18920CC8F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62BCC1E350E546BD8B17CB26;
+			remoteInfo = "test-common";
+		};
+		C7D90DFD3A8C431A8C5E7F5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F36967FFF2AF4158A55883E5;
+			remoteInfo = altonegen;
+		};
+		CA4626DF9185416CA9FC35AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD6D0FD10B1D45718781F368;
+			remoteInfo = ZERO_CHECK;
+		};
+		E365C17F791242CFAA3EAD30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D287BA8DD7614B679E118DCE;
+			remoteInfo = common;
+		};
+		E8D8FC8799C14F8FBEE6DF1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947A24D6B44244DEBFA5618C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62BCC1E350E546BD8B17CB26;
+			remoteInfo = "test-common";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		048B688C3D3A4765B289D6AD /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alState.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alState.c; path = OpenAL32/alState.c; sourceTree = SOURCE_ROOT; };
+		076FADAEA3B3408A805BF184 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/helpers.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = helpers.c; path = Alc/helpers.c; sourceTree = SOURCE_ROOT; };
+		0928AA9ECDEF4751AB7B1A24 /* altonegen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = altonegen; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D7DCBA5E6E047AD8882B62D /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/base.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = base.c; path = Alc/backends/base.c; sourceTree = SOURCE_ROOT; };
+		10C4148BE3964BFBAC2D0FE0 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/sample_cvt.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = sample_cvt.c; path = OpenAL32/sample_cvt.c; sourceTree = SOURCE_ROOT; };
+		13F896C767B44E3A9E375ECC /* test-common */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libtest-common.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		14150DA8D78B4AFCA2539A48 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mixer.c; path = Alc/mixer.c; sourceTree = SOURCE_ROOT; };
+		143885EE13E04E2AAF31D2AB /* /Users/mclifton/Downloads/openal-soft-1.17.2/examples/common/alhelpers.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alhelpers.c; path = examples/common/alhelpers.c; sourceTree = SOURCE_ROOT; };
+		250605E3C21142A78A2A32F5 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_c.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mixer_c.c; path = Alc/mixer_c.c; sourceTree = SOURCE_ROOT; };
+		2661574BA7814231AA5C1ED2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/uintmap.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = uintmap.c; path = common/uintmap.c; sourceTree = SOURCE_ROOT; };
+		2979C05FE8744F62A137C055 /* bsincgen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = bsincgen; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B6CE10D99804C3FA789C73D /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/ALu.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ALu.c; path = Alc/ALu.c; sourceTree = SOURCE_ROOT; };
+		2F33871F14214C379F1E7F77 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alThunk.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alThunk.c; path = OpenAL32/alThunk.c; sourceTree = SOURCE_ROOT; };
+		328A7CF7D1274EB1BCE2D295 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/chorus.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = chorus.c; path = Alc/effects/chorus.c; sourceTree = SOURCE_ROOT; };
+		348C64C96FFB4DF2822BBABC /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/coreaudio.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = coreaudio.c; path = Alc/backends/coreaudio.c; sourceTree = SOURCE_ROOT; };
+		37B2C77CA246474EBD7E2895 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alExtension.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alExtension.c; path = OpenAL32/alExtension.c; sourceTree = SOURCE_ROOT; };
+		37D056692EB741D7828750A6 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/atomic.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = atomic.c; path = common/atomic.c; sourceTree = SOURCE_ROOT; };
+		448ADFDAB440497A9E7F4E62 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/rwlock.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = rwlock.c; path = common/rwlock.c; sourceTree = SOURCE_ROOT; };
+		44AFA4ACD79644898E5A9781 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alFilter.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alFilter.c; path = OpenAL32/alFilter.c; sourceTree = SOURCE_ROOT; };
+		46521DFCF8CE4DF096777D2E /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/threads.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = threads.c; path = common/threads.c; sourceTree = SOURCE_ROOT; };
+		49285C80B1E740019172BFBC /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/bs2b.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = bs2b.c; path = Alc/bs2b.c; sourceTree = SOURCE_ROOT; };
+		4B5E97F338444ACB9A8FC593 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alBuffer.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alBuffer.c; path = OpenAL32/alBuffer.c; sourceTree = SOURCE_ROOT; };
+		513464BE30F64D18AC44E25A /* /Users/mclifton/Downloads/openal-soft-1.17.2/examples/altonegen.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = altonegen.c; path = examples/altonegen.c; sourceTree = SOURCE_ROOT; };
+		576D4293B12B4E83947D07A7 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alEffect.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alEffect.c; path = OpenAL32/alEffect.c; sourceTree = SOURCE_ROOT; };
+		5C9AA50B380741BE92125678 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/alcConfig.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alcConfig.c; path = Alc/alcConfig.c; sourceTree = SOURCE_ROOT; };
+		61B8AA0CAEF54E33A76559A6 /* openal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libopenal.dylib; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FDA3128AAAA472CACB44D9E /* common */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcommon.a; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		74CF41707AE7474BA4DFE538 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/makehrtf.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = makehrtf.c; path = utils/makehrtf.c; sourceTree = SOURCE_ROOT; };
+		75F7C50D046F46C8BED47519 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/distortion.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = distortion.c; path = Alc/effects/distortion.c; sourceTree = SOURCE_ROOT; };
+		793556FA81B94B27AC39D562 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7B4C6CCB3B064362B906ADAB /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		8026B2ED76DB4148A6AC3AF2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/null.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = null.c; path = Alc/effects/null.c; sourceTree = SOURCE_ROOT; };
+		80F56F5C427F400AA70918E2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		83806F872A8A482BA77E1C93 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/reverb.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = reverb.c; path = Alc/effects/reverb.c; sourceTree = SOURCE_ROOT; };
+		871CA5CBF9E34517A0500768 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/alcRing.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alcRing.c; path = Alc/alcRing.c; sourceTree = SOURCE_ROOT; };
+		8A61A487ADE74947ADCDEA29 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		8B7D8B62E50D4995A2672923 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/null.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = null.c; path = Alc/backends/null.c; sourceTree = SOURCE_ROOT; };
+		8EEE21DDC7AC4854A68C0EC1 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/loopback.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = loopback.c; path = Alc/backends/loopback.c; sourceTree = SOURCE_ROOT; };
+		961B626B5A20494092C94AE0 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/bsinc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = bsinc.c; path = Alc/bsinc.c; sourceTree = SOURCE_ROOT; };
+		98DD3E2C10664C3A9DA6801C /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/autowah.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = autowah.c; path = Alc/effects/autowah.c; sourceTree = SOURCE_ROOT; };
+		9C853FDA893D490088967A6F /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/equalizer.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = equalizer.c; path = Alc/effects/equalizer.c; sourceTree = SOURCE_ROOT; };
+		A18C6E93B0D34013A44714B4 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A4B3DFCF1A7F4661A51D4DD8 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alSource.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alSource.c; path = OpenAL32/alSource.c; sourceTree = SOURCE_ROOT; };
+		A7CF36A06A174723BF595F58 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		AC25E9AEC1C845B2A4A44DB9 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse2.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mixer_sse2.c; path = Alc/mixer_sse2.c; sourceTree = SOURCE_ROOT; };
+		AE73B35D87974CD787D07C92 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B120873831464DCE8F81F4D9 /* makehrtf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = makehrtf; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D531B08F5E4674A72A0F80 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/modulator.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = modulator.c; path = Alc/effects/modulator.c; sourceTree = SOURCE_ROOT; };
+		BE11C8A6123A40659B7350B0 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/flanger.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = flanger.c; path = Alc/effects/flanger.c; sourceTree = SOURCE_ROOT; };
+		C08FECCCEAF84A8888A4FDAD /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/wave.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = wave.c; path = Alc/backends/wave.c; sourceTree = SOURCE_ROOT; };
+		C1FBB3558F3543AA9DC4FFB1 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alListener.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alListener.c; path = OpenAL32/alListener.c; sourceTree = SOURCE_ROOT; };
+		C3E74DFB4B2143D7A3BF5027 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse41.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mixer_sse41.c; path = Alc/mixer_sse41.c; sourceTree = SOURCE_ROOT; };
+		C736E18F6F4749E18CCB71C8 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/panning.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = panning.c; path = Alc/panning.c; sourceTree = SOURCE_ROOT; };
+		C9670D9887AA4BE09FEC27C6 /* openal-info */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "openal-info"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA2ACE927B2440AC9F46B380 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/openal-info.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "openal-info.c"; path = "utils/openal-info.c"; sourceTree = SOURCE_ROOT; };
+		CB77EF465DEA4BCBB6DF71F2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		CF869977009F456DAD0C3949 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/bsincgen.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = bsincgen.c; path = utils/bsincgen.c; sourceTree = SOURCE_ROOT; };
+		D11E5DE52F5645C9B952D96C /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alError.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alError.c; path = OpenAL32/alError.c; sourceTree = SOURCE_ROOT; };
+		D1354C43F91A45C1A2DC8DA1 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse3.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mixer_sse3.c; path = Alc/mixer_sse3.c; sourceTree = SOURCE_ROOT; };
+		D13CA32A33284366956BF14D /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/dedicated.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = dedicated.c; path = Alc/effects/dedicated.c; sourceTree = SOURCE_ROOT; };
+		D684CFA82150462FA500A18E /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/compressor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = compressor.c; path = Alc/effects/compressor.c; sourceTree = SOURCE_ROOT; };
+		D873F747451744CEBBD99507 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/hrtf.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = hrtf.c; path = Alc/hrtf.c; sourceTree = SOURCE_ROOT; };
+		DFD23C57D9524A1F9371B3B1 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/echo.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = echo.c; path = Alc/effects/echo.c; sourceTree = SOURCE_ROOT; };
+		E872450E55CB4634BB18DC57 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/ALc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = ALc.c; path = Alc/ALc.c; sourceTree = SOURCE_ROOT; };
+		E8D64F85C02C453C9F82CA88 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alAuxEffectSlot.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alAuxEffectSlot.c; path = OpenAL32/alAuxEffectSlot.c; sourceTree = SOURCE_ROOT; };
+		EE6B7B9AA2144D2C9819BF1C /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mixer_sse.c; path = Alc/mixer_sse.c; sourceTree = SOURCE_ROOT; };
+		F2F1BF07EAA74F05A14EF461 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		01C2E38076B7477687DE91E3 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				37D056692EB741D7828750A6 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/atomic.c */,
+				448ADFDAB440497A9E7F4E62 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/rwlock.c */,
+				46521DFCF8CE4DF096777D2E /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/threads.c */,
+				2661574BA7814231AA5C1ED2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/uintmap.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		109630004B5F41FBBEE8125C /* test-common */ = {
+			isa = PBXGroup;
+			children = (
+				5E35CD3546744F50A6E02FA1 /* Source Files */,
+				A18C6E93B0D34013A44714B4 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */,
+			);
+			name = "test-common";
+			sourceTree = "<group>";
+		};
+		119EE5376EF04B2094B3A6C6 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		126F9AE3F9794FC8B0599021 /* openal */ = {
+			isa = PBXGroup;
+			children = (
+				55DAE5296EB84810890766A2 /* Source Files */,
+				80F56F5C427F400AA70918E2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */,
+			);
+			name = openal;
+			sourceTree = "<group>";
+		};
+		2B35249091C7421586E50D95 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		42FD8EF21BE44EADA9C9561D = {
+			isa = PBXGroup;
+			children = (
+				467E674836BC4FC4AB299E9D /* Sources */,
+				6B163DC208C843A89260E5B6 /* Resources */,
+				67D0331C7F0244E4B8450B9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		467E674836BC4FC4AB299E9D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				109630004B5F41FBBEE8125C /* test-common */,
+				DD66A77799574876AED26657 /* openal-info */,
+				FA46151602854517838562A7 /* common */,
+				522989D90F7F4DF58BCE6257 /* makehrtf */,
+				126F9AE3F9794FC8B0599021 /* openal */,
+				891AAB48C794435994894DDA /* altonegen */,
+				CBA6943BA33F437AA8D232F6 /* bsincgen */,
+				AAB31C892CB248D793A42D12 /* ALL_BUILD */,
+				CD2CCE390B9F4E0FB17EEBB9 /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		522989D90F7F4DF58BCE6257 /* makehrtf */ = {
+			isa = PBXGroup;
+			children = (
+				9A87D2BF13774C20866AB0C9 /* Source Files */,
+				AE73B35D87974CD787D07C92 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */,
+			);
+			name = makehrtf;
+			sourceTree = "<group>";
+		};
+		542A08DC30E94B28A1CB9A1D /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA2ACE927B2440AC9F46B380 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/openal-info.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		55DAE5296EB84810890766A2 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				E872450E55CB4634BB18DC57 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/ALc.c */,
+				2B6CE10D99804C3FA789C73D /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/ALu.c */,
+				5C9AA50B380741BE92125678 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/alcConfig.c */,
+				871CA5CBF9E34517A0500768 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/alcRing.c */,
+				0D7DCBA5E6E047AD8882B62D /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/base.c */,
+				348C64C96FFB4DF2822BBABC /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/coreaudio.c */,
+				8EEE21DDC7AC4854A68C0EC1 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/loopback.c */,
+				8B7D8B62E50D4995A2672923 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/null.c */,
+				C08FECCCEAF84A8888A4FDAD /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/wave.c */,
+				49285C80B1E740019172BFBC /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/bs2b.c */,
+				961B626B5A20494092C94AE0 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/bsinc.c */,
+				98DD3E2C10664C3A9DA6801C /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/autowah.c */,
+				328A7CF7D1274EB1BCE2D295 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/chorus.c */,
+				D684CFA82150462FA500A18E /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/compressor.c */,
+				D13CA32A33284366956BF14D /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/dedicated.c */,
+				75F7C50D046F46C8BED47519 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/distortion.c */,
+				DFD23C57D9524A1F9371B3B1 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/echo.c */,
+				9C853FDA893D490088967A6F /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/equalizer.c */,
+				BE11C8A6123A40659B7350B0 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/flanger.c */,
+				B5D531B08F5E4674A72A0F80 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/modulator.c */,
+				8026B2ED76DB4148A6AC3AF2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/null.c */,
+				83806F872A8A482BA77E1C93 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/reverb.c */,
+				076FADAEA3B3408A805BF184 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/helpers.c */,
+				D873F747451744CEBBD99507 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/hrtf.c */,
+				14150DA8D78B4AFCA2539A48 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer.c */,
+				250605E3C21142A78A2A32F5 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_c.c */,
+				EE6B7B9AA2144D2C9819BF1C /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse.c */,
+				AC25E9AEC1C845B2A4A44DB9 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse2.c */,
+				D1354C43F91A45C1A2DC8DA1 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse3.c */,
+				C3E74DFB4B2143D7A3BF5027 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse41.c */,
+				C736E18F6F4749E18CCB71C8 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/panning.c */,
+				E8D64F85C02C453C9F82CA88 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alAuxEffectSlot.c */,
+				4B5E97F338444ACB9A8FC593 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alBuffer.c */,
+				576D4293B12B4E83947D07A7 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alEffect.c */,
+				D11E5DE52F5645C9B952D96C /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alError.c */,
+				37B2C77CA246474EBD7E2895 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alExtension.c */,
+				44AFA4ACD79644898E5A9781 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alFilter.c */,
+				C1FBB3558F3543AA9DC4FFB1 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alListener.c */,
+				A4B3DFCF1A7F4661A51D4DD8 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alSource.c */,
+				048B688C3D3A4765B289D6AD /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alState.c */,
+				2F33871F14214C379F1E7F77 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alThunk.c */,
+				10C4148BE3964BFBAC2D0FE0 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/sample_cvt.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		5E35CD3546744F50A6E02FA1 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				143885EE13E04E2AAF31D2AB /* /Users/mclifton/Downloads/openal-soft-1.17.2/examples/common/alhelpers.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		6446B6AEEBE548C88648395C /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				513464BE30F64D18AC44E25A /* /Users/mclifton/Downloads/openal-soft-1.17.2/examples/altonegen.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		67D0331C7F0244E4B8450B9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0928AA9ECDEF4751AB7B1A24 /* altonegen */,
+				2979C05FE8744F62A137C055 /* bsincgen */,
+				6FDA3128AAAA472CACB44D9E /* common */,
+				B120873831464DCE8F81F4D9 /* makehrtf */,
+				61B8AA0CAEF54E33A76559A6 /* openal */,
+				C9670D9887AA4BE09FEC27C6 /* openal-info */,
+				13F896C767B44E3A9E375ECC /* test-common */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B163DC208C843A89260E5B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		891AAB48C794435994894DDA /* altonegen */ = {
+			isa = PBXGroup;
+			children = (
+				6446B6AEEBE548C88648395C /* Source Files */,
+				793556FA81B94B27AC39D562 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */,
+			);
+			name = altonegen;
+			sourceTree = "<group>";
+		};
+		9A87D2BF13774C20866AB0C9 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				74CF41707AE7474BA4DFE538 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/makehrtf.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		AAB31C892CB248D793A42D12 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				119EE5376EF04B2094B3A6C6 /* CMake Rules */,
+				8A61A487ADE74947ADCDEA29 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		AE5863CB150741D3BE10F1D5 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF869977009F456DAD0C3949 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/bsincgen.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		CBA6943BA33F437AA8D232F6 /* bsincgen */ = {
+			isa = PBXGroup;
+			children = (
+				AE5863CB150741D3BE10F1D5 /* Source Files */,
+				7B4C6CCB3B064362B906ADAB /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */,
+			);
+			name = bsincgen;
+			sourceTree = "<group>";
+		};
+		CD2CCE390B9F4E0FB17EEBB9 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				2B35249091C7421586E50D95 /* CMake Rules */,
+				F2F1BF07EAA74F05A14EF461 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		DD66A77799574876AED26657 /* openal-info */ = {
+			isa = PBXGroup;
+			children = (
+				542A08DC30E94B28A1CB9A1D /* Source Files */,
+				A7CF36A06A174723BF595F58 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */,
+			);
+			name = "openal-info";
+			sourceTree = "<group>";
+		};
+		FA46151602854517838562A7 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				01C2E38076B7477687DE91E3 /* Source Files */,
+				CB77EF465DEA4BCBB6DF71F2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/CMakeLists.txt */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05EB6D45688E46AA9EBDE67D /* openal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CE51025454541C4B1DD5187 /* Build configuration list for PBXNativeTarget "openal" */;
+			buildPhases = (
+				4EE8C377BC0E4702B9FD362A /* Sources */,
+				E81A2721950E48D7BCC10AF4 /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1A7E74C57E54E61B726ED15 /* PBXTargetDependency */,
+				72B68BD61FBD46ACB6AA0FB6 /* PBXTargetDependency */,
+			);
+			name = openal;
+			productName = openal;
+			productReference = 61B8AA0CAEF54E33A76559A6 /* openal */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		0DB9DE472D404B869C87A3A6 /* bsincgen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EA508D461EA42F38EEAA11A /* Build configuration list for PBXNativeTarget "bsincgen" */;
+			buildPhases = (
+				8DC6100B27A64B36BB7D88B7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDB5EC18104F458681DC5A3C /* PBXTargetDependency */,
+			);
+			name = bsincgen;
+			productName = bsincgen;
+			productReference = 2979C05FE8744F62A137C055 /* bsincgen */;
+			productType = "com.apple.product-type.tool";
+		};
+		5E114C1EFBBA4FB190F3F254 /* openal-info */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E08753EA8FF4451A9AF72AAB /* Build configuration list for PBXNativeTarget "openal-info" */;
+			buildPhases = (
+				A111919255B74150AE8F6579 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBF82EEDC5E24F2FBF5E333B /* PBXTargetDependency */,
+				C17FCCB8E72F47F18CA46B23 /* PBXTargetDependency */,
+				82D2953F913442179BE2362C /* PBXTargetDependency */,
+			);
+			name = "openal-info";
+			productName = "openal-info";
+			productReference = C9670D9887AA4BE09FEC27C6 /* openal-info */;
+			productType = "com.apple.product-type.tool";
+		};
+		62BCC1E350E546BD8B17CB26 /* test-common */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 130ED31B2E9C4CBA997B9DC1 /* Build configuration list for PBXNativeTarget "test-common" */;
+			buildPhases = (
+				586C211F77E84A7B9498962D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2D38EB1164243B9A7A2A09F /* PBXTargetDependency */,
+			);
+			name = "test-common";
+			productName = "test-common";
+			productReference = 13F896C767B44E3A9E375ECC /* test-common */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D18497910483452D93A7BA96 /* makehrtf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8047283AADFB4D94BC49AC28 /* Build configuration list for PBXNativeTarget "makehrtf" */;
+			buildPhases = (
+				CC5406919A614D4D91DA4EE0 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FB6CF97D08B47DB8E518C58 /* PBXTargetDependency */,
+			);
+			name = makehrtf;
+			productName = makehrtf;
+			productReference = B120873831464DCE8F81F4D9 /* makehrtf */;
+			productType = "com.apple.product-type.tool";
+		};
+		D287BA8DD7614B679E118DCE /* common */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DA6026C433840C7B7F1DA4B /* Build configuration list for PBXNativeTarget "common" */;
+			buildPhases = (
+				3C46630A383E421E829599BC /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C0B6E1BBAB0401483103B4F /* PBXTargetDependency */,
+			);
+			name = common;
+			productName = common;
+			productReference = 6FDA3128AAAA472CACB44D9E /* common */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F36967FFF2AF4158A55883E5 /* altonegen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDEA6C44736D47D6B759F7D5 /* Build configuration list for PBXNativeTarget "altonegen" */;
+			buildPhases = (
+				30D2B83A90F14E54B25CDDF9 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD27003D9A5C4B859028ED62 /* PBXTargetDependency */,
+				81D6658F09E34874A047418E /* PBXTargetDependency */,
+				81912BF4A0A84D72AB923436 /* PBXTargetDependency */,
+				441B118F9B1F4B22BD7A87B4 /* PBXTargetDependency */,
+			);
+			name = altonegen;
+			productName = altonegen;
+			productReference = 0928AA9ECDEF4751AB7B1A24 /* altonegen */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		947A24D6B44244DEBFA5618C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0710;
+			};
+			buildConfigurationList = 051889A8335943BB89632F2D /* Build configuration list for PBXProject "OpenAL" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				9E8B12D139DE441B912AC534 /* Debug */,
+				BFFDA443961D448A96647ECE /* Release */,
+				A7A2F71B0DD8416381A00F93 /* MinSizeRel */,
+				BD63D13895A74340B5CB4452 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 42FD8EF21BE44EADA9C9561D;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				9ECFBFA547BB406286C8121B /* ALL_BUILD */,
+				AD6D0FD10B1D45718781F368 /* ZERO_CHECK */,
+				F36967FFF2AF4158A55883E5 /* altonegen */,
+				0DB9DE472D404B869C87A3A6 /* bsincgen */,
+				D287BA8DD7614B679E118DCE /* common */,
+				6DFE014B6DF342D595F7886D /* install */,
+				D18497910483452D93A7BA96 /* makehrtf */,
+				05EB6D45688E46AA9EBDE67D /* openal */,
+				5E114C1EFBBA4FB190F3F254 /* openal-info */,
+				62BCC1E350E546BD8B17CB26 /* test-common */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E49FBCA826249A285E82ED2 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		53D7B17C6C264D329AA87681 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/mclifton/Downloads/openal-soft-1.17.2/build -f /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		62E384DDD0544EA89530CF0C = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		A9E53A7CE42F4815AB9F4E7A /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/mclifton/Downloads/openal-soft-1.17.2/build -f /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		DCA6D80094F8495A85800910 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/mclifton/Downloads/openal-soft-1.17.2/build -f /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		E81A2721950E48D7BCC10AF4 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/mclifton/Downloads/openal-soft-1.17.2/build -f /Users/mclifton/Downloads/openal-soft-1.17.2/build/CMakeScripts/openal_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		F60DC7B8764D4ADFAB2C9737 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30D2B83A90F14E54B25CDDF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A32BD8712E8F44C0B4DFBB97 /* /Users/mclifton/Downloads/openal-soft-1.17.2/examples/altonegen.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C46630A383E421E829599BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8A95C908DD04E2E88A4D793 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/atomic.c */,
+				1D70272F77A642D69D0D2C3C /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/rwlock.c */,
+				D021BA34E2384988B2D4686A /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/threads.c */,
+				B6899D1AB9CA41409B5A55F6 /* /Users/mclifton/Downloads/openal-soft-1.17.2/common/uintmap.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EE8C377BC0E4702B9FD362A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BE390F13974F128495BC96 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/ALc.c */,
+				492838847B604B69BCDE81F8 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/ALu.c */,
+				28DAA0E21A2F400E920ABC53 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/alcConfig.c */,
+				FD8B2C15E2CF417FA3B6D927 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/alcRing.c */,
+				F6AF143FFE4E485FADC66332 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/base.c */,
+				FD4B311E4FE34BF8A751C669 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/coreaudio.c */,
+				7481DE570F2B4B85AD15C930 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/loopback.c */,
+				63A7A5103FE2417BB55228E9 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/null.c */,
+				EAF558111CD04AA9AC44E4DB /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/backends/wave.c */,
+				885A18FA574F4EAEA7B0DE3F /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/bs2b.c */,
+				D1F8711795884FC8A4280197 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/bsinc.c */,
+				9D340837963240ACBE8BE901 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/autowah.c */,
+				918FA66AA41745BEAB5DA2A9 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/chorus.c */,
+				705EA39263314A32AB070281 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/compressor.c */,
+				C95E977464304DB0BDE9E576 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/dedicated.c */,
+				35BC52E1596B47F79BB406EB /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/distortion.c */,
+				A03D6AD46FA9459F8B4D16BD /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/echo.c */,
+				00394A930A7D4A209CF9A00B /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/equalizer.c */,
+				A75BDF3B9AD2430287A36804 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/flanger.c */,
+				24302093500A457CAF3D4BC2 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/modulator.c */,
+				70AB6FA469F2419E9B7BABA7 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/null.c */,
+				544E8CE0B734496C94574416 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/effects/reverb.c */,
+				152603EFBA13433CBAC75D07 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/helpers.c */,
+				78F5197F53DA4F3CB8541A44 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/hrtf.c */,
+				C26A55FBDDDE4F0F9364D337 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer.c */,
+				38CF779BBE3B4637B00FD3BA /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_c.c */,
+				961DC354195B45E68B8549FB /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse.c */,
+				0D961845AB464EBDB8C1A07C /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse2.c */,
+				C6BD07CF16C44BFD9EB98892 /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse3.c */,
+				C3ECA511721A42E6BF74E36D /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/mixer_sse41.c */,
+				D1B508E8B7D245CEAA27C84C /* /Users/mclifton/Downloads/openal-soft-1.17.2/Alc/panning.c */,
+				9B39A942EED74CA39558316B /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alAuxEffectSlot.c */,
+				F98ECFB0269D4F2E91935441 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alBuffer.c */,
+				ECBF7AF33D134AB9ADD51A4F /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alEffect.c */,
+				F8571656E379410D8752A78B /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alError.c */,
+				EEE8C858D51743289C5C6305 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alExtension.c */,
+				E6561DD12C154D229770566F /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alFilter.c */,
+				A637B60D565A4D798408CD7C /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alListener.c */,
+				50DE8D297C8846F9AAEB2642 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alSource.c */,
+				03AF14BFBDF64A598092DB7D /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alState.c */,
+				F644172CD2A24E62B001C252 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/alThunk.c */,
+				72F19EDA7F8E4E87A7C91068 /* /Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/sample_cvt.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		586C211F77E84A7B9498962D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD2527BE965A41EF97550836 /* /Users/mclifton/Downloads/openal-soft-1.17.2/examples/common/alhelpers.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC6100B27A64B36BB7D88B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1789DB351A7C474BB26724FF /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/bsincgen.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A111919255B74150AE8F6579 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E15E7D9CF84748979A5E8F38 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/openal-info.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5406919A614D4D91DA4EE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5F0B9EE5D343D985F70167 /* /Users/mclifton/Downloads/openal-soft-1.17.2/utils/makehrtf.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		08B78CE8F9C846149EFAD317 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D287BA8DD7614B679E118DCE /* common */;
+			targetProxy = E365C17F791242CFAA3EAD30 /* PBXContainerItemProxy */;
+		};
+		2FB6CF97D08B47DB8E518C58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD6D0FD10B1D45718781F368 /* ZERO_CHECK */;
+			targetProxy = BAD3EACC23AE4B33AB1F01C6 /* PBXContainerItemProxy */;
+		};
+		441B118F9B1F4B22BD7A87B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05EB6D45688E46AA9EBDE67D /* openal */;
+			targetProxy = AC19AB9AB93D4194A242515E /* PBXContainerItemProxy */;
+		};
+		4F2868723D77459CAB95B625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E114C1EFBBA4FB190F3F254 /* openal-info */;
+			targetProxy = 5E0F7F6B49D04715B049ADD8 /* PBXContainerItemProxy */;
+		};
+		5A464161FC90447697CEBD2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D18497910483452D93A7BA96 /* makehrtf */;
+			targetProxy = BBD578230E054028A7BA833C /* PBXContainerItemProxy */;
+		};
+		6B7B3BD65D814521B4E67EC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F36967FFF2AF4158A55883E5 /* altonegen */;
+			targetProxy = C7D90DFD3A8C431A8C5E7F5A /* PBXContainerItemProxy */;
+		};
+		72B68BD61FBD46ACB6AA0FB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D287BA8DD7614B679E118DCE /* common */;
+			targetProxy = C14498E10C6B4E8CACE0CBF5 /* PBXContainerItemProxy */;
+		};
+		7C0B6E1BBAB0401483103B4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD6D0FD10B1D45718781F368 /* ZERO_CHECK */;
+			targetProxy = 2779C46FF15D493F9155D3F4 /* PBXContainerItemProxy */;
+		};
+		81912BF4A0A84D72AB923436 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D287BA8DD7614B679E118DCE /* common */;
+			targetProxy = 650284760474460DAE3A6C14 /* PBXContainerItemProxy */;
+		};
+		81D6658F09E34874A047418E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62BCC1E350E546BD8B17CB26 /* test-common */;
+			targetProxy = E8D8FC8799C14F8FBEE6DF1C /* PBXContainerItemProxy */;
+		};
+		82D2953F913442179BE2362C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05EB6D45688E46AA9EBDE67D /* openal */;
+			targetProxy = 5F60B2B7D9634207AA25BC49 /* PBXContainerItemProxy */;
+		};
+		85ED4DB812C94126B1D72AA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DB9DE472D404B869C87A3A6 /* bsincgen */;
+			targetProxy = 8C5DBAC493654B8EA169B6E7 /* PBXContainerItemProxy */;
+		};
+		B4055B05595440F4B9886867 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD6D0FD10B1D45718781F368 /* ZERO_CHECK */;
+			targetProxy = 09DE0C5390244541867675E6 /* PBXContainerItemProxy */;
+		};
+		BBF82EEDC5E24F2FBF5E333B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD6D0FD10B1D45718781F368 /* ZERO_CHECK */;
+			targetProxy = 2A4E770FE63A4A718D50BB98 /* PBXContainerItemProxy */;
+		};
+		BDB5EC18104F458681DC5A3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD6D0FD10B1D45718781F368 /* ZERO_CHECK */;
+			targetProxy = 7CA13A4C75E046B49BCE21C9 /* PBXContainerItemProxy */;
+		};
+		C17FCCB8E72F47F18CA46B23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D287BA8DD7614B679E118DCE /* common */;
+			targetProxy = 5C6B8A5EFB684AC9A9A9850E /* PBXContainerItemProxy */;
+		};
+		C1A7E74C57E54E61B726ED15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD6D0FD10B1D45718781F368 /* ZERO_CHECK */;
+			targetProxy = 49266D95C2CE4EC39F712695 /* PBXContainerItemProxy */;
+		};
+		CD27003D9A5C4B859028ED62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD6D0FD10B1D45718781F368 /* ZERO_CHECK */;
+			targetProxy = 08736B1723F14F478CD93CB0 /* PBXContainerItemProxy */;
+		};
+		E5A1232E2490427B95B7728C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05EB6D45688E46AA9EBDE67D /* openal */;
+			targetProxy = 02794858493D4ED58892D804 /* PBXContainerItemProxy */;
+		};
+		E82CD477D2D7446DB9684116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9ECFBFA547BB406286C8121B /* ALL_BUILD */;
+			targetProxy = 9D089FB4CC52449BB5EEB6B9 /* PBXContainerItemProxy */;
+		};
+		F2D38EB1164243B9A7A2A09F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD6D0FD10B1D45718781F368 /* ZERO_CHECK */;
+			targetProxy = CA4626DF9185416CA9FC35AA /* PBXContainerItemProxy */;
+		};
+		FF8C300C671748E6B5662C68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62BCC1E350E546BD8B17CB26 /* test-common */;
+			targetProxy = C35B756A8E164E18920CC8F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00A7FBBBC36D41F0BC5DC7D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		05608C609CE14A35B8D5813A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/mclifton/Downloads/openal-soft-1.17.2/build/RelWithDebInfo";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11         -D_DEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/mclifton/Downloads/openal-soft-1.17.2/build/RelWithDebInfo/libtest-common.a /Users/mclifton/Downloads/openal-soft-1.17.2/build/RelWithDebInfo/libopenal.1.17.2.dylib /Users/mclifton/Downloads/openal-soft-1.17.2/build/RelWithDebInfo/libcommon.a -framework AudioToolbox -framework ApplicationServices -framework AudioUnit -framework CoreAudio -lpthread -ldl -lm -pthread";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = altonegen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		08D892C772AF40E8BD075B57 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lm";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bsincgen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		0C0756D47D5B42028141838C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		0DAB7C3C75BD4920925CFEF9 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		1F0B99FD15614B6DAF144DF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/mclifton/Downloads/openal-soft-1.17.2/build/Release";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/mclifton/Downloads/openal-soft-1.17.2/build/Release/libtest-common.a /Users/mclifton/Downloads/openal-soft-1.17.2/build/Release/libopenal.1.17.2.dylib /Users/mclifton/Downloads/openal-soft-1.17.2/build/Release/libcommon.a -framework AudioToolbox -framework ApplicationServices -framework AudioUnit -framework CoreAudio -lpthread -ldl -lm -pthread";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = altonegen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		350038BFC44A4A16928E942D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-std=c11     -fPIC   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		3C342661442B4CF19013C08D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		3F0E18A95C0A4E65B9213CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lm";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bsincgen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		41D130B06AF746FC95885F67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0.0;
+				DYLIB_CURRENT_VERSION = 1.17.2;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", openal_EXPORTS, AL_BUILD_LIBRARY, AL_ALEXT_PROTOTYPES, _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", "/Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/Include", "/Users/mclifton/Downloads/openal-soft-1.17.2/Alc", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG -fPIC   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -dynamiclib -Wl,-headerpad_max_install_names -install_name @rpath/libopenal.1.dylib  /Users/mclifton/Downloads/openal-soft-1.17.2/build/Release/libcommon.a -framework AudioToolbox -framework ApplicationServices -framework AudioUnit -framework CoreAudio -lpthread -ldl -lm -pthread";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = openal.1.17.2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		442B45DEB47348B7898C13D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/mclifton/Downloads/openal-soft-1.17.2/build/Release";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/mclifton/Downloads/openal-soft-1.17.2/build/Release/libopenal.1.17.2.dylib /Users/mclifton/Downloads/openal-soft-1.17.2/build/Release/libcommon.a -framework AudioToolbox -framework ApplicationServices -framework AudioUnit -framework CoreAudio -lpthread -ldl -lm -pthread";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "openal-info";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		45DEF4F1BEF449989B0C779C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		52BB69642C0840DD8D4D05A4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "test-common";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		5415412B45FA481B831AB377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/mclifton/Downloads/openal-soft-1.17.2/build/Debug";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11       -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/mclifton/Downloads/openal-soft-1.17.2/build/Debug/libtest-common.a /Users/mclifton/Downloads/openal-soft-1.17.2/build/Debug/libopenal.1.17.2.dylib /Users/mclifton/Downloads/openal-soft-1.17.2/build/Debug/libcommon.a -framework AudioToolbox -framework ApplicationServices -framework AudioUnit -framework CoreAudio -lpthread -ldl -lm -pthread";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = altonegen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		56F728915EE649AB9F8E76B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11       -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lm";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = makehrtf;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		5BA26F09FA334C5093278299 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11         -D_DEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lm";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = makehrtf;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		5F848A4A1E7B4A48905E60B4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		70992D34936D4672B6F77A30 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG -fPIC   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		71EE90778D614B48A8E80969 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lm";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = makehrtf;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		72B1BB05A92C43BDA979B969 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		7C0440DAF72945F4B1059990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lm";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = makehrtf;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		7DBBB3E39F0B4A2BBD63D957 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		80AE5834D6AA44CFA853643C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-std=c11       -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "test-common";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		833A8F54274649C096A3F199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build/build";
+			};
+			name = Debug;
+		};
+		868C3C407B824C6999948A1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG -fPIC   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		87B8AB038D2948B3912AB3C3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11         -D_DEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lm";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bsincgen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		8A1674BD6AA74F25977773BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		8DF0803CA0504AFCB5DE2B89 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0.0;
+				DYLIB_CURRENT_VERSION = 1.17.2;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", openal_EXPORTS, AL_BUILD_LIBRARY, AL_ALEXT_PROTOTYPES, _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", "/Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/Include", "/Users/mclifton/Downloads/openal-soft-1.17.2/Alc", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CFLAGS = "-std=c11         -D_DEBUG -fPIC   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -dynamiclib -Wl,-headerpad_max_install_names -install_name @rpath/libopenal.1.dylib  /Users/mclifton/Downloads/openal-soft-1.17.2/build/RelWithDebInfo/libcommon.a -framework AudioToolbox -framework ApplicationServices -framework AudioUnit -framework CoreAudio -lpthread -ldl -lm -pthread";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = openal.1.17.2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		9B3671F954FA407D90BF62EE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build/build";
+			};
+			name = MinSizeRel;
+		};
+		A612206DBD1A435FB858BC67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11       -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lm";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bsincgen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		A8BA2497F32F4AB097E404D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		A8CA8C951402467BA3AC45CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/mclifton/Downloads/openal-soft-1.17.2/build/Debug";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11       -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/mclifton/Downloads/openal-soft-1.17.2/build/Debug/libopenal.1.17.2.dylib /Users/mclifton/Downloads/openal-soft-1.17.2/build/Debug/libcommon.a -framework AudioToolbox -framework ApplicationServices -framework AudioUnit -framework CoreAudio -lpthread -ldl -lm -pthread";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "openal-info";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+		A986BB143B0B4D04B4187042 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/mclifton/Downloads/openal-soft-1.17.2/build/RelWithDebInfo";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11         -D_DEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/mclifton/Downloads/openal-soft-1.17.2/build/RelWithDebInfo/libopenal.1.17.2.dylib /Users/mclifton/Downloads/openal-soft-1.17.2/build/RelWithDebInfo/libcommon.a -framework AudioToolbox -framework ApplicationServices -framework AudioUnit -framework CoreAudio -lpthread -ldl -lm -pthread";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "openal-info";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		C77312B5B7E240C8B6E656A4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0.0;
+				DYLIB_CURRENT_VERSION = 1.17.2;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", openal_EXPORTS, AL_BUILD_LIBRARY, AL_ALEXT_PROTOTYPES, _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", "/Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/Include", "/Users/mclifton/Downloads/openal-soft-1.17.2/Alc", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG -fPIC   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -dynamiclib -Wl,-headerpad_max_install_names -install_name @rpath/libopenal.1.dylib  /Users/mclifton/Downloads/openal-soft-1.17.2/build/MinSizeRel/libcommon.a -framework AudioToolbox -framework ApplicationServices -framework AudioUnit -framework CoreAudio -lpthread -ldl -lm -pthread";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = openal.1.17.2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		CADFD50E0D744798AA7FB79B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		D1D8F6D3ED454C688A50DDE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build/build";
+			};
+			name = Release;
+		};
+		D947A96D43A04D20BA0F8AC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "test-common";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		D95AEB98F47E440598C94350 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Release;
+		};
+		DB46881C8CE24C0589E494D1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-std=c11         -D_DEBUG -fPIC   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		DF60845D3157469E928D1E3C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/mclifton/Downloads/openal-soft-1.17.2/build/MinSizeRel";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/mclifton/Downloads/openal-soft-1.17.2/build/MinSizeRel/libopenal.1.17.2.dylib /Users/mclifton/Downloads/openal-soft-1.17.2/build/MinSizeRel/libcommon.a -framework AudioToolbox -framework ApplicationServices -framework AudioUnit -framework CoreAudio -lpthread -ldl -lm -pthread";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "openal-info";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		E08330F99BA9400198B54B90 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "-std=c11         -D_DEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "test-common";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		F1B6BB2F162043E5A7864D64 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = RelWithDebInfo;
+		};
+		F2948F72A57543489572187D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", );
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "/Users/mclifton/Downloads/openal-soft-1.17.2/build/MinSizeRel";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-std=c11      -DNDEBUG   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/mclifton/Downloads/openal-soft-1.17.2/build/MinSizeRel/libtest-common.a /Users/mclifton/Downloads/openal-soft-1.17.2/build/MinSizeRel/libopenal.1.17.2.dylib /Users/mclifton/Downloads/openal-soft-1.17.2/build/MinSizeRel/libcommon.a -framework AudioToolbox -framework ApplicationServices -framework AudioUnit -framework CoreAudio -lpthread -ldl -lm -pthread";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = altonegen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = MinSizeRel;
+		};
+		F65752052EDB47D39FA92521 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0.0;
+				DYLIB_CURRENT_VERSION = 1.17.2;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", openal_EXPORTS, AL_BUILD_LIBRARY, AL_ALEXT_PROTOTYPES, _LARGEFILE_SOURCE, _LARGE_FILES, );
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/mclifton/Downloads/openal-soft-1.17.2/include", "/Users/mclifton/Downloads/openal-soft-1.17.2/build", "/Users/mclifton/Downloads/openal-soft-1.17.2/OpenAL32/Include", "/Users/mclifton/Downloads/openal-soft-1.17.2/Alc", );
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CFLAGS = "-std=c11     -fPIC   -Winline -Wall -Wextra -fvisibility=hidden -pthread";
+				OTHER_LDFLAGS = " -dynamiclib -Wl,-headerpad_max_install_names -install_name @rpath/libopenal.1.dylib  /Users/mclifton/Downloads/openal-soft-1.17.2/build/Debug/libcommon.a -framework AudioToolbox -framework ApplicationServices -framework AudioUnit -framework CoreAudio -lpthread -ldl -lm -pthread";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = openal.1.17.2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mclifton/Downloads/openal-soft-1.17.2/build";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", "$(inherited)", );
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		051889A8335943BB89632F2D /* Build configuration list for PBXProject "OpenAL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				833A8F54274649C096A3F199 /* Debug */,
+				D1D8F6D3ED454C688A50DDE6 /* Release */,
+				9B3671F954FA407D90BF62EE /* MinSizeRel */,
+				7DBBB3E39F0B4A2BBD63D957 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		130ED31B2E9C4CBA997B9DC1 /* Build configuration list for PBXNativeTarget "test-common" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80AE5834D6AA44CFA853643C /* Debug */,
+				D947A96D43A04D20BA0F8AC4 /* Release */,
+				52BB69642C0840DD8D4D05A4 /* MinSizeRel */,
+				E08330F99BA9400198B54B90 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1DA6026C433840C7B7F1DA4B /* Build configuration list for PBXNativeTarget "common" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				350038BFC44A4A16928E942D /* Debug */,
+				868C3C407B824C6999948A1B /* Release */,
+				70992D34936D4672B6F77A30 /* MinSizeRel */,
+				DB46881C8CE24C0589E494D1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4EA508D461EA42F38EEAA11A /* Build configuration list for PBXNativeTarget "bsincgen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A612206DBD1A435FB858BC67 /* Debug */,
+				3F0E18A95C0A4E65B9213CA8 /* Release */,
+				08D892C772AF40E8BD075B57 /* MinSizeRel */,
+				87B8AB038D2948B3912AB3C3 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6ACA2A707CEA460784C7EC6F /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8BA2497F32F4AB097E404D7 /* Debug */,
+				8A1674BD6AA74F25977773BE /* Release */,
+				0DAB7C3C75BD4920925CFEF9 /* MinSizeRel */,
+				72B1BB05A92C43BDA979B969 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		799B4033861E48839A9102CB /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45DEF4F1BEF449989B0C779C /* Debug */,
+				D95AEB98F47E440598C94350 /* Release */,
+				CADFD50E0D744798AA7FB79B /* MinSizeRel */,
+				3C342661442B4CF19013C08D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8047283AADFB4D94BC49AC28 /* Build configuration list for PBXNativeTarget "makehrtf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56F728915EE649AB9F8E76B9 /* Debug */,
+				7C0440DAF72945F4B1059990 /* Release */,
+				71EE90778D614B48A8E80969 /* MinSizeRel */,
+				5BA26F09FA334C5093278299 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9CE51025454541C4B1DD5187 /* Build configuration list for PBXNativeTarget "openal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F65752052EDB47D39FA92521 /* Debug */,
+				41D130B06AF746FC95885F67 /* Release */,
+				C77312B5B7E240C8B6E656A4 /* MinSizeRel */,
+				8DF0803CA0504AFCB5DE2B89 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E08753EA8FF4451A9AF72AAB /* Build configuration list for PBXNativeTarget "openal-info" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8CA8C951402467BA3AC45CF /* Debug */,
+				442B45DEB47348B7898C13D6 /* Release */,
+				DF60845D3157469E928D1E3C /* MinSizeRel */,
+				A986BB143B0B4D04B4187042 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E9BE5BF249AC4A63A640A169 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C0756D47D5B42028141838C /* Debug */,
+				00A7FBBBC36D41F0BC5DC7D3 /* Release */,
+				5F848A4A1E7B4A48905E60B4 /* MinSizeRel */,
+				F1B6BB2F162043E5A7864D64 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FDEA6C44736D47D6B759F7D5 /* Build configuration list for PBXNativeTarget "altonegen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5415412B45FA481B831AB377 /* Debug */,
+				1F0B99FD15614B6DAF144DF9 /* Release */,
+				F2948F72A57543489572187D /* MinSizeRel */,
+				05608C609CE14A35B8D5813A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 947A24D6B44244DEBFA5618C /* Project object */;
+}
