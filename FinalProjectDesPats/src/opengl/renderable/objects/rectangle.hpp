@@ -37,6 +37,9 @@ namespace cap { namespace graphics {
         
         void setDirection(vec3);
         vec3 getDirection();
+        
+        void setTexture(texture*);
+        void setTexID(float);
     };
     
 }}

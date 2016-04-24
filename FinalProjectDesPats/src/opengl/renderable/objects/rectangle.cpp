@@ -16,7 +16,7 @@ namespace cap { namespace graphics {
         m_color = vec4(.9f,.9f,.9f,1);
         m_buffer.reset(new bufferObject(GL_ARRAY_BUFFER));
         
-        m_vertices.reset(new vertex[6]);
+        m_vertices.reset(new vertex[4]);
         
         setup();
         buffer();
@@ -26,7 +26,6 @@ namespace cap { namespace graphics {
         if(m_buffer->getID() == 0)
             m_buffer->genBuffer();
         m_buffer->bindBuffer();
-        
         m_buffer->bufferData(4, sizeof(vertex), m_vertices.get(), GL_STATIC_DRAW);
     }
     
@@ -35,9 +34,13 @@ namespace cap { namespace graphics {
         
         glEnableVertexAttribArray(0);
         glEnableVertexAttribArray(1);
+        glEnableVertexAttribArray(2);
+        glEnableVertexAttribArray(3);
         
         glVertexAttribPointer(0, sizeof(vertex::position)/sizeof(GLfloat), GL_FLOAT, GL_FALSE, sizeof(vertex), BUFFER_OFFSET(offsetof(vertex, position)));
         glVertexAttribPointer(1, sizeof(vertex::color)/sizeof(GLfloat), GL_FLOAT, GL_FALSE, sizeof(vertex), BUFFER_OFFSET(offsetof(vertex, color)));
+        glVertexAttribPointer(2, sizeof(vertex::texCoord)/sizeof(GLfloat), GL_FLOAT, GL_FALSE, sizeof(vertex), BUFFER_OFFSET(offsetof(vertex, texCoord)));
+        glVertexAttribPointer(3, sizeof(vertex::tid)/sizeof(GLfloat), GL_FLOAT, GL_FALSE, sizeof(vertex), BUFFER_OFFSET(offsetof(vertex, tid)));
         
         glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
     }
@@ -45,15 +48,23 @@ namespace cap { namespace graphics {
     void rectangle::setup(){
         m_vertices[0].color = m_color;
         m_vertices[0].position = vec3(m_position[0]+m_size[0]/2.f, m_position[1]+m_size[1]/2.f, m_position[2]);
+        m_vertices[0].texCoord = vec2(1,1);
+        m_vertices[0].tid = m_texID;
         
         m_vertices[1].color = m_color;
         m_vertices[1].position = vec3(m_position[0]+m_size[0]/2.f, m_position[1]-m_size[1]/2.f, m_position[2]);
+        m_vertices[1].texCoord = vec2(1,0);
+        m_vertices[1].tid = m_texID;
 
         m_vertices[2].color = m_color;
         m_vertices[2].position = vec3(m_position[0]-m_size[0]/2.f, m_position[1]-m_size[1]/2.f, m_position[2]);
+        m_vertices[2].texCoord = vec2(0,0);
+        m_vertices[2].tid = m_texID;
         
         m_vertices[3].color = m_color;
         m_vertices[3].position = vec3(m_position[0]-m_size[0]/2.f, m_position[1]+m_size[1]/2.f, m_position[2]);
+        m_vertices[3].texCoord = vec2(0,1);
+        m_vertices[3].tid = m_texID;
     }
     
     void rectangle::setColor(vec4 color){
@@ -89,6 +100,14 @@ namespace cap { namespace graphics {
     
     vec3 rectangle::getDirection(){
         return m_direction;
+    }
+    
+    void rectangle::setTexture(texture* Texture){
+        m_texture = Texture;
+    }
+    
+    void rectangle::setTexID(float tid){
+        m_texID = tid;
     }
     
 }}

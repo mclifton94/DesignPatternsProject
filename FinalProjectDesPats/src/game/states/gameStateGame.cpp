@@ -26,20 +26,12 @@ namespace cap { namespace state {
     
     //--------------------------------------------------------------------------------
     void gameStateGame::setup(){
-        
     }
     
     //--------------------------------------------------------------------------------
     void gameStateGame::loop(){
-        
-        rectangle r(vec2(1,1),vec3(-1,0,-3));
-        rectangle j(vec2(1,1),vec3(1,0,-3));
-        
         m_Window->clear();
 
-        r.draw();
-        j.draw();
-            
         m_Window->swap();
         glfwPollEvents();
             

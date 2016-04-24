@@ -23,8 +23,10 @@ namespace cap { namespace opencl {
     }
     
     ocl::~ocl(){
-        clReleaseMemObject(m_InputMem);
-        clReleaseMemObject(m_OutputMem);
+        if( m_InputMem)
+            clReleaseMemObject(m_InputMem);
+        if( m_OutputMem)
+            clReleaseMemObject(m_OutputMem);
         clReleaseProgram(m_Program);
         clReleaseKernel(m_Kernel);
         clReleaseCommandQueue(m_Queue);

@@ -67,14 +67,14 @@ namespace cap { namespace opencl {
         
         size_t m_LocalMax, m_GlobalMax;
         
-        cl_device_id m_DeviceID;
-        cl_context m_Context;
-        cl_command_queue m_Queue;
-        cl_program m_Program;
-        cl_kernel m_Kernel;
+        cl_device_id m_DeviceID = NULL;
+        cl_context m_Context = NULL;
+        cl_command_queue m_Queue = NULL;
+        cl_program m_Program = NULL;
+        cl_kernel m_Kernel = NULL;
         
-        cl_mem m_InputMem;
-        cl_mem m_OutputMem;
+        cl_mem m_InputMem = NULL;
+        cl_mem m_OutputMem = NULL;
         
     public:
         ocl(bool);

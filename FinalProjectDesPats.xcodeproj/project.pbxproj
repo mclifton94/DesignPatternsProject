@@ -12,6 +12,7 @@
 		F90290A11CA9AED0008969D6 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A01CA9AED0008969D6 /* libGLEW.a */; };
 		F90290A31CA9AED9008969D6 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A21CA9AED9008969D6 /* libglfw3.a */; };
 		F90290A51CA9AEE2008969D6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90290A41CA9AEE2008969D6 /* OpenGL.framework */; };
+		F909D1131CCCFD0C00566343 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F909D1111CCCFD0C00566343 /* texture.cpp */; };
 		F90D593E1CB18BBA00DE5083 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D593C1CB18BBA00DE5083 /* game.cpp */; };
 		F90D59421CB18E5C00DE5083 /* gameStateGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59401CB18E5C00DE5083 /* gameStateGame.cpp */; };
 		F90D59471CB18E7A00DE5083 /* gameStateMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D59451CB18E7A00DE5083 /* gameStateMenu.cpp */; };
@@ -20,7 +21,6 @@
 		F90D595C1CB1A1E200DE5083 /* keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D595B1CB1A1E200DE5083 /* keyboard.cpp */; };
 		F90D595F1CB1AAEF00DE5083 /* ocl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D595D1CB1AAEF00DE5083 /* ocl.cpp */; };
 		F95C93BD1CB6A0B4004E0403 /* gameStateOpenCL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F95C93BB1CB6A0B4004E0403 /* gameStateOpenCL.cpp */; };
-		F976AED11CCAA3AC00CABAC3 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F976AECF1CCAA39E00CABAC3 /* OpenCL.framework */; };
 		F9897D541CB2DE750035EDD4 /* fileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D521CB2DE750035EDD4 /* fileReader.cpp */; };
 		F9897D671CB2EAED0035EDD4 /* baseObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D641CB2EAED0035EDD4 /* baseObject.cpp */; };
 		F9897D6A1CB2EAF90035EDD4 /* rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D681CB2EAF90035EDD4 /* rectangle.cpp */; };
@@ -50,6 +50,11 @@
 		F90290A01CA9AED0008969D6 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = Dependencies/glew/1.13.0/lib/libGLEW.a; sourceTree = "<group>"; };
 		F90290A21CA9AED9008969D6 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = Dependencies/glfw3/3.1.2/lib/libglfw3.a; sourceTree = "<group>"; };
 		F90290A41CA9AEE2008969D6 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Dependencies/OpenGL.framework; sourceTree = "<group>"; };
+		F909D1111CCCFD0C00566343 /* texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = texture.cpp; path = src/opengl/textureManagement/texture.cpp; sourceTree = "<group>"; };
+		F909D1121CCCFD0C00566343 /* texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = texture.hpp; path = src/opengl/textureManagement/texture.hpp; sourceTree = "<group>"; };
+		F909D1151CCCFF7D00566343 /* textureLoad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = textureLoad.hpp; path = src/opengl/textureManagement/textureLoad.hpp; sourceTree = "<group>"; };
+		F909D1191CCD05A800566343 /* fsMenu.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fsMenu.shader; path = res/shaders/fsMenu.shader; sourceTree = "<group>"; };
+		F909D11A1CCD05A800566343 /* vsMenu.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vsMenu.shader; path = res/shaders/vsMenu.shader; sourceTree = "<group>"; };
 		F90D59371CB18A7900DE5083 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = Dependencies/OpenCL.framework; sourceTree = "<group>"; };
 		F90D593C1CB18BBA00DE5083 /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = game.cpp; path = src/game/interface/game.cpp; sourceTree = "<group>"; };
 		F90D593D1CB18BBA00DE5083 /* game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = game.hpp; path = src/game/interface/game.hpp; sourceTree = "<group>"; };
@@ -71,7 +76,6 @@
 		F93852C81CB6ABC200572CD6 /* MaxContSub.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; name = MaxContSub.cl; path = res/kernels/MaxContSub.cl; sourceTree = "<group>"; };
 		F95C93BB1CB6A0B4004E0403 /* gameStateOpenCL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gameStateOpenCL.cpp; path = src/game/states/gameStateOpenCL.cpp; sourceTree = "<group>"; };
 		F95C93BC1CB6A0B4004E0403 /* gameStateOpenCL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = gameStateOpenCL.hpp; path = src/game/states/gameStateOpenCL.hpp; sourceTree = "<group>"; };
-		F976AECF1CCAA39E00CABAC3 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
 		F9897D501CB2DC770035EDD4 /* tools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tools.hpp; path = src/utils/fileinput/tools.hpp; sourceTree = "<group>"; };
 		F9897D521CB2DE750035EDD4 /* fileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fileReader.cpp; path = src/utils/fileinput/fileReader.cpp; sourceTree = "<group>"; };
 		F9897D531CB2DE750035EDD4 /* fileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fileReader.hpp; path = src/utils/fileinput/fileReader.hpp; sourceTree = "<group>"; };
@@ -102,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F976AED11CCAA3AC00CABAC3 /* OpenCL.framework in Frameworks */,
 				F90290A51CA9AEE2008969D6 /* OpenGL.framework in Frameworks */,
 				F90290A31CA9AED9008969D6 /* libglfw3.a in Frameworks */,
 				F90290A11CA9AED0008969D6 /* libGLEW.a in Frameworks */,
@@ -116,7 +119,6 @@
 		F902908A1CA9AE76008969D6 = {
 			isa = PBXGroup;
 			children = (
-				F976AECF1CCAA39E00CABAC3 /* OpenCL.framework */,
 				F902909D1CA9AE99008969D6 /* Dependencies */,
 				F90290951CA9AE76008969D6 /* FinalProjectDesPats */,
 				F90290941CA9AE76008969D6 /* Products */,
@@ -151,6 +153,23 @@
 				F90290A41CA9AEE2008969D6 /* OpenGL.framework */,
 			);
 			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		F909D1101CCCFCE100566343 /* textureManagement */ = {
+			isa = PBXGroup;
+			children = (
+				F909D1111CCCFD0C00566343 /* texture.cpp */,
+				F909D1121CCCFD0C00566343 /* texture.hpp */,
+				F909D1151CCCFF7D00566343 /* textureLoad.hpp */,
+			);
+			name = textureManagement;
+			sourceTree = "<group>";
+		};
+		F909D1171CCD040000566343 /* textures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = textures;
 			sourceTree = "<group>";
 		};
 		F90D592E1CB1783B00DE5083 /* states */ = {
@@ -218,6 +237,7 @@
 		F90D593A1CB18A8F00DE5083 /* opengl */ = {
 			isa = PBXGroup;
 			children = (
+				F909D1101CCCFCE100566343 /* textureManagement */,
 				F9897D721CB31B580035EDD4 /* shaders */,
 				F9897D6B1CB30D8B0035EDD4 /* buffers */,
 				F9897D581CB2E7C50035EDD4 /* renderable */,
@@ -304,6 +324,7 @@
 		F9897D551CB2E4D00035EDD4 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				F909D1171CCD040000566343 /* textures */,
 				F9897D771CB31D0C0035EDD4 /* shaders */,
 				F9897D761CB31D050035EDD4 /* kernel */,
 			);
@@ -363,6 +384,8 @@
 		F9897D771CB31D0C0035EDD4 /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				F909D1191CCD05A800566343 /* fsMenu.shader */,
+				F909D11A1CCD05A800566343 /* vsMenu.shader */,
 				F9897D7A1CB31D4F0035EDD4 /* fs.shader */,
 				F9897D7B1CB31D4F0035EDD4 /* vs.shader */,
 			);
@@ -437,6 +460,7 @@
 				F90D59421CB18E5C00DE5083 /* gameStateGame.cpp in Sources */,
 				F9897D751CB31B770035EDD4 /* shaderObject.cpp in Sources */,
 				F90290971CA9AE76008969D6 /* main.cpp in Sources */,
+				F909D1131CCCFD0C00566343 /* texture.cpp in Sources */,
 				F90D594B1CB1964D00DE5083 /* gameWindow.cpp in Sources */,
 				F9BE79131CBA7E64006FC4E5 /* point.cpp in Sources */,
 				F9897D6A1CB2EAF90035EDD4 /* rectangle.cpp in Sources */,

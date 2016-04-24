@@ -26,9 +26,10 @@ namespace cap { namespace state {
     {
         window.reset( new gameWindow(640, 480, (char*)"Game Window!", 1 ));
         m_pStateGame.reset(new gameStateGame(window.get(), this));
+        m_pStateMenu.reset(new gameStateMenu(window.get(), this));
         m_pStateOpenCL.reset(new gameStateOpenCL(window.get(), this));
         m_pStateOpenCLComplex.reset(new gameStateOpenCLComplex(window.get(), this));
-        setState(m_pStateGame.get());
+        setState(m_pStateMenu.get());
         
         m_Timer->reset();
     }
@@ -44,9 +45,6 @@ namespace cap { namespace state {
         while(!window->shouldClose()){
             
             if(m_Timer->check()){
-//                char title[16];
-//                sprintf(title, "%d", m_Timer->get());
-//                window->setTitle(title);
                 std::cerr << m_Timer->get() << "\n";
                 m_Timer->reset();
             }
@@ -59,6 +57,11 @@ namespace cap { namespace state {
     //--------------------------------------------------------------------------------
     gameStates* game::getStateGame(){
         return m_pStateGame.get();
+    }
+    
+    //--------------------------------------------------------------------------------
+    gameStates* game::getStateMenu(){
+        return m_pStateMenu.get();
     }
     
     //--------------------------------------------------------------------------------

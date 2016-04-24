@@ -9,5 +9,6 @@
 #pragma once 
 
 #include "gameStateGame.hpp"
+#include "gameStateMenu.hpp"
 #include "gameStateOpenCL.hpp"
 #include "gameStateOpenCLComplex.hpp"
