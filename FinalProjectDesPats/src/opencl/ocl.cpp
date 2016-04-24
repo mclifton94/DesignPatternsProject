@@ -11,6 +11,7 @@
 
 namespace cap { namespace opencl {
   
+    //--------------------------------------------------------------------------------
     ocl::ocl(bool gpu_cpu){
         err = clGetDeviceIDs(NULL, gpu_cpu ? CL_DEVICE_TYPE_GPU : CL_DEVICE_TYPE_CPU, 1, &m_DeviceID, NULL);
         if( err != CL_SUCCESS ){
@@ -22,6 +23,7 @@ namespace cap { namespace opencl {
         
     }
     
+    //--------------------------------------------------------------------------------
     ocl::~ocl(){
         if( m_InputMem)
             clReleaseMemObject(m_InputMem);
@@ -33,21 +35,20 @@ namespace cap { namespace opencl {
         clReleaseContext(m_Context);
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::setup(const char** Kernel, const char* kernelFunc, unsigned int count, const float * data){
         getProgram(Kernel);
         getProgramExec();
         getKernel(kernelFunc);
-        //getInputOutput(count);
-        //writeInput(data);
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::setup(const char* kernelFile, const char* kernelFunc, unsigned int count, const float * data){
         if(!m_reader.open(kernelFile)){
             std::cerr << "Failed to open " << kernelFile << "\n";
             return;
         }
         
-        // NEED IMPROVEMENT, IF POSSIBLE
         std::string contents = "";
         unsigned char c;
         while(m_reader.read(c)){
@@ -63,13 +64,13 @@ namespace cap { namespace opencl {
         writeInput(data);
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::setup(const char* kernelFile, const char* kernelFunc, unsigned int count){
         if(!m_reader.open(kernelFile)){
             std::cerr << "Failed to open " << kernelFile << "\n";
             return;
         }
         
-        // NEED IMPROVEMENT, IF POSSIBLE
         std::string contents = "";
         unsigned char c;
         while(m_reader.read(c)){
@@ -81,10 +82,9 @@ namespace cap { namespace opencl {
         getProgram(&temp);
         getProgramExec();
         getKernel(kernelFunc);
-        //getInputOutput(count);
-        //writeInput(data);
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::getContext(){
         m_Context = clCreateContext(0, 1, &m_DeviceID, NULL, NULL, &err);
         if(!m_Context){
@@ -92,6 +92,7 @@ namespace cap { namespace opencl {
         }
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::getQueue(){
         m_Queue = clCreateCommandQueue(m_Context, m_DeviceID, 0, &err);
         if(!m_Queue){
@@ -99,6 +100,7 @@ namespace cap { namespace opencl {
         }
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::getProgram(const char** fileinput ){
         m_Program = clCreateProgramWithSource(m_Context, 1, fileinput, NULL, &err);
         if(!m_Program){
@@ -106,6 +108,7 @@ namespace cap { namespace opencl {
         }
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::getProgramExec(){
         err = clBuildProgram(m_Program, 0, NULL, NULL, NULL, NULL);
         if(err){
@@ -119,6 +122,7 @@ namespace cap { namespace opencl {
         }
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::getKernel(const char* kernelName ){
         m_Kernel = clCreateKernel(m_Program, kernelName, &err);
         if (!m_Kernel || err)
@@ -127,6 +131,7 @@ namespace cap { namespace opencl {
         }
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::getInputOutput(unsigned int count ){
         _count = count;
         m_InputMem = clCreateBuffer(m_Context,  CL_MEM_READ_ONLY,  sizeof(float) * _count, NULL, NULL);
@@ -137,6 +142,7 @@ namespace cap { namespace opencl {
         }
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::getInputOutputPts(unsigned int count){
         _count = count;
         m_InputMem = clCreateBuffer(m_Context,  CL_MEM_READ_ONLY,  sizeof(pt) * _count, NULL, NULL);
@@ -147,6 +153,7 @@ namespace cap { namespace opencl {
         }
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::writeInput(const pt* data){
         err = clEnqueueWriteBuffer(m_Queue, m_InputMem, CL_TRUE, 0, sizeof(pt) * _count, data, 0, NULL, NULL);
         if (err != CL_SUCCESS)
@@ -155,6 +162,7 @@ namespace cap { namespace opencl {
         }
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::writeInput(const float* data){
         err = clEnqueueWriteBuffer(m_Queue, m_InputMem, CL_TRUE, 0, sizeof(float) * _count, data, 0, NULL, NULL);
         if (err != CL_SUCCESS)
@@ -163,6 +171,7 @@ namespace cap { namespace opencl {
         }
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::setArguments(int count, argument args[]){
         err = 0;
         err  = clSetKernelArg(m_Kernel, 0, sizeof(cl_mem), &m_InputMem);
@@ -178,6 +187,7 @@ namespace cap { namespace opencl {
         }
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::getWorkGroupAndExec(){
         err = clGetKernelWorkGroupInfo(m_Kernel, m_DeviceID, CL_KERNEL_WORK_GROUP_SIZE, sizeof(m_LocalMax), &m_LocalMax, NULL);
         if (err != CL_SUCCESS)
@@ -195,10 +205,12 @@ namespace cap { namespace opencl {
         }
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::wait(){
         clFinish(m_Queue);
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::getResults(results* result){
         err = clEnqueueReadBuffer( m_Queue, m_OutputMem, CL_TRUE, 0, sizeof(results) * _count, result, 0, NULL, NULL );
         if (err)
@@ -207,6 +219,7 @@ namespace cap { namespace opencl {
         }
     }
     
+    //--------------------------------------------------------------------------------
     void ocl::getResults(pt* result){
         err = clEnqueueReadBuffer( m_Queue, m_OutputMem, CL_TRUE, 0, sizeof(pt) * _count, result, 0, NULL, NULL );
         if (err)
