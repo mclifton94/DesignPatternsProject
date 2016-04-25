@@ -18,7 +18,6 @@ namespace cap { namespace state {
     gameStateMenu::gameStateMenu(gameWindow* window, game* game)
     : m_Window(window),  m_Game(game)
     {
-        m_menuMusic.reset(new audioTrack("/Users/mclifton/Downloads/01. Pray You Catch Me (online-audio-converter.com).wav"));
         m_shader.reset(new shaderObject(tools::getEnv("/FinalProjectDesPats/res/shaders/vsMenu.shader"),
                                         tools::getEnv("/FinalProjectDesPats/res/shaders/fsMenu.shader")));
         m_shader->enable();
@@ -26,8 +25,8 @@ namespace cap { namespace state {
         
         m_txPath["MenuPic"] = tools::getEnv("/FinalProjectDesPats/res/textures/MenuPicture.png");
         
-        m_texManager.reset(new textureManager(16));
-        m_texManager->submitTexture(m_txPath["MenuPic"]);
+        m_texManager = textureManager::getInstance();
+        m_texManager->submitTexture(m_txPath["MenuPic"], 0);
         m_shader->setUniform1iv("textures", m_texManager->getTextureIDs(), 16);
         
         m_menuPicture.reset(new rectangle(vec2(2,2),vec3(0,0,-1)));
@@ -43,8 +42,6 @@ namespace cap { namespace state {
     
     //--------------------------------------------------------------------------------
     void gameStateMenu::setup(){
-        m_menuMusic->restart();
-        std::cerr << "Music started!\n";
     }
     
     //--------------------------------------------------------------------------------
@@ -60,7 +57,6 @@ namespace cap { namespace state {
         glfwPollEvents();
         
         m_shader->disable();
-        
         changeState();
     }
     
@@ -68,11 +64,12 @@ namespace cap { namespace state {
     bool gameStateMenu::changeState(){
         if( inputKeyboard::keysPressed.count(GLFW_KEY_0) && inputKeyboard::keysPressed[GLFW_KEY_0]){
             m_Game->setState(m_Game->getStateOpenCL());
-            m_menuMusic->pause();
             return true;
         }else if( inputKeyboard::keysPressed.count(GLFW_KEY_9) && inputKeyboard::keysPressed[GLFW_KEY_9]){
             m_Game->setState(m_Game->getStateOpenCLComplex());
-            m_menuMusic->pause();
+            return true;
+        }else if( inputKeyboard::keysPressed.count(GLFW_KEY_7) && inputKeyboard::keysPressed[GLFW_KEY_7]){
+            m_Game->setState(m_Game->getStateGame());
             return true;
         }
         return false;

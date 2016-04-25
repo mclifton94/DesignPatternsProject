@@ -10,6 +10,13 @@
 
 namespace cap { namespace graphics {
   
+    
+    //--------------------------------------------------------------------------------
+    textureManager* textureManager::getInstance(){
+        static textureManager instance(16);
+        return &instance;
+    }
+    
     //--------------------------------------------------------------------------------
     textureManager::textureManager(int numTextures)
     : m_maxTextures(numTextures)
@@ -28,9 +35,9 @@ namespace cap { namespace graphics {
     }
     
     //--------------------------------------------------------------------------------
-    void textureManager::submitTexture(std::string path){
+    void textureManager::submitTexture(std::string path, int loadWith){
         if( !findTexture(path).isFound ){
-            m_allTextures.push_back(new texture(path));
+            m_allTextures.push_back(new texture(path, loadWith));
             m_textureMap[path] = (int)m_allTextures.size()-1;
         }
     }

@@ -34,11 +34,13 @@ namespace cap { namespace graphics {
         
         textureMap m_textureMap; // path, int in allTextures vector
         
-    public:
         textureManager(int);
-        ~textureManager();
         
-        void submitTexture(std::string);
+    public:
+        ~textureManager();
+        static textureManager* getInstance();
+        
+        void submitTexture(std::string, int);
         searchResult findTexture(std::string);
         
         void enableTextures();

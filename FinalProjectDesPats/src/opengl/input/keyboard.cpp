@@ -23,7 +23,7 @@ namespace cap { namespace input {
         }else if( action == GLFW_PRESS){
             keysPressed[key] = true;
             //std::cerr << key << " pressed!\n";
-        }else{
+        }else if( action == GLFW_REPEAT){
             keysHeld[key] = true;
             //std::cerr << key << " held!\n";
         }

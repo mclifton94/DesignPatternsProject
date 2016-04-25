@@ -10,6 +10,7 @@
 
 #include "baseObject.hpp"
 #include "baseObjectActions.hpp"
+#include "spriteTextures.hpp"
 
 namespace cap { namespace graphics {
     
@@ -17,6 +18,7 @@ namespace cap { namespace graphics {
     private:
         vec4 m_color;
         vec2 m_size;
+        texCoords m_coords;
         
     public:
         rectangle(vec2, vec3);
@@ -38,8 +40,14 @@ namespace cap { namespace graphics {
         void setDirection(vec3);
         vec3 getDirection();
         
+        void setPosition(vec3);
+        vec3 getPosition() const;
+        
         void setTexture(texture*);
         void setTexID(float);
+        
+        void setTexCoords(texCoords);
+        texCoords getTexCoords() const;
         
         rectangle* clone();
     };

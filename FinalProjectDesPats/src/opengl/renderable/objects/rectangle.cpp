@@ -11,11 +11,15 @@
 namespace cap { namespace graphics {
     
     //--------------------------------------------------------------------------------
-    rectangle::rectangle(vec2 size, vec3 position){
+    rectangle::rectangle(vec2 size, vec3 position)
+    : m_coords(vec2(), vec2())
+    {
         m_size = size;
         m_position = position;
         m_color = vec4(.9f,.9f,.9f,1);
         m_buffer.reset(new bufferObject(GL_ARRAY_BUFFER));
+        
+        m_coords = texCoords(vec2(0,1), vec2(1,0));
         
         m_vertices.reset(new vertex[4]);
         
@@ -30,6 +34,16 @@ namespace cap { namespace graphics {
         m_buffer->bindBuffer();
         m_buffer->bufferData(4, sizeof(vertex), m_vertices.get(), GL_STATIC_DRAW);
         m_buffer->unbindBuffer();
+    }
+    
+    //--------------------------------------------------------------------------------
+    void rectangle::setPosition(vec3 Position){
+        m_position = Position;
+    }
+    
+    //--------------------------------------------------------------------------------
+    vec3 rectangle::getPosition() const {
+        return m_position;
     }
     
     //--------------------------------------------------------------------------------
@@ -60,22 +74,22 @@ namespace cap { namespace graphics {
     void rectangle::setup(){
         m_vertices[0].color = m_color;
         m_vertices[0].position = vec3(m_position[0]+m_size[0]/2.f, m_position[1]+m_size[1]/2.f, m_position[2]);
-        m_vertices[0].texCoord = vec2(1,1);
+        m_vertices[0].texCoord = m_coords.tr;// vec2(.1,.1);
         m_vertices[0].tid = m_texID;
         
         m_vertices[1].color = m_color;
         m_vertices[1].position = vec3(m_position[0]+m_size[0]/2.f, m_position[1]-m_size[1]/2.f, m_position[2]);
-        m_vertices[1].texCoord = vec2(1,0);
+        m_vertices[1].texCoord = m_coords.br;// vec2(.1,0);
         m_vertices[1].tid = m_texID;
 
         m_vertices[2].color = m_color;
         m_vertices[2].position = vec3(m_position[0]-m_size[0]/2.f, m_position[1]-m_size[1]/2.f, m_position[2]);
-        m_vertices[2].texCoord = vec2(0,0);
+        m_vertices[2].texCoord = m_coords.bl;// vec2(0,0);
         m_vertices[2].tid = m_texID;
         
         m_vertices[3].color = m_color;
         m_vertices[3].position = vec3(m_position[0]-m_size[0]/2.f, m_position[1]+m_size[1]/2.f, m_position[2]);
-        m_vertices[3].texCoord = vec2(0,1);
+        m_vertices[3].texCoord = m_coords.tl;// vec2(0,.1);
         m_vertices[3].tid = m_texID;
     }
     
@@ -131,6 +145,18 @@ namespace cap { namespace graphics {
         m_texID = tid;
         setup();
         buffer();
+    }
+    
+    //--------------------------------------------------------------------------------
+    void rectangle::setTexCoords(texCoords Coords){
+        m_coords = Coords;
+        setup();
+        buffer();
+    }
+    
+    //--------------------------------------------------------------------------------
+    texCoords rectangle::getTexCoords() const {
+        return m_coords;
     }
     
     //--------------------------------------------------------------------------------

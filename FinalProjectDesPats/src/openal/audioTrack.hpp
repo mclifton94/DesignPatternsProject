@@ -30,7 +30,7 @@ namespace cap { namespace openal {
         ALenum m_format = 0;
         
         ALCdevice* m_device;
-        ALCcontext* m_context;
+        ALCcontext* m_context = NULL;
         
         std::unique_ptr<unsigned char> m_data;
         

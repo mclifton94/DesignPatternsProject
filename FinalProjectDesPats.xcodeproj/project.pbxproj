@@ -33,6 +33,8 @@
 		F9DB3C7B1CCD650600CF9187 /* libopenal.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DB3C751CCD64F400CF9187 /* libopenal.dylib */; };
 		F9DB3C7C1CCD650600CF9187 /* libtest-common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DB3C791CCD64F400CF9187 /* libtest-common.a */; };
 		F9DB3C8C1CCD6FFA00CF9187 /* audioTrack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9DB3C8A1CCD6FFA00CF9187 /* audioTrack.cpp */; };
+		F9DB3C941CCD816800CF9187 /* spriteTextures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9DB3C931CCD816800CF9187 /* spriteTextures.cpp */; };
+		F9DB3C991CCD845E00CF9187 /* DK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9DB3C971CCD845E00CF9187 /* DK.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +164,15 @@
 		F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OpenAL.xcodeproj; path = Dependencies/alut/OpenAL.xcodeproj; sourceTree = "<group>"; };
 		F9DB3C8A1CCD6FFA00CF9187 /* audioTrack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = audioTrack.cpp; path = src/openal/audioTrack.cpp; sourceTree = "<group>"; };
 		F9DB3C8B1CCD6FFA00CF9187 /* audioTrack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = audioTrack.hpp; path = src/openal/audioTrack.hpp; sourceTree = "<group>"; };
+		F9DB3C8E1CCD7BA400CF9187 /* dk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dk.png; path = res/textures/dk.png; sourceTree = "<group>"; };
+		F9DB3C931CCD816800CF9187 /* spriteTextures.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = spriteTextures.cpp; path = src/opengl/renderable/spriteTextures.cpp; sourceTree = "<group>"; };
+		F9DB3C951CCD818400CF9187 /* spriteTextures.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = spriteTextures.hpp; path = src/opengl/renderable/spriteTextures.hpp; sourceTree = "<group>"; };
+		F9DB3C971CCD845E00CF9187 /* DK.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DK.cpp; path = src/game/states/gameDK/DK.cpp; sourceTree = "<group>"; };
+		F9DB3C981CCD845E00CF9187 /* DK.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DK.hpp; path = src/game/states/gameDK/DK.hpp; sourceTree = "<group>"; };
+		F9DB3C9A1CCDAD5300CF9187 /* fsGame.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fsGame.shader; path = res/shaders/fsGame.shader; sourceTree = "<group>"; };
+		F9DB3C9B1CCDAD5300CF9187 /* vsGame.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vsGame.shader; path = res/shaders/vsGame.shader; sourceTree = "<group>"; };
+		F9DB3C9C1CCDB11600CF9187 /* backgroundDK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundDK.png; path = res/textures/backgroundDK.png; sourceTree = "<group>"; };
+		F9DB3C9D1CCDB53F00CF9187 /* theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = theme.wav; path = res/sounds/theme.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +248,8 @@
 		F909D1171CCD040000566343 /* textures */ = {
 			isa = PBXGroup;
 			children = (
+				F9DB3C9C1CCDB11600CF9187 /* backgroundDK.png */,
+				F9DB3C8E1CCD7BA400CF9187 /* dk.png */,
 				F909D1201CCD3E2900566343 /* MenuPicture.png */,
 			);
 			name = textures;
@@ -330,6 +343,7 @@
 		F90D59431CB18E6200DE5083 /* game */ = {
 			isa = PBXGroup;
 			children = (
+				F9DB3C961CCD843F00CF9187 /* entities */,
 				F90D59411CB18E5C00DE5083 /* gameStateGame.hpp */,
 				F90D59401CB18E5C00DE5083 /* gameStateGame.cpp */,
 			);
@@ -395,6 +409,7 @@
 		F9897D551CB2E4D00035EDD4 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				F9DB3C8D1CCD7B2800CF9187 /* sounds */,
 				F909D1171CCD040000566343 /* textures */,
 				F9897D771CB31D0C0035EDD4 /* shaders */,
 				F9897D761CB31D050035EDD4 /* kernel */,
@@ -405,6 +420,8 @@
 		F9897D581CB2E7C50035EDD4 /* renderable */ = {
 			isa = PBXGroup;
 			children = (
+				F9DB3C951CCD818400CF9187 /* spriteTextures.hpp */,
+				F9DB3C931CCD816800CF9187 /* spriteTextures.cpp */,
 				F9897D641CB2EAED0035EDD4 /* baseObject.cpp */,
 				F9897D651CB2EAED0035EDD4 /* baseObject.hpp */,
 				F9897D661CB2EAED0035EDD4 /* baseObjectActions.hpp */,
@@ -455,6 +472,8 @@
 		F9897D771CB31D0C0035EDD4 /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				F9DB3C9A1CCDAD5300CF9187 /* fsGame.shader */,
+				F9DB3C9B1CCDAD5300CF9187 /* vsGame.shader */,
 				F909D1191CCD05A800566343 /* fsMenu.shader */,
 				F909D11A1CCD05A800566343 /* vsMenu.shader */,
 				F9897D7A1CB31D4F0035EDD4 /* fs.shader */,
@@ -493,6 +512,23 @@
 				F9DB3C8B1CCD6FFA00CF9187 /* audioTrack.hpp */,
 			);
 			name = openal;
+			sourceTree = "<group>";
+		};
+		F9DB3C8D1CCD7B2800CF9187 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F9DB3C9D1CCDB53F00CF9187 /* theme.wav */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
+		F9DB3C961CCD843F00CF9187 /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				F9DB3C971CCD845E00CF9187 /* DK.cpp */,
+				F9DB3C981CCD845E00CF9187 /* DK.hpp */,
+			);
+			name = entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -616,6 +652,7 @@
 				F909D1131CCCFD0C00566343 /* texture.cpp in Sources */,
 				F90D594B1CB1964D00DE5083 /* gameWindow.cpp in Sources */,
 				F9BE79131CBA7E64006FC4E5 /* point.cpp in Sources */,
+				F9DB3C991CCD845E00CF9187 /* DK.cpp in Sources */,
 				F9897D6A1CB2EAF90035EDD4 /* rectangle.cpp in Sources */,
 				F9897D6E1CB30DB60035EDD4 /* buffer.cpp in Sources */,
 				F9897D541CB2DE750035EDD4 /* fileReader.cpp in Sources */,
@@ -628,6 +665,7 @@
 				F90D595F1CB1AAEF00DE5083 /* ocl.cpp in Sources */,
 				F95C93BD1CB6A0B4004E0403 /* gameStateOpenCL.cpp in Sources */,
 				F90D595C1CB1A1E200DE5083 /* keyboard.cpp in Sources */,
+				F9DB3C941CCD816800CF9187 /* spriteTextures.cpp in Sources */,
 				F9897D791CB31D450035EDD4 /* kernel.cl in Sources */,
 				F9BE79101CBA7D75006FC4E5 /* gameStateOpenCLComplex.cpp in Sources */,
 			);

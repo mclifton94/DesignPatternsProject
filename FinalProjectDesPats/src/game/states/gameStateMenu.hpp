@@ -47,10 +47,8 @@ namespace cap { namespace state {
         std::unique_ptr<rectangle> m_menuPicture;
         
         std::unique_ptr<shaderObject> m_shader;
-        std::unique_ptr<textureManager> m_texManager;
+        textureManager* m_texManager;
         pathToString m_txPath;
-        
-        std::unique_ptr<audioTrack> m_menuMusic;
     };
     
 }}

@@ -13,6 +13,8 @@ namespace cap { namespace openal {
     audioTrack::audioTrack(std::string filepath, bool debug)
     : m_filepath(filepath)
     {
+        m_context = NULL;
+        
         FILE* fp = NULL;
         fp = fopen(m_filepath.c_str(), "rb");
         if( !fp ){
@@ -51,13 +53,11 @@ namespace cap { namespace openal {
         fread(&bytesPS,sizeof(short),1,fp);
         fread(&bitsPS,sizeof(short),1,fp);
         
-        fread(type, sizeof(char), 4, fp);
-        while(type[0]!='d' || type[1]!='a' || type[2]!='t' || type[3]!='a'){
-            if(fread(type, sizeof(char), 4, fp) != 1){
-                error(404, "CORRUPT FILE!\n");
-                return;
-            }
+        fread(type, sizeof(char), 1, fp);
+        while(type[0]!='d'){
+           fread(type, sizeof(char), 1, fp);
         }
+        fread(type, sizeof(char), 3, fp);
         
         fread(&dataSize,sizeof(int),1,fp);
         
@@ -143,7 +143,7 @@ namespace cap { namespace openal {
         alSourcef (m_source, AL_GAIN,     1.0f     );                                 //Set the gain of the source
         alSourcefv(m_source, AL_POSITION, SourcePos);                                 //Set the position of the source
         alSourcefv(m_source, AL_VELOCITY, SourceVel);                                 //Set the velocity of the source
-        alSourcei (m_source, AL_LOOPING,  AL_FALSE );                                 //Set if source is looping sound
+        alSourcei (m_source, AL_LOOPING,  AL_TRUE );                                 //Set if source is looping sound
     }
     
     audioTrack::~audioTrack(){
@@ -163,9 +163,6 @@ namespace cap { namespace openal {
     
     void audioTrack::pause(){
         alSourcePause(m_source);
-        if(alGetError() != AL_NO_ERROR){
-            error(51, "Failed to pause!\n");
-        }
     }
     
     void audioTrack::restart(){

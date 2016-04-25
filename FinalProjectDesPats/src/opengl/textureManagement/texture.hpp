@@ -22,9 +22,10 @@ namespace cap { namespace graphics {
         GLsizei m_height;
         
         void loadTexture();
+        void loadTexture2();
         
     public:
-        texture(const std::string&);
+        texture(const std::string&, int);
         ~texture();
         
         void bind() const;

@@ -142,6 +142,9 @@ namespace cap { namespace state {
         }else if( inputKeyboard::keysPressed.count(GLFW_KEY_8) && inputKeyboard::keysPressed[GLFW_KEY_8]){
             m_Game->setState(m_Game->getStateMenu());
             return true;
+        }else if( inputKeyboard::keysPressed.count(GLFW_KEY_7) && inputKeyboard::keysPressed[GLFW_KEY_7]){
+            m_Game->setState(m_Game->getStateGame());
+            return true;
         }
         return false;
     }
