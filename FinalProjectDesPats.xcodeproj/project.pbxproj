@@ -21,6 +21,9 @@
 		F90D595C1CB1A1E200DE5083 /* keyboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D595B1CB1A1E200DE5083 /* keyboard.cpp */; };
 		F90D595F1CB1AAEF00DE5083 /* ocl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F90D595D1CB1AAEF00DE5083 /* ocl.cpp */; };
 		F95C93BD1CB6A0B4004E0403 /* gameStateOpenCL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F95C93BB1CB6A0B4004E0403 /* gameStateOpenCL.cpp */; };
+		F97032E71CCDC9E1006EC6AC /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F97032DE1CCDC9DB006EC6AC /* libcommon.a */; };
+		F97032E81CCDC9E1006EC6AC /* libopenal.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F97032E21CCDC9DB006EC6AC /* libopenal.dylib */; };
+		F97032E91CCDC9E1006EC6AC /* libtest-common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F97032E61CCDC9DB006EC6AC /* libtest-common.a */; };
 		F9897D541CB2DE750035EDD4 /* fileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D521CB2DE750035EDD4 /* fileReader.cpp */; };
 		F9897D671CB2EAED0035EDD4 /* baseObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D641CB2EAED0035EDD4 /* baseObject.cpp */; };
 		F9897D6A1CB2EAF90035EDD4 /* rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9897D681CB2EAF90035EDD4 /* rectangle.cpp */; };
@@ -29,62 +32,59 @@
 		F9897D791CB31D450035EDD4 /* kernel.cl in Sources */ = {isa = PBXBuildFile; fileRef = F9897D781CB31D450035EDD4 /* kernel.cl */; };
 		F9BE79101CBA7D75006FC4E5 /* gameStateOpenCLComplex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9BE790E1CBA7D75006FC4E5 /* gameStateOpenCLComplex.cpp */; };
 		F9BE79131CBA7E64006FC4E5 /* point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9BE79111CBA7E64006FC4E5 /* point.cpp */; };
-		F9DB3C7A1CCD650200CF9187 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DB3C711CCD64F400CF9187 /* libcommon.a */; };
-		F9DB3C7B1CCD650600CF9187 /* libopenal.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DB3C751CCD64F400CF9187 /* libopenal.dylib */; };
-		F9DB3C7C1CCD650600CF9187 /* libtest-common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DB3C791CCD64F400CF9187 /* libtest-common.a */; };
 		F9DB3C8C1CCD6FFA00CF9187 /* audioTrack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9DB3C8A1CCD6FFA00CF9187 /* audioTrack.cpp */; };
 		F9DB3C941CCD816800CF9187 /* spriteTextures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9DB3C931CCD816800CF9187 /* spriteTextures.cpp */; };
 		F9DB3C991CCD845E00CF9187 /* DK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9DB3C971CCD845E00CF9187 /* DK.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F9DB3C6C1CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+		F97032D91CCDC9DB006EC6AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			containerPortal = F97032CC1CCDC9DA006EC6AC /* OpenAL.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 17457C40935843D08643A916;
+			remoteGlobalIDString = C640C06A41784CE2892B3B12;
 			remoteInfo = altonegen;
 		};
-		F9DB3C6E1CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+		F97032DB1CCDC9DB006EC6AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			containerPortal = F97032CC1CCDC9DA006EC6AC /* OpenAL.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 4474D973388E4551A00041AD;
+			remoteGlobalIDString = E6A05EAD82894E9CA746D9AE;
 			remoteInfo = bsincgen;
 		};
-		F9DB3C701CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+		F97032DD1CCDC9DB006EC6AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			containerPortal = F97032CC1CCDC9DA006EC6AC /* OpenAL.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 51F7F08CE88F48619E0EB76A;
+			remoteGlobalIDString = B578B011712C411BBBE479E5;
 			remoteInfo = common;
 		};
-		F9DB3C721CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+		F97032DF1CCDC9DB006EC6AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			containerPortal = F97032CC1CCDC9DA006EC6AC /* OpenAL.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8E74782B114746E48EFC0EE7;
+			remoteGlobalIDString = 2DD6E64E77A94CBC99C02A06;
 			remoteInfo = makehrtf;
 		};
-		F9DB3C741CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+		F97032E11CCDC9DB006EC6AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			containerPortal = F97032CC1CCDC9DA006EC6AC /* OpenAL.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = F3E6AB2EE4264B4293AB2343;
+			remoteGlobalIDString = C84DE2E9D9A04DA695E9C6DD;
 			remoteInfo = openal;
 		};
-		F9DB3C761CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+		F97032E31CCDC9DB006EC6AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			containerPortal = F97032CC1CCDC9DA006EC6AC /* OpenAL.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = C505243B38E44DEBA502FA02;
+			remoteGlobalIDString = 9E55CA13180642B5A8001E29;
 			remoteInfo = "openal-info";
 		};
-		F9DB3C781CCD64F400CF9187 /* PBXContainerItemProxy */ = {
+		F97032E51CCDC9DB006EC6AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+			containerPortal = F97032CC1CCDC9DA006EC6AC /* OpenAL.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 70B6D58D8029434DBB0E70B1;
+			remoteGlobalIDString = A678AEA38AA840DF91E6448A;
 			remoteInfo = "test-common";
 		};
 /* End PBXContainerItemProxy section */
@@ -137,6 +137,7 @@
 		F93852C81CB6ABC200572CD6 /* MaxContSub.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; name = MaxContSub.cl; path = res/kernels/MaxContSub.cl; sourceTree = "<group>"; };
 		F95C93BB1CB6A0B4004E0403 /* gameStateOpenCL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gameStateOpenCL.cpp; path = src/game/states/gameStateOpenCL.cpp; sourceTree = "<group>"; };
 		F95C93BC1CB6A0B4004E0403 /* gameStateOpenCL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = gameStateOpenCL.hpp; path = src/game/states/gameStateOpenCL.hpp; sourceTree = "<group>"; };
+		F97032CC1CCDC9DA006EC6AC /* OpenAL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OpenAL.xcodeproj; path = Dependencies/openal/build/OpenAL.xcodeproj; sourceTree = "<group>"; };
 		F9897D501CB2DC770035EDD4 /* tools.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tools.hpp; path = src/utils/fileinput/tools.hpp; sourceTree = "<group>"; };
 		F9897D521CB2DE750035EDD4 /* fileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fileReader.cpp; path = src/utils/fileinput/fileReader.cpp; sourceTree = "<group>"; };
 		F9897D531CB2DE750035EDD4 /* fileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fileReader.hpp; path = src/utils/fileinput/fileReader.hpp; sourceTree = "<group>"; };
@@ -160,8 +161,6 @@
 		F9BE790F1CBA7D75006FC4E5 /* gameStateOpenCLComplex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = gameStateOpenCLComplex.hpp; path = src/game/states/gameStateOpenCLComplex.hpp; sourceTree = "<group>"; };
 		F9BE79111CBA7E64006FC4E5 /* point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = point.cpp; path = src/opengl/renderable/objects/point.cpp; sourceTree = "<group>"; };
 		F9BE79121CBA7E64006FC4E5 /* point.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = point.hpp; path = src/opengl/renderable/objects/point.hpp; sourceTree = "<group>"; };
-		F9DB3C3E1CCD608D00CF9187 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
-		F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OpenAL.xcodeproj; path = Dependencies/alut/OpenAL.xcodeproj; sourceTree = "<group>"; };
 		F9DB3C8A1CCD6FFA00CF9187 /* audioTrack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = audioTrack.cpp; path = src/openal/audioTrack.cpp; sourceTree = "<group>"; };
 		F9DB3C8B1CCD6FFA00CF9187 /* audioTrack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = audioTrack.hpp; path = src/openal/audioTrack.hpp; sourceTree = "<group>"; };
 		F9DB3C8E1CCD7BA400CF9187 /* dk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dk.png; path = res/textures/dk.png; sourceTree = "<group>"; };
@@ -180,9 +179,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9DB3C7B1CCD650600CF9187 /* libopenal.dylib in Frameworks */,
-				F9DB3C7C1CCD650600CF9187 /* libtest-common.a in Frameworks */,
-				F9DB3C7A1CCD650200CF9187 /* libcommon.a in Frameworks */,
+				F97032E71CCDC9E1006EC6AC /* libcommon.a in Frameworks */,
+				F97032E81CCDC9E1006EC6AC /* libopenal.dylib in Frameworks */,
+				F97032E91CCDC9E1006EC6AC /* libtest-common.a in Frameworks */,
 				F90290A31CA9AED9008969D6 /* libglfw3.a in Frameworks */,
 				F90290A11CA9AED0008969D6 /* libGLEW.a in Frameworks */,
 				F902909F1CA9AEC2008969D6 /* libfreeimage.a in Frameworks */,
@@ -195,6 +194,7 @@
 		F902908A1CA9AE76008969D6 = {
 			isa = PBXGroup;
 			children = (
+				F97032CC1CCDC9DA006EC6AC /* OpenAL.xcodeproj */,
 				F902909D1CA9AE99008969D6 /* Dependencies */,
 				F90290951CA9AE76008969D6 /* FinalProjectDesPats */,
 				F90290941CA9AE76008969D6 /* Products */,
@@ -222,8 +222,6 @@
 		F902909D1CA9AE99008969D6 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */,
-				F9DB3C3E1CCD608D00CF9187 /* OpenAL.framework */,
 				F90290A21CA9AED9008969D6 /* libglfw3.a */,
 				F90290A01CA9AED0008969D6 /* libGLEW.a */,
 				F902909E1CA9AEC2008969D6 /* libfreeimage.a */,
@@ -406,6 +404,20 @@
 			name = opencl;
 			sourceTree = "<group>";
 		};
+		F97032CD1CCDC9DA006EC6AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F97032DA1CCDC9DB006EC6AC /* altonegen */,
+				F97032DC1CCDC9DB006EC6AC /* bsincgen */,
+				F97032DE1CCDC9DB006EC6AC /* libcommon.a */,
+				F97032E01CCDC9DB006EC6AC /* makehrtf */,
+				F97032E21CCDC9DB006EC6AC /* libopenal.dylib */,
+				F97032E41CCDC9DB006EC6AC /* openal-info */,
+				F97032E61CCDC9DB006EC6AC /* libtest-common.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F9897D551CB2E4D00035EDD4 /* res */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,20 +503,6 @@
 			name = openclComplex;
 			sourceTree = "<group>";
 		};
-		F9DB3C601CCD64F400CF9187 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F9DB3C6D1CCD64F400CF9187 /* altonegen */,
-				F9DB3C6F1CCD64F400CF9187 /* bsincgen */,
-				F9DB3C711CCD64F400CF9187 /* libcommon.a */,
-				F9DB3C731CCD64F400CF9187 /* makehrtf */,
-				F9DB3C751CCD64F400CF9187 /* libopenal.dylib */,
-				F9DB3C771CCD64F400CF9187 /* openal-info */,
-				F9DB3C791CCD64F400CF9187 /* libtest-common.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F9DB3C7F1CCD6FDD00CF9187 /* openal */ = {
 			isa = PBXGroup;
 			children = (
@@ -577,8 +575,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F9DB3C601CCD64F400CF9187 /* Products */;
-					ProjectRef = F9DB3C5F1CCD64F400CF9187 /* OpenAL.xcodeproj */;
+					ProductGroup = F97032CD1CCDC9DA006EC6AC /* Products */;
+					ProjectRef = F97032CC1CCDC9DA006EC6AC /* OpenAL.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -589,54 +587,54 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F9DB3C6D1CCD64F400CF9187 /* altonegen */ = {
+		F97032DA1CCDC9DB006EC6AC /* altonegen */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = altonegen;
-			remoteRef = F9DB3C6C1CCD64F400CF9187 /* PBXContainerItemProxy */;
+			remoteRef = F97032D91CCDC9DB006EC6AC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F9DB3C6F1CCD64F400CF9187 /* bsincgen */ = {
+		F97032DC1CCDC9DB006EC6AC /* bsincgen */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = bsincgen;
-			remoteRef = F9DB3C6E1CCD64F400CF9187 /* PBXContainerItemProxy */;
+			remoteRef = F97032DB1CCDC9DB006EC6AC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F9DB3C711CCD64F400CF9187 /* libcommon.a */ = {
+		F97032DE1CCDC9DB006EC6AC /* libcommon.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libcommon.a;
-			remoteRef = F9DB3C701CCD64F400CF9187 /* PBXContainerItemProxy */;
+			remoteRef = F97032DD1CCDC9DB006EC6AC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F9DB3C731CCD64F400CF9187 /* makehrtf */ = {
+		F97032E01CCDC9DB006EC6AC /* makehrtf */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = makehrtf;
-			remoteRef = F9DB3C721CCD64F400CF9187 /* PBXContainerItemProxy */;
+			remoteRef = F97032DF1CCDC9DB006EC6AC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F9DB3C751CCD64F400CF9187 /* libopenal.dylib */ = {
+		F97032E21CCDC9DB006EC6AC /* libopenal.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			name = libopenal.dylib;
 			path = libopenal.1.17.2.dylib;
-			remoteRef = F9DB3C741CCD64F400CF9187 /* PBXContainerItemProxy */;
+			remoteRef = F97032E11CCDC9DB006EC6AC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F9DB3C771CCD64F400CF9187 /* openal-info */ = {
+		F97032E41CCDC9DB006EC6AC /* openal-info */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = "openal-info";
-			remoteRef = F9DB3C761CCD64F400CF9187 /* PBXContainerItemProxy */;
+			remoteRef = F97032E31CCDC9DB006EC6AC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F9DB3C791CCD64F400CF9187 /* libtest-common.a */ = {
+		F97032E61CCDC9DB006EC6AC /* libtest-common.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libtest-common.a";
-			remoteRef = F9DB3C781CCD64F400CF9187 /* PBXContainerItemProxy */;
+			remoteRef = F97032E51CCDC9DB006EC6AC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -765,9 +763,9 @@
 					"$(PROJECT_DIR)/Dependencies/glew/1.13.0/include",
 					"$(PROJECT_DIR)/Dependencies/glfw3/3.1.2/include",
 					"$(PROJECT_DIR)/Dependencies/freeimage/3.17.0/include",
-					"$(PROJECT_DIR)/Dependencies/alut",
-					"$(PROJECT_DIR)/Dependencies/alut/include",
-					"$(PROJECT_DIR)/Dependencies/alut/examples",
+					"$(PROJECT_DIR)/Dependencies/openal",
+					"$(PROJECT_DIR)/Dependencies/openal/include",
+					"$(PROJECT_DIR)/Dependencies/openal/examples",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -791,9 +789,9 @@
 					"$(PROJECT_DIR)/Dependencies/glew/1.13.0/include",
 					"$(PROJECT_DIR)/Dependencies/glfw3/3.1.2/include",
 					"$(PROJECT_DIR)/Dependencies/freeimage/3.17.0/include",
-					"$(PROJECT_DIR)/Dependencies/alut",
-					"$(PROJECT_DIR)/Dependencies/alut/include",
-					"$(PROJECT_DIR)/Dependencies/alut/examples",
+					"$(PROJECT_DIR)/Dependencies/openal",
+					"$(PROJECT_DIR)/Dependencies/openal/include",
+					"$(PROJECT_DIR)/Dependencies/openal/examples",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
